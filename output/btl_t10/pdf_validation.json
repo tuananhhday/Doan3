@@ -1,0 +1,10 @@
+{
+  "report_pdf": {
+    "pages": 12,
+    "sha256": "ca9e72dbca5bd09fbb0d8e3ea633a3e2eb08ca14a87b6eaf215966fc103d3a9f"
+  },
+  "slides_pdf": {
+    "pages": 15,
+    "sha256": "b65aed615ea7d3f06a7a1be08ef44e199d983b6e64934c2cdb3e3cca45bc9202"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "3_default_models": true,
+  "36_trials": true,
+  "12_per_model": true,
+  "test_selected_by_valid": true,
+  "checkpoint_ID_mapping_verified": true,
+  "report_12_pages": true,
+  "budget_curve_1_3_6_12": true,
+  "references": 7,
+  "slides": 15
+}

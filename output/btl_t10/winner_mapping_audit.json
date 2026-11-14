@@ -1,0 +1,32 @@
+[
+  {
+    "model": "GRU4Rec",
+    "trial_id": "GRU4Rec-t12",
+    "all_internal_ids_equal": true,
+    "mapping_sha256": "092d8d8827b62a85a58a6cc3a6a0007e6852b14421e6fc976e6f0afef4d6a371",
+    "candidate_items": 36244,
+    "test_samples": 66305,
+    "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+    "device": "CPU"
+  },
+  {
+    "model": "NARM",
+    "trial_id": "NARM-t02",
+    "all_internal_ids_equal": true,
+    "mapping_sha256": "092d8d8827b62a85a58a6cc3a6a0007e6852b14421e6fc976e6f0afef4d6a371",
+    "candidate_items": 36244,
+    "test_samples": 66305,
+    "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+    "device": "CPU"
+  },
+  {
+    "model": "SASRec",
+    "trial_id": "SASRec-t07",
+    "all_internal_ids_equal": true,
+    "mapping_sha256": "092d8d8827b62a85a58a6cc3a6a0007e6852b14421e6fc976e6f0afef4d6a371",
+    "candidate_items": 36244,
+    "test_samples": 66305,
+    "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+    "device": "CPU"
+  }
+]

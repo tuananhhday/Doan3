@@ -1,0 +1,8 @@
+{
+  "remote_search_dir": "/work/search/t10-search-v1-6a8f9863eef8",
+  "run_tag": "t10_tuning_v1",
+  "target_trials": 12,
+  "run_until_week": 10,
+  "gpu_budget_hours": 5.0,
+  "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d"
+}

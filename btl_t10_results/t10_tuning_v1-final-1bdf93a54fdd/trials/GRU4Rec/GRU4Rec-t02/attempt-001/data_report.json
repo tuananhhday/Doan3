@@ -1,0 +1,126 @@
+{
+  "protocol": "t10-train-core5-day-split-known-prefix-v1",
+  "dataset": "diginetica_w1",
+  "min_train_count": 5,
+  "max_prefix_length": 50,
+  "sources": {
+    "train-item-views.csv": {
+      "url": "https://raw.githubusercontent.com/RecoHut-Datasets/diginetica/2672053d53bf74e6e8eec77e684e4e7b6bc5da8c/train-item-views.csv",
+      "sha256": "0b9edf1b7960bb855a2248972f8ed593f18721f321b976b2077c9f782fb43e38",
+      "bytes": 42664076
+    },
+    "product-categories.csv": {
+      "url": "https://raw.githubusercontent.com/RecoHut-Datasets/diginetica/2672053d53bf74e6e8eec77e684e4e7b6bc5da8c/product-categories.csv",
+      "sha256": "9e9566e34548e5d1b8d05ed6dd0222fbb8a7b7b2a8a18cdf28c1a4eba8f9e42c",
+      "bytes": 1979575
+    }
+  },
+  "cleaning": {
+    "raw_rows": 1235380,
+    "raw_sessions": 310324,
+    "invalid_rows_removed": 0,
+    "exact_duplicate_rows_removed": 0,
+    "multi_day_sessions_removed": 260,
+    "short_sessions_removed": 90694,
+    "clean_rows": 1142593,
+    "clean_sessions": 219370
+  },
+  "boundaries": [
+    "2016-05-12",
+    "2016-05-23"
+  ],
+  "train_core_iterations": [
+    {
+      "before": 920067,
+      "after": 778636
+    },
+    {
+      "before": 778636,
+      "after": 774825
+    },
+    {
+      "before": 774825,
+      "after": 774487
+    },
+    {
+      "before": 774487,
+      "after": 774446
+    },
+    {
+      "before": 774446,
+      "after": 774441
+    },
+    {
+      "before": 774441,
+      "after": 774441
+    }
+  ],
+  "vocabulary_items": 36244,
+  "category_coverage": 1.0,
+  "category_coverage_meets_95pct": true,
+  "count_definition": "raw training interactions AFTER train-core, BEFORE prefix augmentation",
+  "oov_policy": "skip unseen target; remove OOV from prefix; skip empty known prefix",
+  "splits": {
+    "train": {
+      "sessions_input": 161141,
+      "events_input": 774441,
+      "eligible_positions": 613300,
+      "samples": 613300,
+      "unseen_target": 0,
+      "empty_known_prefix": 0,
+      "prefixes_with_oov": 0,
+      "truncated_prefixes": 32,
+      "warm_samples": 510950,
+      "long_tail_samples": 102350,
+      "sessions_with_samples": 161141,
+      "prefix_mean_length": 4.085141040273928,
+      "sha256": "ae2d42fc4c88515d38670dbaa000402baee1a6248a2896092df67cd00e9a7c7c",
+      "sample_metadata_sha256": "a0b721463c45153dcae52c1e0fb04931e1f57e69d48b48bda0e57ad733e131b1",
+      "first_day": "2016-01-01",
+      "last_day": "2016-05-12",
+      "sessions_before_train_core": 175802,
+      "split_ratio_before_core": 0.8013949035875462
+    },
+    "valid": {
+      "sessions_input": 21766,
+      "events_input": 110465,
+      "eligible_positions": 88699,
+      "samples": 65924,
+      "unseen_target": 20897,
+      "empty_known_prefix": 1878,
+      "prefixes_with_oov": 16249,
+      "truncated_prefixes": 0,
+      "warm_samples": 53999,
+      "long_tail_samples": 11925,
+      "sessions_with_samples": 18785,
+      "prefix_mean_length": 3.727807778654208,
+      "sha256": "3aee3869ae347a1405bd3f101a861f299f8c0ffb2a8dd88a370dcf06559a1a3e",
+      "sample_metadata_sha256": "b14b59f5fcf2657c695b472708069b2a8c821e05ca6c3707aded9f18d39c9699",
+      "first_day": "2016-05-13",
+      "last_day": "2016-05-23",
+      "sessions_before_train_core": 21766,
+      "split_ratio_before_core": 0.09922049505401832
+    },
+    "test": {
+      "sessions_input": 21802,
+      "events_input": 112061,
+      "eligible_positions": 90259,
+      "samples": 66305,
+      "unseen_target": 21754,
+      "empty_known_prefix": 2200,
+      "prefixes_with_oov": 18114,
+      "truncated_prefixes": 0,
+      "warm_samples": 54466,
+      "long_tail_samples": 11839,
+      "sessions_with_samples": 18769,
+      "prefix_mean_length": 3.716823768946535,
+      "sha256": "7bb4d23567fa9b638162329e0932e0c9bfc4d1c2cc119aa2d816acdd89c3780c",
+      "sample_metadata_sha256": "a558689943e6bff915a8d354cdce475af280e215a3e96590121945c6779253ed",
+      "first_day": "2016-05-24",
+      "last_day": "2016-06-01",
+      "sessions_before_train_core": 21802,
+      "split_ratio_before_core": 0.09938460135843552
+    }
+  },
+  "fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad"
+}

@@ -1,0 +1,36 @@
+{
+ "GRU4Rec": {
+  "trial": "GRU4Rec-t12",
+  "overrides": {
+   "learning_rate": 0.003,
+   "hidden_size": 64,
+   "num_layers": 1,
+   "dropout_prob": 0.3
+  },
+  "valid_mrr20": 0.17514487243056734
+ },
+ "NARM": {
+  "trial": "NARM-t02",
+  "overrides": {
+   "learning_rate": 0.001,
+   "hidden_size": 256,
+   "n_layers": 1,
+   "dropout_probs": [
+    0.1,
+    0.1
+   ]
+  },
+  "valid_mrr20": 0.178615799616994
+ },
+ "SASRec": {
+  "trial": "SASRec-t07",
+  "overrides": {
+   "learning_rate": 0.0003,
+   "hidden_size": 128,
+   "n_layers": 2,
+   "hidden_dropout_prob": 0.3,
+   "attn_dropout_prob": 0.3
+  },
+  "valid_mrr20": 0.19446532027399904
+ }
+}

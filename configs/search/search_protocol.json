@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "search_version": "t10-search-v1",
+  "status": "frozen_not_trained",
+  "models": [
+    "GRU4Rec",
+    "NARM",
+    "SASRec"
+  ],
+  "budget_unit": "distinct_configurations",
+  "tuning_trials_per_model": 12,
+  "default_runs_counted_in_tuning_budget": false,
+  "fallback_trials_per_model": 8,
+  "fallback_rule": "same first 8 trials of each model; record reason",
+  "search_seed": 2026,
+  "model_search_seed_offsets": {
+    "GRU4Rec": 0,
+    "NARM": 1,
+    "SASRec": 2
+  },
+  "train_seed": 42,
+  "max_epochs": 30,
+  "stopping_step": 5,
+  "early_stopping_semantics": "RecBole 1.2.1: counter > 5; equal best resets counter",
+  "max_train_valid_seconds_per_trial": 5400,
+  "remote_timeout_seconds_per_trial": 7200,
+  "global_compute_budget": {
+    "status": "must_be_set_before_GPU_run",
+    "value": null,
+    "rule": "do not start GPU trials until total budget is set"
+  },
+  "primary_validation_group": "All-seen",
+  "selection_metric": "MRR@20",
+  "tie_break": "lowest trial_index",
+  "test_during_search": false,
+  "test_policy": "select winners on validation after all trials are frozen/completed; then test",
+  "report_metrics": [
+    "HR@10",
+    "HR@20",
+    "MRR@20",
+    "NDCG@20"
+  ],
+  "report_groups": [
+    "All-seen",
+    "Warm",
+    "Long-tail"
+  ],
+  "warm_definition": "target count >10 in training interactions before prefix augmentation",
+  "ranking": "full training catalog; exclude PAD; allow repeat items; ties by internal item ID ascending",
+  "data": {
+    "dataset": "diginetica_w1",
+    "fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+    "atomic_sha256": {
+      "train": "ae2d42fc4c88515d38670dbaa000402baee1a6248a2896092df67cd00e9a7c7c",
+      "valid": "3aee3869ae347a1405bd3f101a861f299f8c0ffb2a8dd88a370dcf06559a1a3e",
+      "test": "7bb4d23567fa9b638162329e0932e0c9bfc4d1c2cc119aa2d816acdd89c3780c"
+    },
+    "candidate_items": 36244,
+    "samples": {
+      "train": 613300,
+      "valid": 65924,
+      "test": 66305
+    },
+    "remote_prepared_dir": "/work/prepared/local-b93fbf33b89e2bc7",
+    "volume": "btl-t10-week1"
+  },
+  "shared_baseline_settings": {
+    "epochs": 30,
+    "seed": 42,
+    "stopping_step": 5,
+    "eval_step": 1,
+    "learner": "adam",
+    "weight_decay": 0.0,
+    "train_batch_size": 2048,
+    "eval_batch_size": 128,
+    "MAX_ITEM_LIST_LENGTH": 50,
+    "valid_metric": "MRR@20",
+    "metrics": [
+      "Hit",
+      "MRR",
+      "NDCG"
+    ],
+    "topk": [
+      10,
+      20
+    ],
+    "eval_args": {
+      "split": {
+        "RS": [
+          0.8,
+          0.1,
+          0.1
+        ]
+      },
+      "order": "TO",
+      "group_by": "none",
+      "mode": {
+        "valid": "full",
+        "test": "full"
+      }
+    },
+    "repeatable": true,
+    "reproducibility": true,
+    "benchmark_filename": [
+      "train",
+      "valid",
+      "test"
+    ],
+    "alias_of_item_id": [
+      "item_id_list"
+    ],
+    "train_neg_sample_args": {
+      "distribution": "none",
+      "sample_num": "none",
+      "alpha": "none",
+      "dynamic": false,
+      "candidate_num": 0
+    }
+  },
+  "recbole_version": "1.2.1",
+  "baseline_config_sha256": {
+    "GRU4Rec": "ec4050ac70dc67aa26820512a774912fe6260df574069b1eb14ecedc5eb3b6ed",
+    "NARM": "5080dc5f9ddc84d2ebe88beb7c1b9b3929be40822dbd91e5d23fa3691c061679",
+    "SASRec": "8a804629d3bd5c029fd9e6ae5f089e203ba33e2617e152a8cc7b246300a535f6"
+  },
+  "derived_parameters": {
+    "SASRec": {
+      "attn_dropout_prob": "hidden_dropout_prob"
+    }
+  },
+  "hyper_file_usage": "parse choices then materialize(model, sampled); vanilla HyperTuning needs this adapter for coupled SASRec dropout",
+  "retry_policy": "preserve failed attempts; no silent replacement of trials; completed trials skipped",
+  "analysis_trial_counts": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "multiple_seeds": "optional separate experiment"
+}

@@ -1,0 +1,4566 @@
+{
+  "complete": true,
+  "counts": {
+    "GRU4Rec": 12,
+    "NARM": 12,
+    "SASRec": 12
+  },
+  "state": {
+    "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+    "results": [
+      {
+        "trial_id": "GRU4Rec-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "486f239e96caf7b026b23e039fb03092114085cb45c268802cc3b64d93619461",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.12884450980744153,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 280.29215000199997,
+        "test_seconds": 4.580000450005173e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t01/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t01/attempt-001/GRU4Rec-Oct-24-2026_16-13-39.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5642142295837402,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 296.95947959999995
+      },
+      {
+        "trial_id": "NARM-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        },
+        "trial_spec_sha256": "832d215e48ba85fffd9766ee9d539e07400f3191f52c7dc2ac4d1949bad68a3e",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 23,
+        "best_epoch": 17,
+        "best_valid_mrr20": 0.1704617299348757,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 215.48612445399993,
+        "test_seconds": 3.799999603870674e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t01/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t01/attempt-001/NARM-Oct-24-2026_16-18-40.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5648245811462402,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 228.05823636800005
+      },
+      {
+        "trial_id": "SASRec-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "dc511879f9af946d30e1dafaed8da0bf44f54647ada60120ad62a635ae22f582",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 27,
+        "best_epoch": 21,
+        "best_valid_mrr20": 0.18795006183855179,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 426.01227350499994,
+        "test_seconds": 3.330000026835478e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t01/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t01/attempt-001/SASRec-Oct-24-2026_16-22-34.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.100511074066162,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 436.144174883
+      },
+      {
+        "trial_id": "GRU4Rec-t02",
+        "trial_index": 2,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.5
+        },
+        "trial_spec_sha256": "4c112f2ce803e7bfad0824b09f00fe1014c9b2890869c7fde2486f1226bfc9a3",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 28,
+        "best_valid_mrr20": 0.1678581208381056,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 213.72715496700002,
+        "test_seconds": 2.6899999738816405e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t02/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t02/attempt-001/GRU4Rec-Oct-24-2026_16-30-03.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.1741232872009277,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 229.70744612
+      },
+      {
+        "trial_id": "NARM-t02",
+        "trial_index": 2,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 256,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        },
+        "trial_spec_sha256": "a6c0bc4ac79940cd993349c5a446a317f0d221221ee9f89820d037dd63a3955e",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 13,
+        "best_epoch": 7,
+        "best_valid_mrr20": 0.1782794502833039,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 113.654244812,
+        "test_seconds": 5.25000018569699e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t02/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t02/attempt-001/NARM-Oct-24-2026_16-33-58.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.9420971870422363,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 125.83915976899999
+      },
+      {
+        "trial_id": "SASRec-t02",
+        "trial_index": 2,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.5,
+          "attn_dropout_prob": 0.5
+        },
+        "trial_spec_sha256": "f7cf185787ee7d7566ad38cdcb6de7d44ee1a2cb5dc25688a58bb403e2158016",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.1881337468763312,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 497.394973217,
+        "test_seconds": 4.7399998948094435e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t02/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t02/attempt-001/SASRec-Oct-24-2026_16-36-18.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.3669700622558594,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 513.987528256
+      },
+      {
+        "trial_id": "GRU4Rec-t03",
+        "trial_index": 3,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 256,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "5d3fd987e1ca230f2bca425cffef77e851192c7738b80232f0a82f3378271d90",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 18,
+        "best_epoch": 12,
+        "best_valid_mrr20": 0.16046223220860403,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 158.31378411699995,
+        "test_seconds": 2.409999524388695e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t03/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t03/attempt-001/GRU4Rec-Oct-24-2026_16-44-54.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.455183506011963,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 170.46086885499994
+      },
+      {
+        "trial_id": "NARM-t03",
+        "trial_index": 3,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        },
+        "trial_spec_sha256": "d582291d9c1a2fc64850b37988bb4930ad8135ac1463bf3482f2164abaf889a5",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.1266185571358423,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 392.961537778,
+        "test_seconds": 4.0800000533636194e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t03/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t03/attempt-001/NARM-Oct-24-2026_16-48-08.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.3734993934631348,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 411.894718293
+      },
+      {
+        "trial_id": "SASRec-t03",
+        "trial_index": 3,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "7d6d8e88675f1bd56cb5a7db092be702973dbf14e74e94826842e6bdba614c54",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 21,
+        "best_epoch": 15,
+        "best_valid_mrr20": 0.18640563386689932,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 389.828163084,
+        "test_seconds": 3.059999471588526e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t03/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t03/attempt-001/SASRec-Oct-24-2026_16-55-08.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.349193572998047,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 404.639362319
+      },
+      {
+        "trial_id": "GRU4Rec-t04",
+        "trial_index": 4,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 256,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "74b7ce49ce9f16a49136c6582d500bac4ee76709e25df26c5d3dfe0973f3b511",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 13,
+        "best_epoch": 7,
+        "best_valid_mrr20": 0.16658162118398143,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 144.72348831800002,
+        "test_seconds": 3.330000026835478e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t04/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t04/attempt-001/GRU4Rec-Oct-24-2026_17-02-03.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.454742431640625,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 159.26755524099997
+      },
+      {
+        "trial_id": "NARM-t04",
+        "trial_index": 4,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        },
+        "trial_spec_sha256": "d04e7c6b9f77f71fbef898d90c753657e70de2b29e9861eb16f74f45a4400dc1",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 27,
+        "best_epoch": 21,
+        "best_valid_mrr20": 0.16707972298008128,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 268.19823993899996,
+        "test_seconds": 3.359999709573458e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t04/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t04/attempt-001/NARM-Oct-24-2026_17-05-04.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.2008605003356934,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 288.665098354
+      },
+      {
+        "trial_id": "SASRec-t04",
+        "trial_index": 4,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "7fabeeccbf309bdc115197e0ad82a764594a66c51d0a3b193272750bc8d43632",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.17853787648530983,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 405.51163521700005,
+        "test_seconds": 6.049999683455098e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t04/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t04/attempt-001/SASRec-Oct-24-2026_17-09-58.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5196313858032227,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 420.321894503
+      },
+      {
+        "trial_id": "GRU4Rec-t05",
+        "trial_index": 5,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "63a58500e36d2f0c2ba2242ddab500cce9d0734ad6bb09f1f4e65bf0840afd53",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 13,
+        "best_epoch": 7,
+        "best_valid_mrr20": 0.1696043341555709,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 111.74507838000001,
+        "test_seconds": 4.1300000930277747e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t05/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t05/attempt-001/GRU4Rec-Oct-24-2026_17-17-14.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5642142295837402,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 129.449567548
+      },
+      {
+        "trial_id": "NARM-t05",
+        "trial_index": 5,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        },
+        "trial_spec_sha256": "0a86501bd709b3121e32a870cbf96859546e8354d460b27c476d7053f04c81e5",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 12,
+        "best_epoch": 6,
+        "best_valid_mrr20": 0.17543242654591082,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 116.29602717700001,
+        "test_seconds": 2.2599999738304177e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t05/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t05/attempt-001/NARM-Oct-24-2026_17-19-46.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5648751258850098,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 132.685181968
+      },
+      {
+        "trial_id": "SASRec-t05",
+        "trial_index": 5,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.5,
+          "attn_dropout_prob": 0.5
+        },
+        "trial_spec_sha256": "4a56638a482de80ce469892feafdd30d36aa226b1df9b415578c18d697d7ea4e",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.17619746764552574,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 519.806121275,
+        "test_seconds": 3.8999996831989847e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.1012825965881348,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 532.4078447290001
+      },
+      {
+        "trial_id": "GRU4Rec-t06",
+        "trial_index": 6,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "a52a6bc2d491712b2fe4fd951d6eaa5849a101ac9afcc889c1d5dbbf1f40e35c",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.13808631907305546,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 500.80513742,
+        "test_seconds": 5.609999789157882e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t06/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t06/attempt-001/GRU4Rec-Oct-24-2026_17-31-19.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5642142295837402,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 519.831055711
+      },
+      {
+        "trial_id": "NARM-t06",
+        "trial_index": 6,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        },
+        "trial_spec_sha256": "1271b499e9a62d74fda8da007d0f02ffbd9934e9ebbdbb0c214d2b850ac9fe2a",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.1595851101763786,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 447.72756306199994,
+        "test_seconds": 4.019999551019282e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t06/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t06/attempt-001/NARM-Oct-24-2026_17-40-10.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.1980910301208496,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 464.1631129020001
+      },
+      {
+        "trial_id": "SASRec-t06",
+        "trial_index": 6,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "bb2e2f1b89b383ba931b48c5ef13c0f8eddb13c540ebd2baba9e00c18fd8b762",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 13,
+        "best_epoch": 7,
+        "best_valid_mrr20": 0.18529565677098564,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 259.44386444400004,
+        "test_seconds": 3.2999992072291207e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t06/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t06/attempt-001/SASRec-Oct-24-2026_17-48-06.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.9509353637695312,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 274.00381526399997
+      },
+      {
+        "trial_id": "GRU4Rec-t07",
+        "trial_index": 7,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 256,
+          "num_layers": 1,
+          "dropout_prob": 0.5
+        },
+        "trial_spec_sha256": "629f060ea4ff9c2dcae05991f5a004cbeafe4dcb527fc082d1fe00f9e79fd1d1",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.12460183441025995,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 267.61038872200004,
+        "test_seconds": 4.720000106317457e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t07/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t07/attempt-001/GRU4Rec-Oct-24-2026_17-54-33.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.7632970809936523,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 287.625658317
+      },
+      {
+        "trial_id": "NARM-t07",
+        "trial_index": 7,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        },
+        "trial_spec_sha256": "ea7a73001b9b577dce833b437676d04317557fcc17a8abfe6bb61fe67edb95b7",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 28,
+        "best_valid_mrr20": 0.17332910398579954,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 278.946880568,
+        "test_seconds": 4.0800000533636194e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t07/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t07/attempt-001/NARM-Oct-24-2026_17-59-21.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5648751258850098,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 291.647854895
+      },
+      {
+        "trial_id": "SASRec-t07",
+        "trial_index": 7,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "58cc38c5af4d3e60ccf3b0034e1eed25b42c6fc6fac53c495877b8ac0bd291e1",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 23,
+        "best_epoch": 17,
+        "best_valid_mrr20": 0.19387440431283023,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 455.08410603899995,
+        "test_seconds": 7.129999630706152e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t07/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t07/attempt-001/SASRec-Oct-24-2026_18-04-19.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.846252918243408,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 467.57052568100005
+      },
+      {
+        "trial_id": "GRU4Rec-t08",
+        "trial_index": 8,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "fe9193e040a47002dfe01d0f3bef664b037fcf14750924d0e6e9129a719931c7",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 15,
+        "best_epoch": 9,
+        "best_valid_mrr20": 0.16585113407268115,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 138.253720891,
+        "test_seconds": 4.329999967467302e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t08/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t08/attempt-001/GRU4Rec-Oct-24-2026_18-12-19.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.3467621803283691,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 156.94309877299997
+      },
+      {
+        "trial_id": "NARM-t08",
+        "trial_index": 8,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        },
+        "trial_spec_sha256": "780a8bfd786aa4a7039c07bfc0c292f54271a3260321269ec01ef870c6ebeec4",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 28,
+        "best_valid_mrr20": 0.16619451009231326,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 279.257626177,
+        "test_seconds": 3.4999999343199306e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t08/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t08/attempt-001/NARM-Oct-24-2026_18-14-59.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.3734993934631348,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 293.70083841900004
+      },
+      {
+        "trial_id": "SASRec-t08",
+        "trial_index": 8,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "135ccb40696edf73bf6aced67f8928708c91333f3a1899df88c86b4e61f339ca",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.19232181887825053,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 574.8752379299999,
+        "test_seconds": 5.680000185748213e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t08/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t08/attempt-001/SASRec-Oct-24-2026_18-20-04.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.3669700622558594,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 593.785964632
+      },
+      {
+        "trial_id": "GRU4Rec-t09",
+        "trial_index": 9,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "f30101d396488387beff03bd7bc5f8ea6b2fdb5e134feb4b0cbafac53a99d198",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 18,
+        "best_epoch": 12,
+        "best_valid_mrr20": 0.1691054880002936,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 158.50105895600007,
+        "test_seconds": 4.67000063508749e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t09/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t09/attempt-001/GRU4Rec-Oct-24-2026_18-30-00.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.3496661186218262,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 172.73207908899997
+      },
+      {
+        "trial_id": "NARM-t09",
+        "trial_index": 9,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        },
+        "trial_spec_sha256": "fdb35474f10a1f3c482300caa4ca65b49cf0e333e3f6cc9a80a194e2d6cc65d7",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.1470704902725906,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 298.798332779,
+        "test_seconds": 3.9299999343711534e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t09/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t09/attempt-001/NARM-Oct-24-2026_18-33-02.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.973813533782959,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 315.61925257900003
+      },
+      {
+        "trial_id": "SASRec-t09",
+        "trial_index": 9,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "ad76af23a125d19c7fce16bac3f51635d9708a690d7346311ed39bb2ef81f50a",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 20,
+        "best_epoch": 14,
+        "best_valid_mrr20": 0.18631884813849858,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 216.442423491,
+        "test_seconds": 5.859999987478659e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t09/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t09/attempt-001/SASRec-Oct-25-2026_01-49-07.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.6742510795593262,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 233.520100833
+      },
+      {
+        "trial_id": "GRU4Rec-t10",
+        "trial_index": 10,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "5c573031be36260711d58d05227b22fd3ef96cf6f52447e0722db7fbe8ee05d0",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 15,
+        "best_epoch": 9,
+        "best_valid_mrr20": 0.17111763122569978,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 100.444449945,
+        "test_seconds": 5.140000212122686e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t10/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t10/attempt-001/GRU4Rec-Oct-25-2026_01-53-00.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.1767325401306152,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 111.95416447399998
+      },
+      {
+        "trial_id": "NARM-t10",
+        "trial_index": 10,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        },
+        "trial_spec_sha256": "0ddeb5ff33c9259d06227bd4fafa73ca1ea6c6d99e7bc8373c734a4736d43dfc",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 28,
+        "best_epoch": 22,
+        "best_valid_mrr20": 0.1726105493730608,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 246.38683077599995,
+        "test_seconds": 6.239999947865726e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.974790096282959,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 257.866420427
+      },
+      {
+        "trial_id": "SASRec-t10",
+        "trial_index": 10,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.1,
+          "attn_dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "51751146722dc319d445fc5cf893159b9a9af654ba32a023b6f60403f89c2e03",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 30,
+        "best_valid_mrr20": 0.18813454505772975,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 317.08991910199995,
+        "test_seconds": 1.990000555451843e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t10/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t10/attempt-001/SASRec-Oct-25-2026_01-59-21.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.525252342224121,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 330.4958933319999
+      },
+      {
+        "trial_id": "GRU4Rec-t11",
+        "trial_index": 11,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 128,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "a09f6fe9479fd5b0336dc15895b99d0c60afde1a01954b75488408befa8be1bb",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 21,
+        "best_epoch": 15,
+        "best_valid_mrr20": 0.15769274011119974,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 192.70583129699997,
+        "test_seconds": 5.219999934524822e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t11/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t11/attempt-001/GRU4Rec-Oct-25-2026_02-05-07.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.9732537269592285,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 214.510010248
+      },
+      {
+        "trial_id": "NARM-t11",
+        "trial_index": 11,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        },
+        "trial_spec_sha256": "c51f8e1f75309ab4eb73e5e19d46ed51ef105a0b525b01873846a4bb15062112",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 13,
+        "best_epoch": 7,
+        "best_valid_mrr20": 0.17170857617345286,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 129.08539598700003,
+        "test_seconds": 2.5399998548891745e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t11/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t11/attempt-001/NARM-Oct-25-2026_02-08-40.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.9728875160217285,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 142.701875574
+      },
+      {
+        "trial_id": "SASRec-t11",
+        "trial_index": 11,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.1,
+          "attn_dropout_prob": 0.1
+        },
+        "trial_spec_sha256": "f06028dcda235b940b44b983b329af5e41c85df6b9a7376f6cb615bf3db9da62",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 17,
+        "best_epoch": 11,
+        "best_valid_mrr20": 0.1937140842011068,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 217.61006119899997,
+        "test_seconds": 1.9800006612058496e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t11/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t11/attempt-001/SASRec-Oct-25-2026_02-11-08.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.9509353637695312,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 231.15009115499993
+      },
+      {
+        "trial_id": "GRU4Rec-t12",
+        "trial_index": 12,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "749ceccaa58ac398a81f4fc3080c4137ce81eedbf565cb1257958a17b73386c6",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 18,
+        "best_epoch": 12,
+        "best_valid_mrr20": 0.1757441402804481,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 141.00246850100007,
+        "test_seconds": 2.0999993921577698e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t12/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t12/attempt-001/GRU4Rec-Oct-25-2026_02-15-05.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.171353816986084,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 154.23298999100007
+      },
+      {
+        "trial_id": "NARM-t12",
+        "trial_index": 12,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.25,
+            0.5
+          ]
+        },
+        "trial_spec_sha256": "cbc7edce4ac6ad63c233fa4216ff001043f91c3b4357958c395c473f6ac0cd3f",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 28,
+        "best_valid_mrr20": 0.1629900738029467,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 287.45483094400004,
+        "test_seconds": 3.0700016395712737e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t12/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t12/attempt-001/NARM-Oct-25-2026_02-17-45.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.3697538375854492,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 301.36956948099987
+      },
+      {
+        "trial_id": "SASRec-t12",
+        "trial_index": 12,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "5d59421f077fca80b52eb2fe8e7abd5cfd31dad7a2a37244426e8ba9c0cf481a",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 30,
+        "best_epoch": 28,
+        "best_valid_mrr20": 0.18729684713557554,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 353.736332148,
+        "test_seconds": 3.380000066499633e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t12/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t12/attempt-001/SASRec-Oct-25-2026_02-22-57.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.520155906677246,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 371.836776137
+      }
+    ],
+    "failures": {},
+    "elapsed_calls_seconds": 11114.378546651003,
+    "target_trials_per_model": 12,
+    "status": "completed",
+    "active_trial": null,
+    "gpu_budget_hours": 5.0,
+    "search_dir": "/work/search/t10-search-v1-6a8f9863eef8",
+    "test_policy": "test only after all 12 trials/model; interim results are validation only",
+    "completed_per_model": {
+      "GRU4Rec": 12,
+      "NARM": 12,
+      "SASRec": 12
+    },
+    "updated_unix": 1792895396.8518615,
+    "smoke_results": {
+      "GRU4Rec": {
+        "trial_id": "GRU4Rec-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "c549c13a2839b3e0b5defd58b0065500b97d31ae294c1d535e5f8ec2d9fcdb9b",
+        "test_evaluated": false,
+        "model": "GRU4Rec",
+        "smoke": true,
+        "seed": 42,
+        "max_epochs": 1,
+        "epochs_completed": 1,
+        "best_epoch": 1,
+        "best_valid_mrr20": 0.0,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 5.921675097000001,
+        "test_seconds": 2.559999998652529e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/smoke/GRU4Rec/GRU4Rec-t01/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/smoke/GRU4Rec/GRU4Rec-t01/attempt-001/GRU4Rec-Oct-24-2026_16-12-13.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 0.17224407196044922,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 24.353259065
+      },
+      "NARM": {
+        "trial_id": "NARM-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        },
+        "trial_spec_sha256": "849b35574d6c822025e2b9fa747cd39e04cb112220336c836109d45fcf5d7950",
+        "test_evaluated": false,
+        "model": "NARM",
+        "smoke": true,
+        "seed": 42,
+        "max_epochs": 1,
+        "epochs_completed": 1,
+        "best_epoch": 1,
+        "best_valid_mrr20": 0.0011160714285714285,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 5.088629900999997,
+        "test_seconds": 1.7800000051693132e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/smoke/NARM/NARM-t01/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/smoke/NARM/NARM-t01/attempt-001/NARM-Oct-24-2026_16-12-40.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 0.17285442352294922,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 19.737705427
+      },
+      "SASRec": {
+        "trial_id": "SASRec-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "78a775217ad60a96752371175becb2e24868ce3e06971ab2e51314b46dad58a9",
+        "test_evaluated": false,
+        "model": "SASRec",
+        "smoke": true,
+        "seed": 42,
+        "max_epochs": 1,
+        "epochs_completed": 1,
+        "best_epoch": 1,
+        "best_valid_mrr20": 0.010416666666666666,
+        "stop_reason": "epoch_limit",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 7.0086157900000075,
+        "test_seconds": 4.350000040176383e-07,
+        "test": null,
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/smoke/SASRec/SASRec-t01/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/smoke/SASRec/SASRec-t01/attempt-001/SASRec-Oct-24-2026_16-13-04.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 0.15424156188964844,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 21.260729391000005
+      }
+    },
+    "winner_tests": {
+      "GRU4Rec": {
+        "trial_id": "GRU4Rec-t12",
+        "trial_index": 12,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "749ceccaa58ac398a81f4fc3080c4137ce81eedbf565cb1257958a17b73386c6",
+        "test_evaluated": true,
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 18,
+        "best_epoch": 12,
+        "best_valid_mrr20": 0.1757441402804481,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 141.00246850100007,
+        "test_seconds": 2.0999993921577698e-07,
+        "test": {
+          "All-seen": {
+            "n": 66305,
+            "hit@10": 0.3819168991780409,
+            "hit@20": 0.5148782143126461,
+            "mrr@20": 0.17416848488721073,
+            "ndcg@20": 0.24930157845675177
+          },
+          "Warm": {
+            "n": 54466,
+            "hit@10": 0.41877501560606617,
+            "hit@20": 0.5579627657621268,
+            "mrr@20": 0.19053083736760187,
+            "ndcg@20": 0.27172597997197095
+          },
+          "Long-tail": {
+            "n": 11839,
+            "hit@10": 0.21234901596418618,
+            "hit@20": 0.31666525889010894,
+            "mrr@20": 0.0988925418010548,
+            "ndcg@20": 0.14613683034222097
+          }
+        },
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t12/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t12/attempt-001/GRU4Rec-Oct-25-2026_02-15-05.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.171353816986084,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 154.23298999100007
+      },
+      "NARM": {
+        "trial_id": "NARM-t02",
+        "trial_index": 2,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 256,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        },
+        "trial_spec_sha256": "a6c0bc4ac79940cd993349c5a446a317f0d221221ee9f89820d037dd63a3955e",
+        "test_evaluated": true,
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 13,
+        "best_epoch": 7,
+        "best_valid_mrr20": 0.1782794502833039,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 113.654244812,
+        "test_seconds": 5.25000018569699e-07,
+        "test": {
+          "All-seen": {
+            "n": 66305,
+            "hit@10": 0.38936731769851446,
+            "hit@20": 0.5231732146896916,
+            "mrr@20": 0.1807370283321074,
+            "ndcg@20": 0.256323131976409
+          },
+          "Warm": {
+            "n": 54466,
+            "hit@10": 0.42676164946939377,
+            "hit@20": 0.5670877244519517,
+            "mrr@20": 0.19729181738375517,
+            "ndcg@20": 0.27911184201623174
+          },
+          "Long-tail": {
+            "n": 11839,
+            "hit@10": 0.21733254497846102,
+            "hit@20": 0.32114198834361013,
+            "mrr@20": 0.10457576973872605,
+            "ndcg@20": 0.1514823615541622
+          }
+        },
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t02/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t02/attempt-001/NARM-Oct-24-2026_16-33-58.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.9420971870422363,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 125.83915976899999
+      },
+      "SASRec": {
+        "trial_id": "SASRec-t07",
+        "trial_index": 7,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        },
+        "trial_spec_sha256": "58cc38c5af4d3e60ccf3b0034e1eed25b42c6fc6fac53c495877b8ac0bd291e1",
+        "test_evaluated": true,
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 23,
+        "best_epoch": 17,
+        "best_valid_mrr20": 0.19387440431283023,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 455.08410603899995,
+        "test_seconds": 7.129999630706152e-07,
+        "test": {
+          "All-seen": {
+            "n": 66305,
+            "hit@10": 0.41601689163713146,
+            "hit@20": 0.5552974888771586,
+            "mrr@20": 0.19151411971629007,
+            "ndcg@20": 0.27192096531869
+          },
+          "Warm": {
+            "n": 54466,
+            "hit@10": 0.44954650607718577,
+            "hit@20": 0.5930305144493813,
+            "mrr@20": 0.20452754928366923,
+            "ndcg@20": 0.2906574376089768
+          },
+          "Long-tail": {
+            "n": 11839,
+            "hit@10": 0.2617619731396233,
+            "hit@20": 0.38170453585606895,
+            "mrr@20": 0.1316450889859159,
+            "ndcg@20": 0.18572274758384974
+          }
+        },
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t07/attempt-001",
+        "checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t07/attempt-001/SASRec-Oct-24-2026_18-04-19.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.846252918243408,
+        "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+        "worker_seconds": 467.57052568100005
+      }
+    }
+  },
+  "baseline": {
+    "results": [
+      {
+        "model": "GRU4Rec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 28,
+        "best_epoch": 22,
+        "best_valid_mrr20": 0.16852817347380808,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 215.540210579,
+        "test_seconds": 0.9557749909999984,
+        "test": {
+          "All-seen": {
+            "n": 66305,
+            "hit@10": 0.3719327350878516,
+            "hit@20": 0.5074428776110399,
+            "mrr@20": 0.1685172698207727,
+            "ndcg@20": 0.24308530517132265
+          },
+          "Warm": {
+            "n": 54466,
+            "hit@10": 0.41097198252120587,
+            "hit@20": 0.5535012668453714,
+            "mrr@20": 0.18638993558995132,
+            "ndcg@20": 0.2673649941351262
+          },
+          "Long-tail": {
+            "n": 11839,
+            "hit@10": 0.19233043331362445,
+            "hit@20": 0.29554861052453757,
+            "mrr@20": 0.08629304363747282,
+            "ndcg@20": 0.131385200508553
+          }
+        },
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/GRU4Rec",
+        "checkpoint": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/GRU4Rec/GRU4Rec-Oct-24-2026_06-17-47.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5642142295837402
+      },
+      {
+        "model": "NARM",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 21,
+        "best_epoch": 15,
+        "best_valid_mrr20": 0.1759902872486421,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 170.922360696,
+        "test_seconds": 1.1317556380000156,
+        "test": {
+          "All-seen": {
+            "n": 66305,
+            "hit@10": 0.38730110851368676,
+            "hit@20": 0.5242591056481412,
+            "mrr@20": 0.1748322477343754,
+            "ndcg@20": 0.25185801526226304
+          },
+          "Warm": {
+            "n": 54466,
+            "hit@10": 0.4275327727389564,
+            "hit@20": 0.5700804171409687,
+            "mrr@20": 0.19363895848207302,
+            "ndcg@20": 0.27686274050675597
+          },
+          "Long-tail": {
+            "n": 11839,
+            "hit@10": 0.2022130247487119,
+            "hit@20": 0.3134555283385421,
+            "mrr@20": 0.08831089393894494,
+            "ndcg@20": 0.1368223395154462
+          }
+        },
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/NARM",
+        "checkpoint": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/NARM/NARM-Oct-24-2026_06-21-39.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 1.5648245811462402
+      },
+      {
+        "model": "SASRec",
+        "smoke": false,
+        "seed": 42,
+        "max_epochs": 30,
+        "epochs_completed": 27,
+        "best_epoch": 21,
+        "best_valid_mrr20": 0.18771273434219443,
+        "stop_reason": "early_stopping",
+        "max_train_seconds": 5400,
+        "train_valid_seconds": 490.16472197,
+        "test_seconds": 1.413801125999953,
+        "test": {
+          "All-seen": {
+            "n": 66305,
+            "hit@10": 0.3945856270266194,
+            "hit@20": 0.5352537516024433,
+            "mrr@20": 0.1841646029794733,
+            "ndcg@20": 0.2614638862864484
+          },
+          "Warm": {
+            "n": 54466,
+            "hit@10": 0.4287628979546873,
+            "hit@20": 0.5753497594829802,
+            "mrr@20": 0.1969381340533105,
+            "ndcg@20": 0.28048746613217795
+          },
+          "Long-tail": {
+            "n": 11839,
+            "hit@10": 0.23735112762902272,
+            "hit@20": 0.35078976264887235,
+            "mrr@20": 0.1253992390578893,
+            "ndcg@20": 0.17394481373999154
+          }
+        },
+        "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+        "candidate_items": 36244,
+        "tie_policy": "score desc, internal item ID asc",
+        "run_dir": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/SASRec",
+        "checkpoint": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/SASRec/SASRec-Oct-24-2026_06-24-46.pth",
+        "environment": {
+          "recbole": "1.2.1",
+          "torch": "2.5.1+cu124",
+          "numpy": "1.23.5",
+          "pandas": "1.5.3",
+          "scipy": "1.10.1",
+          "python": "3.10.17",
+          "gpu": "NVIDIA H100 80GB HBM3",
+          "cuda": "12.4",
+          "gpu_count": 1,
+          "protocol": "t10-train-core5-day-split-known-prefix-v1"
+        },
+        "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+        "peak_cuda_allocated_gib": 2.3489418029785156
+      }
+    ],
+    "failures": {},
+    "archive": {
+      "volume": "btl-t10-week1",
+      "path": "exports/week1_local.zip"
+    }
+  },
+  "data_report": {
+    "protocol": "t10-train-core5-day-split-known-prefix-v1",
+    "dataset": "diginetica_w1",
+    "min_train_count": 5,
+    "max_prefix_length": 50,
+    "sources": {
+      "train-item-views.csv": {
+        "url": "https://raw.githubusercontent.com/RecoHut-Datasets/diginetica/2672053d53bf74e6e8eec77e684e4e7b6bc5da8c/train-item-views.csv",
+        "sha256": "0b9edf1b7960bb855a2248972f8ed593f18721f321b976b2077c9f782fb43e38",
+        "bytes": 42664076
+      },
+      "product-categories.csv": {
+        "url": "https://raw.githubusercontent.com/RecoHut-Datasets/diginetica/2672053d53bf74e6e8eec77e684e4e7b6bc5da8c/product-categories.csv",
+        "sha256": "9e9566e34548e5d1b8d05ed6dd0222fbb8a7b7b2a8a18cdf28c1a4eba8f9e42c",
+        "bytes": 1979575
+      }
+    },
+    "cleaning": {
+      "raw_rows": 1235380,
+      "raw_sessions": 310324,
+      "invalid_rows_removed": 0,
+      "exact_duplicate_rows_removed": 0,
+      "multi_day_sessions_removed": 260,
+      "short_sessions_removed": 90694,
+      "clean_rows": 1142593,
+      "clean_sessions": 219370
+    },
+    "boundaries": [
+      "2016-05-12",
+      "2016-05-23"
+    ],
+    "train_core_iterations": [
+      {
+        "before": 920067,
+        "after": 778636
+      },
+      {
+        "before": 778636,
+        "after": 774825
+      },
+      {
+        "before": 774825,
+        "after": 774487
+      },
+      {
+        "before": 774487,
+        "after": 774446
+      },
+      {
+        "before": 774446,
+        "after": 774441
+      },
+      {
+        "before": 774441,
+        "after": 774441
+      }
+    ],
+    "vocabulary_items": 36244,
+    "category_coverage": 1.0,
+    "category_coverage_meets_95pct": true,
+    "count_definition": "raw training interactions AFTER train-core, BEFORE prefix augmentation",
+    "oov_policy": "skip unseen target; remove OOV from prefix; skip empty known prefix",
+    "splits": {
+      "train": {
+        "sessions_input": 161141,
+        "events_input": 774441,
+        "eligible_positions": 613300,
+        "samples": 613300,
+        "unseen_target": 0,
+        "empty_known_prefix": 0,
+        "prefixes_with_oov": 0,
+        "truncated_prefixes": 32,
+        "warm_samples": 510950,
+        "long_tail_samples": 102350,
+        "sessions_with_samples": 161141,
+        "prefix_mean_length": 4.085141040273928,
+        "sha256": "ae2d42fc4c88515d38670dbaa000402baee1a6248a2896092df67cd00e9a7c7c",
+        "sample_metadata_sha256": "a0b721463c45153dcae52c1e0fb04931e1f57e69d48b48bda0e57ad733e131b1",
+        "first_day": "2016-01-01",
+        "last_day": "2016-05-12",
+        "sessions_before_train_core": 175802,
+        "split_ratio_before_core": 0.8013949035875462
+      },
+      "valid": {
+        "sessions_input": 21766,
+        "events_input": 110465,
+        "eligible_positions": 88699,
+        "samples": 65924,
+        "unseen_target": 20897,
+        "empty_known_prefix": 1878,
+        "prefixes_with_oov": 16249,
+        "truncated_prefixes": 0,
+        "warm_samples": 53999,
+        "long_tail_samples": 11925,
+        "sessions_with_samples": 18785,
+        "prefix_mean_length": 3.727807778654208,
+        "sha256": "3aee3869ae347a1405bd3f101a861f299f8c0ffb2a8dd88a370dcf06559a1a3e",
+        "sample_metadata_sha256": "b14b59f5fcf2657c695b472708069b2a8c821e05ca6c3707aded9f18d39c9699",
+        "first_day": "2016-05-13",
+        "last_day": "2016-05-23",
+        "sessions_before_train_core": 21766,
+        "split_ratio_before_core": 0.09922049505401832
+      },
+      "test": {
+        "sessions_input": 21802,
+        "events_input": 112061,
+        "eligible_positions": 90259,
+        "samples": 66305,
+        "unseen_target": 21754,
+        "empty_known_prefix": 2200,
+        "prefixes_with_oov": 18114,
+        "truncated_prefixes": 0,
+        "warm_samples": 54466,
+        "long_tail_samples": 11839,
+        "sessions_with_samples": 18769,
+        "prefix_mean_length": 3.716823768946535,
+        "sha256": "7bb4d23567fa9b638162329e0932e0c9bfc4d1c2cc119aa2d816acdd89c3780c",
+        "sample_metadata_sha256": "a558689943e6bff915a8d354cdce475af280e215a3e96590121945c6779253ed",
+        "first_day": "2016-05-24",
+        "last_day": "2016-06-01",
+        "sessions_before_train_core": 21802,
+        "split_ratio_before_core": 0.09938460135843552
+      }
+    },
+    "fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad"
+  },
+  "manifest": {
+    "schema_version": 1,
+    "search_version": "t10-search-v1",
+    "search_seed": 2026,
+    "train_seed": 42,
+    "trials_per_model": 12,
+    "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+    "candidate_count_excluding_default": {
+      "GRU4Rec": 53,
+      "NARM": 53,
+      "SASRec": 53
+    },
+    "trials": [
+      {
+        "trial_id": "GRU4Rec-t01",
+        "trial_index": 1,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t02",
+        "trial_index": 2,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.5
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t03",
+        "trial_index": 3,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 256,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t04",
+        "trial_index": 4,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 256,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t05",
+        "trial_index": 5,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t06",
+        "trial_index": 6,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t07",
+        "trial_index": 7,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 256,
+          "num_layers": 1,
+          "dropout_prob": 0.5
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t08",
+        "trial_index": 8,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t09",
+        "trial_index": 9,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t10",
+        "trial_index": 10,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t11",
+        "trial_index": 11,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 128,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t12",
+        "trial_index": 12,
+        "model": "GRU4Rec",
+        "search_seed": 2026,
+        "model_search_seed": 2026,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "NARM-t01",
+        "trial_index": 1,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t02",
+        "trial_index": 2,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 256,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t03",
+        "trial_index": 3,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t04",
+        "trial_index": 4,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t05",
+        "trial_index": 5,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t06",
+        "trial_index": 6,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t07",
+        "trial_index": 7,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t08",
+        "trial_index": 8,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t09",
+        "trial_index": 9,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t10",
+        "trial_index": 10,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t11",
+        "trial_index": 11,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t12",
+        "trial_index": 12,
+        "model": "NARM",
+        "search_seed": 2026,
+        "model_search_seed": 2027,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.25,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "SASRec-t01",
+        "trial_index": 1,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t02",
+        "trial_index": 2,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.5,
+          "attn_dropout_prob": 0.5
+        }
+      },
+      {
+        "trial_id": "SASRec-t03",
+        "trial_index": 3,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t04",
+        "trial_index": 4,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t05",
+        "trial_index": 5,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.5,
+          "attn_dropout_prob": 0.5
+        }
+      },
+      {
+        "trial_id": "SASRec-t06",
+        "trial_index": 6,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t07",
+        "trial_index": 7,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t08",
+        "trial_index": 8,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t09",
+        "trial_index": 9,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t10",
+        "trial_index": 10,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.1,
+          "attn_dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "SASRec-t11",
+        "trial_index": 11,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.1,
+          "attn_dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "SASRec-t12",
+        "trial_index": 12,
+        "model": "SASRec",
+        "search_seed": 2026,
+        "model_search_seed": 2028,
+        "train_seed": 42,
+        "status": "planned",
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      }
+    ],
+    "execution_order": [
+      "GRU4Rec-t01",
+      "NARM-t01",
+      "SASRec-t01",
+      "GRU4Rec-t02",
+      "NARM-t02",
+      "SASRec-t02",
+      "GRU4Rec-t03",
+      "NARM-t03",
+      "SASRec-t03",
+      "GRU4Rec-t04",
+      "NARM-t04",
+      "SASRec-t04",
+      "GRU4Rec-t05",
+      "NARM-t05",
+      "SASRec-t05",
+      "GRU4Rec-t06",
+      "NARM-t06",
+      "SASRec-t06",
+      "GRU4Rec-t07",
+      "NARM-t07",
+      "SASRec-t07",
+      "GRU4Rec-t08",
+      "NARM-t08",
+      "SASRec-t08",
+      "GRU4Rec-t09",
+      "NARM-t09",
+      "SASRec-t09",
+      "GRU4Rec-t10",
+      "NARM-t10",
+      "SASRec-t10",
+      "GRU4Rec-t11",
+      "NARM-t11",
+      "SASRec-t11",
+      "GRU4Rec-t12",
+      "NARM-t12",
+      "SASRec-t12"
+    ],
+    "batch_prefixes": {
+      "week4": 3,
+      "week5_and_6": 6,
+      "week7": 12,
+      "fallback": 8
+    }
+  },
+  "protocol": {
+    "schema_version": 1,
+    "search_version": "t10-search-v1",
+    "status": "frozen_not_trained",
+    "models": [
+      "GRU4Rec",
+      "NARM",
+      "SASRec"
+    ],
+    "budget_unit": "distinct_configurations",
+    "tuning_trials_per_model": 12,
+    "default_runs_counted_in_tuning_budget": false,
+    "fallback_trials_per_model": 8,
+    "fallback_rule": "same first 8 trials of each model; record reason",
+    "search_seed": 2026,
+    "model_search_seed_offsets": {
+      "GRU4Rec": 0,
+      "NARM": 1,
+      "SASRec": 2
+    },
+    "train_seed": 42,
+    "max_epochs": 30,
+    "stopping_step": 5,
+    "early_stopping_semantics": "RecBole 1.2.1: counter > 5; equal best resets counter",
+    "max_train_valid_seconds_per_trial": 5400,
+    "remote_timeout_seconds_per_trial": 7200,
+    "global_compute_budget": {
+      "status": "must_be_set_before_GPU_run",
+      "value": null,
+      "rule": "do not start GPU trials until total budget is set"
+    },
+    "primary_validation_group": "All-seen",
+    "selection_metric": "MRR@20",
+    "tie_break": "lowest trial_index",
+    "test_during_search": false,
+    "test_policy": "select winners on validation after all trials are frozen/completed; then test",
+    "report_metrics": [
+      "HR@10",
+      "HR@20",
+      "MRR@20",
+      "NDCG@20"
+    ],
+    "report_groups": [
+      "All-seen",
+      "Warm",
+      "Long-tail"
+    ],
+    "warm_definition": "target count >10 in training interactions before prefix augmentation",
+    "ranking": "full training catalog; exclude PAD; allow repeat items; ties by internal item ID ascending",
+    "data": {
+      "dataset": "diginetica_w1",
+      "fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+      "atomic_sha256": {
+        "train": "ae2d42fc4c88515d38670dbaa000402baee1a6248a2896092df67cd00e9a7c7c",
+        "valid": "3aee3869ae347a1405bd3f101a861f299f8c0ffb2a8dd88a370dcf06559a1a3e",
+        "test": "7bb4d23567fa9b638162329e0932e0c9bfc4d1c2cc119aa2d816acdd89c3780c"
+      },
+      "candidate_items": 36244,
+      "samples": {
+        "train": 613300,
+        "valid": 65924,
+        "test": 66305
+      },
+      "remote_prepared_dir": "/work/prepared/local-b93fbf33b89e2bc7",
+      "volume": "btl-t10-week1"
+    },
+    "shared_baseline_settings": {
+      "epochs": 30,
+      "seed": 42,
+      "stopping_step": 5,
+      "eval_step": 1,
+      "learner": "adam",
+      "weight_decay": 0.0,
+      "train_batch_size": 2048,
+      "eval_batch_size": 128,
+      "MAX_ITEM_LIST_LENGTH": 50,
+      "valid_metric": "MRR@20",
+      "metrics": [
+        "Hit",
+        "MRR",
+        "NDCG"
+      ],
+      "topk": [
+        10,
+        20
+      ],
+      "eval_args": {
+        "split": {
+          "RS": [
+            0.8,
+            0.1,
+            0.1
+          ]
+        },
+        "order": "TO",
+        "group_by": "none",
+        "mode": {
+          "valid": "full",
+          "test": "full"
+        }
+      },
+      "repeatable": true,
+      "reproducibility": true,
+      "benchmark_filename": [
+        "train",
+        "valid",
+        "test"
+      ],
+      "alias_of_item_id": [
+        "item_id_list"
+      ],
+      "train_neg_sample_args": {
+        "distribution": "none",
+        "sample_num": "none",
+        "alpha": "none",
+        "dynamic": false,
+        "candidate_num": 0
+      }
+    },
+    "recbole_version": "1.2.1",
+    "baseline_config_sha256": {
+      "GRU4Rec": "ec4050ac70dc67aa26820512a774912fe6260df574069b1eb14ecedc5eb3b6ed",
+      "NARM": "5080dc5f9ddc84d2ebe88beb7c1b9b3929be40822dbd91e5d23fa3691c061679",
+      "SASRec": "8a804629d3bd5c029fd9e6ae5f089e203ba33e2617e152a8cc7b246300a535f6"
+    },
+    "derived_parameters": {
+      "SASRec": {
+        "attn_dropout_prob": "hidden_dropout_prob"
+      }
+    },
+    "hyper_file_usage": "parse choices then materialize(model, sampled); vanilla HyperTuning needs this adapter for coupled SASRec dropout",
+    "retry_policy": "preserve failed attempts; no silent replacement of trials; completed trials skipped",
+    "analysis_trial_counts": [
+      1,
+      3,
+      6,
+      12
+    ],
+    "multiple_seeds": "optional separate experiment"
+  },
+  "trials": [
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t01",
+      "Trial_index": 1,
+      "Valid_MRR@20": 0.12884450980744153,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 280.29215000199997,
+      "Worker_seconds": 296.95947959999995,
+      "Overrides": "{\"dropout_prob\": 0.3, \"hidden_size\": 128, \"learning_rate\": 0.0003, \"num_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t01/attempt-001/GRU4Rec-Oct-24-2026_16-13-39.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t02",
+      "Trial_index": 2,
+      "Valid_MRR@20": 0.1678581208381056,
+      "Best_epoch": 28,
+      "Epochs": 30,
+      "Train_valid_seconds": 213.72715496700002,
+      "Worker_seconds": 229.70744612,
+      "Overrides": "{\"dropout_prob\": 0.5, \"hidden_size\": 64, \"learning_rate\": 0.001, \"num_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t02/attempt-001/GRU4Rec-Oct-24-2026_16-30-03.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t03",
+      "Trial_index": 3,
+      "Valid_MRR@20": 0.16046223220860403,
+      "Best_epoch": 12,
+      "Epochs": 18,
+      "Train_valid_seconds": 158.31378411699995,
+      "Worker_seconds": 170.46086885499994,
+      "Overrides": "{\"dropout_prob\": 0.1, \"hidden_size\": 256, \"learning_rate\": 0.001, \"num_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t03/attempt-001/GRU4Rec-Oct-24-2026_16-44-54.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t04",
+      "Trial_index": 4,
+      "Valid_MRR@20": 0.16658162118398143,
+      "Best_epoch": 7,
+      "Epochs": 13,
+      "Train_valid_seconds": 144.72348831800002,
+      "Worker_seconds": 159.26755524099997,
+      "Overrides": "{\"dropout_prob\": 0.1, \"hidden_size\": 256, \"learning_rate\": 0.003, \"num_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t04/attempt-001/GRU4Rec-Oct-24-2026_17-02-03.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t05",
+      "Trial_index": 5,
+      "Valid_MRR@20": 0.1696043341555709,
+      "Best_epoch": 7,
+      "Epochs": 13,
+      "Train_valid_seconds": 111.74507838000001,
+      "Worker_seconds": 129.449567548,
+      "Overrides": "{\"dropout_prob\": 0.1, \"hidden_size\": 128, \"learning_rate\": 0.003, \"num_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t05/attempt-001/GRU4Rec-Oct-24-2026_17-17-14.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t06",
+      "Trial_index": 6,
+      "Valid_MRR@20": 0.13808631907305546,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 500.80513742,
+      "Worker_seconds": 519.831055711,
+      "Overrides": "{\"dropout_prob\": 0.1, \"hidden_size\": 128, \"learning_rate\": 0.0003, \"num_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t06/attempt-001/GRU4Rec-Oct-24-2026_17-31-19.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t07",
+      "Trial_index": 7,
+      "Valid_MRR@20": 0.12460183441025995,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 267.61038872200004,
+      "Worker_seconds": 287.625658317,
+      "Overrides": "{\"dropout_prob\": 0.5, \"hidden_size\": 256, \"learning_rate\": 0.0003, \"num_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t07/attempt-001/GRU4Rec-Oct-24-2026_17-54-33.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t08",
+      "Trial_index": 8,
+      "Valid_MRR@20": 0.16585113407268115,
+      "Best_epoch": 9,
+      "Epochs": 15,
+      "Train_valid_seconds": 138.253720891,
+      "Worker_seconds": 156.94309877299997,
+      "Overrides": "{\"dropout_prob\": 0.1, \"hidden_size\": 64, \"learning_rate\": 0.003, \"num_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t08/attempt-001/GRU4Rec-Oct-24-2026_18-12-19.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t09",
+      "Trial_index": 9,
+      "Valid_MRR@20": 0.1691054880002936,
+      "Best_epoch": 12,
+      "Epochs": 18,
+      "Train_valid_seconds": 158.50105895600007,
+      "Worker_seconds": 172.73207908899997,
+      "Overrides": "{\"dropout_prob\": 0.3, \"hidden_size\": 64, \"learning_rate\": 0.003, \"num_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t09/attempt-001/GRU4Rec-Oct-24-2026_18-30-00.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t10",
+      "Trial_index": 10,
+      "Valid_MRR@20": 0.17111763122569978,
+      "Best_epoch": 9,
+      "Epochs": 15,
+      "Train_valid_seconds": 100.444449945,
+      "Worker_seconds": 111.95416447399998,
+      "Overrides": "{\"dropout_prob\": 0.1, \"hidden_size\": 64, \"learning_rate\": 0.003, \"num_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t10/attempt-001/GRU4Rec-Oct-25-2026_01-53-00.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t11",
+      "Trial_index": 11,
+      "Valid_MRR@20": 0.15769274011119974,
+      "Best_epoch": 15,
+      "Epochs": 21,
+      "Train_valid_seconds": 192.70583129699997,
+      "Worker_seconds": 214.510010248,
+      "Overrides": "{\"dropout_prob\": 0.1, \"hidden_size\": 128, \"learning_rate\": 0.001, \"num_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t11/attempt-001/GRU4Rec-Oct-25-2026_02-05-07.pth"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Trial": "GRU4Rec-t12",
+      "Trial_index": 12,
+      "Valid_MRR@20": 0.1757441402804481,
+      "Best_epoch": 12,
+      "Epochs": 18,
+      "Train_valid_seconds": 141.00246850100007,
+      "Worker_seconds": 154.23298999100007,
+      "Overrides": "{\"dropout_prob\": 0.3, \"hidden_size\": 64, \"learning_rate\": 0.003, \"num_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t12/attempt-001/GRU4Rec-Oct-25-2026_02-15-05.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t01",
+      "Trial_index": 1,
+      "Valid_MRR@20": 0.1704617299348757,
+      "Best_epoch": 17,
+      "Epochs": 23,
+      "Train_valid_seconds": 215.48612445399993,
+      "Worker_seconds": 228.05823636800005,
+      "Overrides": "{\"dropout_probs\": [0.1, 0.1], \"hidden_size\": 128, \"learning_rate\": 0.0003, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t01/attempt-001/NARM-Oct-24-2026_16-18-40.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t02",
+      "Trial_index": 2,
+      "Valid_MRR@20": 0.1782794502833039,
+      "Best_epoch": 7,
+      "Epochs": 13,
+      "Train_valid_seconds": 113.654244812,
+      "Worker_seconds": 125.83915976899999,
+      "Overrides": "{\"dropout_probs\": [0.1, 0.1], \"hidden_size\": 256, \"learning_rate\": 0.001, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t02/attempt-001/NARM-Oct-24-2026_16-33-58.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t03",
+      "Trial_index": 3,
+      "Valid_MRR@20": 0.1266185571358423,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 392.961537778,
+      "Worker_seconds": 411.894718293,
+      "Overrides": "{\"dropout_probs\": [0.5, 0.5], \"hidden_size\": 64, \"learning_rate\": 0.0003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t03/attempt-001/NARM-Oct-24-2026_16-48-08.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t04",
+      "Trial_index": 4,
+      "Valid_MRR@20": 0.16707972298008128,
+      "Best_epoch": 21,
+      "Epochs": 27,
+      "Train_valid_seconds": 268.19823993899996,
+      "Worker_seconds": 288.665098354,
+      "Overrides": "{\"dropout_probs\": [0.1, 0.1], \"hidden_size\": 64, \"learning_rate\": 0.0003, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t04/attempt-001/NARM-Oct-24-2026_17-05-04.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t05",
+      "Trial_index": 5,
+      "Valid_MRR@20": 0.17543242654591082,
+      "Best_epoch": 6,
+      "Epochs": 12,
+      "Train_valid_seconds": 116.29602717700001,
+      "Worker_seconds": 132.685181968,
+      "Overrides": "{\"dropout_probs\": [0.1, 0.1], \"hidden_size\": 128, \"learning_rate\": 0.003, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t05/attempt-001/NARM-Oct-24-2026_17-19-46.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t06",
+      "Trial_index": 6,
+      "Valid_MRR@20": 0.1595851101763786,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 447.72756306199994,
+      "Worker_seconds": 464.1631129020001,
+      "Overrides": "{\"dropout_probs\": [0.5, 0.5], \"hidden_size\": 64, \"learning_rate\": 0.001, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t06/attempt-001/NARM-Oct-24-2026_17-40-10.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t07",
+      "Trial_index": 7,
+      "Valid_MRR@20": 0.17332910398579954,
+      "Best_epoch": 28,
+      "Epochs": 30,
+      "Train_valid_seconds": 278.946880568,
+      "Worker_seconds": 291.647854895,
+      "Overrides": "{\"dropout_probs\": [0.5, 0.5], \"hidden_size\": 128, \"learning_rate\": 0.001, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t07/attempt-001/NARM-Oct-24-2026_17-59-21.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t08",
+      "Trial_index": 8,
+      "Valid_MRR@20": 0.16619451009231326,
+      "Best_epoch": 28,
+      "Epochs": 30,
+      "Train_valid_seconds": 279.257626177,
+      "Worker_seconds": 293.70083841900004,
+      "Overrides": "{\"dropout_probs\": [0.5, 0.5], \"hidden_size\": 64, \"learning_rate\": 0.003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t08/attempt-001/NARM-Oct-24-2026_18-14-59.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t09",
+      "Trial_index": 9,
+      "Valid_MRR@20": 0.1470704902725906,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 298.798332779,
+      "Worker_seconds": 315.61925257900003,
+      "Overrides": "{\"dropout_probs\": [0.5, 0.5], \"hidden_size\": 128, \"learning_rate\": 0.0003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t09/attempt-001/NARM-Oct-24-2026_18-33-02.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t10",
+      "Trial_index": 10,
+      "Valid_MRR@20": 0.1726105493730608,
+      "Best_epoch": 22,
+      "Epochs": 28,
+      "Train_valid_seconds": 246.38683077599995,
+      "Worker_seconds": 257.866420427,
+      "Overrides": "{\"dropout_probs\": [0.5, 0.5], \"hidden_size\": 128, \"learning_rate\": 0.003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t11",
+      "Trial_index": 11,
+      "Valid_MRR@20": 0.17170857617345286,
+      "Best_epoch": 7,
+      "Epochs": 13,
+      "Train_valid_seconds": 129.08539598700003,
+      "Worker_seconds": 142.701875574,
+      "Overrides": "{\"dropout_probs\": [0.1, 0.1], \"hidden_size\": 128, \"learning_rate\": 0.003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t11/attempt-001/NARM-Oct-25-2026_02-08-40.pth"
+    },
+    {
+      "Model": "NARM",
+      "Trial": "NARM-t12",
+      "Trial_index": 12,
+      "Valid_MRR@20": 0.1629900738029467,
+      "Best_epoch": 28,
+      "Epochs": 30,
+      "Train_valid_seconds": 287.45483094400004,
+      "Worker_seconds": 301.36956948099987,
+      "Overrides": "{\"dropout_probs\": [0.25, 0.5], \"hidden_size\": 64, \"learning_rate\": 0.001, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t12/attempt-001/NARM-Oct-25-2026_02-17-45.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t01",
+      "Trial_index": 1,
+      "Valid_MRR@20": 0.18795006183855179,
+      "Best_epoch": 21,
+      "Epochs": 27,
+      "Train_valid_seconds": 426.01227350499994,
+      "Worker_seconds": 436.144174883,
+      "Overrides": "{\"attn_dropout_prob\": 0.3, \"hidden_dropout_prob\": 0.3, \"hidden_size\": 32, \"learning_rate\": 0.001, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t01/attempt-001/SASRec-Oct-24-2026_16-22-34.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t02",
+      "Trial_index": 2,
+      "Valid_MRR@20": 0.1881337468763312,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 497.394973217,
+      "Worker_seconds": 513.987528256,
+      "Overrides": "{\"attn_dropout_prob\": 0.5, \"hidden_dropout_prob\": 0.5, \"hidden_size\": 64, \"learning_rate\": 0.0003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t02/attempt-001/SASRec-Oct-24-2026_16-36-18.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t03",
+      "Trial_index": 3,
+      "Valid_MRR@20": 0.18640563386689932,
+      "Best_epoch": 15,
+      "Epochs": 21,
+      "Train_valid_seconds": 389.828163084,
+      "Worker_seconds": 404.639362319,
+      "Overrides": "{\"attn_dropout_prob\": 0.3, \"hidden_dropout_prob\": 0.3, \"hidden_size\": 64, \"learning_rate\": 0.003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t03/attempt-001/SASRec-Oct-24-2026_16-55-08.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t04",
+      "Trial_index": 4,
+      "Valid_MRR@20": 0.17853787648530983,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 405.51163521700005,
+      "Worker_seconds": 420.321894503,
+      "Overrides": "{\"attn_dropout_prob\": 0.3, \"hidden_dropout_prob\": 0.3, \"hidden_size\": 32, \"learning_rate\": 0.0003, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t04/attempt-001/SASRec-Oct-24-2026_17-09-58.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t05",
+      "Trial_index": 5,
+      "Valid_MRR@20": 0.17619746764552574,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 519.806121275,
+      "Worker_seconds": 532.4078447290001,
+      "Overrides": "{\"attn_dropout_prob\": 0.5, \"hidden_dropout_prob\": 0.5, \"hidden_size\": 32, \"learning_rate\": 0.001, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t06",
+      "Trial_index": 6,
+      "Valid_MRR@20": 0.18529565677098564,
+      "Best_epoch": 7,
+      "Epochs": 13,
+      "Train_valid_seconds": 259.44386444400004,
+      "Worker_seconds": 274.00381526399997,
+      "Overrides": "{\"attn_dropout_prob\": 0.3, \"hidden_dropout_prob\": 0.3, \"hidden_size\": 128, \"learning_rate\": 0.003, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t06/attempt-001/SASRec-Oct-24-2026_17-48-06.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t07",
+      "Trial_index": 7,
+      "Valid_MRR@20": 0.19387440431283023,
+      "Best_epoch": 17,
+      "Epochs": 23,
+      "Train_valid_seconds": 455.08410603899995,
+      "Worker_seconds": 467.57052568100005,
+      "Overrides": "{\"attn_dropout_prob\": 0.3, \"hidden_dropout_prob\": 0.3, \"hidden_size\": 128, \"learning_rate\": 0.0003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t07/attempt-001/SASRec-Oct-24-2026_18-04-19.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t08",
+      "Trial_index": 8,
+      "Valid_MRR@20": 0.19232181887825053,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 574.8752379299999,
+      "Worker_seconds": 593.785964632,
+      "Overrides": "{\"attn_dropout_prob\": 0.3, \"hidden_dropout_prob\": 0.3, \"hidden_size\": 64, \"learning_rate\": 0.0003, \"n_layers\": 2}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t08/attempt-001/SASRec-Oct-24-2026_18-20-04.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t09",
+      "Trial_index": 9,
+      "Valid_MRR@20": 0.18631884813849858,
+      "Best_epoch": 14,
+      "Epochs": 20,
+      "Train_valid_seconds": 216.442423491,
+      "Worker_seconds": 233.520100833,
+      "Overrides": "{\"attn_dropout_prob\": 0.3, \"hidden_dropout_prob\": 0.3, \"hidden_size\": 64, \"learning_rate\": 0.003, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t09/attempt-001/SASRec-Oct-25-2026_01-49-07.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t10",
+      "Trial_index": 10,
+      "Valid_MRR@20": 0.18813454505772975,
+      "Best_epoch": 30,
+      "Epochs": 30,
+      "Train_valid_seconds": 317.08991910199995,
+      "Worker_seconds": 330.4958933319999,
+      "Overrides": "{\"attn_dropout_prob\": 0.1, \"hidden_dropout_prob\": 0.1, \"hidden_size\": 32, \"learning_rate\": 0.0003, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t10/attempt-001/SASRec-Oct-25-2026_01-59-21.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t11",
+      "Trial_index": 11,
+      "Valid_MRR@20": 0.1937140842011068,
+      "Best_epoch": 11,
+      "Epochs": 17,
+      "Train_valid_seconds": 217.61006119899997,
+      "Worker_seconds": 231.15009115499993,
+      "Overrides": "{\"attn_dropout_prob\": 0.1, \"hidden_dropout_prob\": 0.1, \"hidden_size\": 128, \"learning_rate\": 0.0003, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t11/attempt-001/SASRec-Oct-25-2026_02-11-08.pth"
+    },
+    {
+      "Model": "SASRec",
+      "Trial": "SASRec-t12",
+      "Trial_index": 12,
+      "Valid_MRR@20": 0.18729684713557554,
+      "Best_epoch": 28,
+      "Epochs": 30,
+      "Train_valid_seconds": 353.736332148,
+      "Worker_seconds": 371.836776137,
+      "Overrides": "{\"attn_dropout_prob\": 0.3, \"hidden_dropout_prob\": 0.3, \"hidden_size\": 32, \"learning_rate\": 0.001, \"n_layers\": 1}",
+      "Checkpoint": "/work/results/t10_tuning_v1/trials/SASRec/SASRec-t12/attempt-001/SASRec-Oct-25-2026_02-22-57.pth"
+    }
+  ],
+  "comparison": [
+    {
+      "Model": "GRU4Rec",
+      "Variant": "Default",
+      "Group": "All-seen",
+      "N": 66305,
+      "HR@10": 0.3719327350878516,
+      "HR@20": 0.5074428776110399,
+      "MRR@20": 0.1685172698207727,
+      "NDCG@20": 0.24308530517132265,
+      "Valid_MRR@20": 0.16852817347380808,
+      "Best_epoch": 22,
+      "Trial": "default"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Variant": "Default",
+      "Group": "Warm",
+      "N": 54466,
+      "HR@10": 0.41097198252120587,
+      "HR@20": 0.5535012668453714,
+      "MRR@20": 0.18638993558995132,
+      "NDCG@20": 0.2673649941351262,
+      "Valid_MRR@20": 0.16852817347380808,
+      "Best_epoch": 22,
+      "Trial": "default"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Variant": "Default",
+      "Group": "Long-tail",
+      "N": 11839,
+      "HR@10": 0.19233043331362445,
+      "HR@20": 0.29554861052453757,
+      "MRR@20": 0.08629304363747282,
+      "NDCG@20": 0.131385200508553,
+      "Valid_MRR@20": 0.16852817347380808,
+      "Best_epoch": 22,
+      "Trial": "default"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Variant": "Tuned",
+      "Group": "All-seen",
+      "N": 66305,
+      "HR@10": 0.3819168991780409,
+      "HR@20": 0.5148782143126461,
+      "MRR@20": 0.17416848488721073,
+      "NDCG@20": 0.24930157845675177,
+      "Valid_MRR@20": 0.1757441402804481,
+      "Best_epoch": 12,
+      "Trial": "GRU4Rec-t12"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Variant": "Tuned",
+      "Group": "Warm",
+      "N": 54466,
+      "HR@10": 0.41877501560606617,
+      "HR@20": 0.5579627657621268,
+      "MRR@20": 0.19053083736760187,
+      "NDCG@20": 0.27172597997197095,
+      "Valid_MRR@20": 0.1757441402804481,
+      "Best_epoch": 12,
+      "Trial": "GRU4Rec-t12"
+    },
+    {
+      "Model": "GRU4Rec",
+      "Variant": "Tuned",
+      "Group": "Long-tail",
+      "N": 11839,
+      "HR@10": 0.21234901596418618,
+      "HR@20": 0.31666525889010894,
+      "MRR@20": 0.0988925418010548,
+      "NDCG@20": 0.14613683034222097,
+      "Valid_MRR@20": 0.1757441402804481,
+      "Best_epoch": 12,
+      "Trial": "GRU4Rec-t12"
+    },
+    {
+      "Model": "NARM",
+      "Variant": "Default",
+      "Group": "All-seen",
+      "N": 66305,
+      "HR@10": 0.38730110851368676,
+      "HR@20": 0.5242591056481412,
+      "MRR@20": 0.1748322477343754,
+      "NDCG@20": 0.25185801526226304,
+      "Valid_MRR@20": 0.1759902872486421,
+      "Best_epoch": 15,
+      "Trial": "default"
+    },
+    {
+      "Model": "NARM",
+      "Variant": "Default",
+      "Group": "Warm",
+      "N": 54466,
+      "HR@10": 0.4275327727389564,
+      "HR@20": 0.5700804171409687,
+      "MRR@20": 0.19363895848207302,
+      "NDCG@20": 0.27686274050675597,
+      "Valid_MRR@20": 0.1759902872486421,
+      "Best_epoch": 15,
+      "Trial": "default"
+    },
+    {
+      "Model": "NARM",
+      "Variant": "Default",
+      "Group": "Long-tail",
+      "N": 11839,
+      "HR@10": 0.2022130247487119,
+      "HR@20": 0.3134555283385421,
+      "MRR@20": 0.08831089393894494,
+      "NDCG@20": 0.1368223395154462,
+      "Valid_MRR@20": 0.1759902872486421,
+      "Best_epoch": 15,
+      "Trial": "default"
+    },
+    {
+      "Model": "NARM",
+      "Variant": "Tuned",
+      "Group": "All-seen",
+      "N": 66305,
+      "HR@10": 0.38936731769851446,
+      "HR@20": 0.5231732146896916,
+      "MRR@20": 0.1807370283321074,
+      "NDCG@20": 0.256323131976409,
+      "Valid_MRR@20": 0.1782794502833039,
+      "Best_epoch": 7,
+      "Trial": "NARM-t02"
+    },
+    {
+      "Model": "NARM",
+      "Variant": "Tuned",
+      "Group": "Warm",
+      "N": 54466,
+      "HR@10": 0.42676164946939377,
+      "HR@20": 0.5670877244519517,
+      "MRR@20": 0.19729181738375517,
+      "NDCG@20": 0.27911184201623174,
+      "Valid_MRR@20": 0.1782794502833039,
+      "Best_epoch": 7,
+      "Trial": "NARM-t02"
+    },
+    {
+      "Model": "NARM",
+      "Variant": "Tuned",
+      "Group": "Long-tail",
+      "N": 11839,
+      "HR@10": 0.21733254497846102,
+      "HR@20": 0.32114198834361013,
+      "MRR@20": 0.10457576973872605,
+      "NDCG@20": 0.1514823615541622,
+      "Valid_MRR@20": 0.1782794502833039,
+      "Best_epoch": 7,
+      "Trial": "NARM-t02"
+    },
+    {
+      "Model": "SASRec",
+      "Variant": "Default",
+      "Group": "All-seen",
+      "N": 66305,
+      "HR@10": 0.3945856270266194,
+      "HR@20": 0.5352537516024433,
+      "MRR@20": 0.1841646029794733,
+      "NDCG@20": 0.2614638862864484,
+      "Valid_MRR@20": 0.18771273434219443,
+      "Best_epoch": 21,
+      "Trial": "default"
+    },
+    {
+      "Model": "SASRec",
+      "Variant": "Default",
+      "Group": "Warm",
+      "N": 54466,
+      "HR@10": 0.4287628979546873,
+      "HR@20": 0.5753497594829802,
+      "MRR@20": 0.1969381340533105,
+      "NDCG@20": 0.28048746613217795,
+      "Valid_MRR@20": 0.18771273434219443,
+      "Best_epoch": 21,
+      "Trial": "default"
+    },
+    {
+      "Model": "SASRec",
+      "Variant": "Default",
+      "Group": "Long-tail",
+      "N": 11839,
+      "HR@10": 0.23735112762902272,
+      "HR@20": 0.35078976264887235,
+      "MRR@20": 0.1253992390578893,
+      "NDCG@20": 0.17394481373999154,
+      "Valid_MRR@20": 0.18771273434219443,
+      "Best_epoch": 21,
+      "Trial": "default"
+    },
+    {
+      "Model": "SASRec",
+      "Variant": "Tuned",
+      "Group": "All-seen",
+      "N": 66305,
+      "HR@10": 0.41601689163713146,
+      "HR@20": 0.5552974888771586,
+      "MRR@20": 0.19151411971629007,
+      "NDCG@20": 0.27192096531869,
+      "Valid_MRR@20": 0.19387440431283023,
+      "Best_epoch": 17,
+      "Trial": "SASRec-t07"
+    },
+    {
+      "Model": "SASRec",
+      "Variant": "Tuned",
+      "Group": "Warm",
+      "N": 54466,
+      "HR@10": 0.44954650607718577,
+      "HR@20": 0.5930305144493813,
+      "MRR@20": 0.20452754928366923,
+      "NDCG@20": 0.2906574376089768,
+      "Valid_MRR@20": 0.19387440431283023,
+      "Best_epoch": 17,
+      "Trial": "SASRec-t07"
+    },
+    {
+      "Model": "SASRec",
+      "Variant": "Tuned",
+      "Group": "Long-tail",
+      "N": 11839,
+      "HR@10": 0.2617619731396233,
+      "HR@20": 0.38170453585606895,
+      "MRR@20": 0.1316450889859159,
+      "NDCG@20": 0.18572274758384974,
+      "Valid_MRR@20": 0.19387440431283023,
+      "Best_epoch": 17,
+      "Trial": "SASRec-t07"
+    }
+  ],
+  "gains": [
+    {
+      "Model": "GRU4Rec",
+      "Group": "All-seen",
+      "Metric": "HR@10",
+      "Default": 0.3719327350878516,
+      "Tuned": 0.3819168991780409,
+      "Absolute_gain": 0.009984164090189318,
+      "Relative_gain_pct": 2.6844004703783413
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "All-seen",
+      "Metric": "HR@20",
+      "Default": 0.5074428776110399,
+      "Tuned": 0.5148782143126461,
+      "Absolute_gain": 0.007435336701606232,
+      "Relative_gain_pct": 1.4652558996611817
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "All-seen",
+      "Metric": "MRR@20",
+      "Default": 0.1685172698207727,
+      "Tuned": 0.17416848488721073,
+      "Absolute_gain": 0.005651215066438037,
+      "Relative_gain_pct": 3.353493130080028
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "All-seen",
+      "Metric": "NDCG@20",
+      "Default": 0.24308530517132265,
+      "Tuned": 0.24930157845675177,
+      "Absolute_gain": 0.006216273285429119,
+      "Relative_gain_pct": 2.557239435369402
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Warm",
+      "Metric": "HR@10",
+      "Default": 0.41097198252120587,
+      "Tuned": 0.41877501560606617,
+      "Absolute_gain": 0.0078030330848603,
+      "Relative_gain_pct": 1.8986776268763452
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Warm",
+      "Metric": "HR@20",
+      "Default": 0.5535012668453714,
+      "Tuned": 0.5579627657621268,
+      "Absolute_gain": 0.004461498916755402,
+      "Relative_gain_pct": 0.8060503532689811
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Warm",
+      "Metric": "MRR@20",
+      "Default": 0.18638993558995132,
+      "Tuned": 0.19053083736760187,
+      "Absolute_gain": 0.0041409017776505574,
+      "Relative_gain_pct": 2.2216337832533717
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Warm",
+      "Metric": "NDCG@20",
+      "Default": 0.2673649941351262,
+      "Tuned": 0.27172597997197095,
+      "Absolute_gain": 0.004360985836844744,
+      "Relative_gain_pct": 1.6310982860533725
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Long-tail",
+      "Metric": "HR@10",
+      "Default": 0.19233043331362445,
+      "Tuned": 0.21234901596418618,
+      "Absolute_gain": 0.020018582650561723,
+      "Relative_gain_pct": 10.408432147562593
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Long-tail",
+      "Metric": "HR@20",
+      "Default": 0.29554861052453757,
+      "Tuned": 0.31666525889010894,
+      "Absolute_gain": 0.021116648365571367,
+      "Relative_gain_pct": 7.1448985424406795
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Long-tail",
+      "Metric": "MRR@20",
+      "Default": 0.08629304363747282,
+      "Tuned": 0.0988925418010548,
+      "Absolute_gain": 0.012599498163581982,
+      "Relative_gain_pct": 14.600827172713885
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Long-tail",
+      "Metric": "NDCG@20",
+      "Default": 0.131385200508553,
+      "Tuned": 0.14613683034222097,
+      "Absolute_gain": 0.014751629833667956,
+      "Relative_gain_pct": 11.227771298874444
+    },
+    {
+      "Model": "NARM",
+      "Group": "All-seen",
+      "Metric": "HR@10",
+      "Default": 0.38730110851368676,
+      "Tuned": 0.38936731769851446,
+      "Absolute_gain": 0.0020662091848276942,
+      "Relative_gain_pct": 0.5334890965732098
+    },
+    {
+      "Model": "NARM",
+      "Group": "All-seen",
+      "Metric": "HR@20",
+      "Default": 0.5242591056481412,
+      "Tuned": 0.5231732146896916,
+      "Absolute_gain": -0.0010858909584495757,
+      "Relative_gain_pct": -0.20712867869163465
+    },
+    {
+      "Model": "NARM",
+      "Group": "All-seen",
+      "Metric": "MRR@20",
+      "Default": 0.1748322477343754,
+      "Tuned": 0.1807370283321074,
+      "Absolute_gain": 0.005904780597732001,
+      "Relative_gain_pct": 3.3773978623801724
+    },
+    {
+      "Model": "NARM",
+      "Group": "All-seen",
+      "Metric": "NDCG@20",
+      "Default": 0.25185801526226304,
+      "Tuned": 0.256323131976409,
+      "Absolute_gain": 0.004465116714145956,
+      "Relative_gain_pct": 1.772870603104043
+    },
+    {
+      "Model": "NARM",
+      "Group": "Warm",
+      "Metric": "HR@10",
+      "Default": 0.4275327727389564,
+      "Tuned": 0.42676164946939377,
+      "Absolute_gain": -0.0007711232695626347,
+      "Relative_gain_pct": -0.18036588508115803
+    },
+    {
+      "Model": "NARM",
+      "Group": "Warm",
+      "Metric": "HR@20",
+      "Default": 0.5700804171409687,
+      "Tuned": 0.5670877244519517,
+      "Absolute_gain": -0.002992692689017029,
+      "Relative_gain_pct": -0.5249597423510516
+    },
+    {
+      "Model": "NARM",
+      "Group": "Warm",
+      "Metric": "MRR@20",
+      "Default": 0.19363895848207302,
+      "Tuned": 0.19729181738375517,
+      "Absolute_gain": 0.0036528589016821544,
+      "Relative_gain_pct": 1.8864276746356978
+    },
+    {
+      "Model": "NARM",
+      "Group": "Warm",
+      "Metric": "NDCG@20",
+      "Default": 0.27686274050675597,
+      "Tuned": 0.27911184201623174,
+      "Absolute_gain": 0.0022491015094757705,
+      "Relative_gain_pct": 0.8123525416815299
+    },
+    {
+      "Model": "NARM",
+      "Group": "Long-tail",
+      "Metric": "HR@10",
+      "Default": 0.2022130247487119,
+      "Tuned": 0.21733254497846102,
+      "Absolute_gain": 0.015119520229749134,
+      "Relative_gain_pct": 7.477025898078529
+    },
+    {
+      "Model": "NARM",
+      "Group": "Long-tail",
+      "Metric": "HR@20",
+      "Default": 0.3134555283385421,
+      "Tuned": 0.32114198834361013,
+      "Absolute_gain": 0.007686460005068008,
+      "Relative_gain_pct": 2.452169226623555
+    },
+    {
+      "Model": "NARM",
+      "Group": "Long-tail",
+      "Metric": "MRR@20",
+      "Default": 0.08831089393894494,
+      "Tuned": 0.10457576973872605,
+      "Absolute_gain": 0.016264875799781114,
+      "Relative_gain_pct": 18.417745619273294
+    },
+    {
+      "Model": "NARM",
+      "Group": "Long-tail",
+      "Metric": "NDCG@20",
+      "Default": 0.1368223395154462,
+      "Tuned": 0.1514823615541622,
+      "Absolute_gain": 0.014660022038715997,
+      "Relative_gain_pct": 10.714640672447347
+    },
+    {
+      "Model": "SASRec",
+      "Group": "All-seen",
+      "Metric": "HR@10",
+      "Default": 0.3945856270266194,
+      "Tuned": 0.41601689163713146,
+      "Absolute_gain": 0.021431264610512035,
+      "Relative_gain_pct": 5.431334327103163
+    },
+    {
+      "Model": "SASRec",
+      "Group": "All-seen",
+      "Metric": "HR@20",
+      "Default": 0.5352537516024433,
+      "Tuned": 0.5552974888771586,
+      "Absolute_gain": 0.020043737274715312,
+      "Relative_gain_pct": 3.744716821639895
+    },
+    {
+      "Model": "SASRec",
+      "Group": "All-seen",
+      "Metric": "MRR@20",
+      "Default": 0.1841646029794733,
+      "Tuned": 0.19151411971629007,
+      "Absolute_gain": 0.007349516736816775,
+      "Relative_gain_pct": 3.9907325392143576
+    },
+    {
+      "Model": "SASRec",
+      "Group": "All-seen",
+      "Metric": "NDCG@20",
+      "Default": 0.2614638862864484,
+      "Tuned": 0.27192096531869,
+      "Absolute_gain": 0.010457079032241579,
+      "Relative_gain_pct": 3.9994353257586246
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Warm",
+      "Metric": "HR@10",
+      "Default": 0.4287628979546873,
+      "Tuned": 0.44954650607718577,
+      "Absolute_gain": 0.020783608122498465,
+      "Relative_gain_pct": 4.847342953796092
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Warm",
+      "Metric": "HR@20",
+      "Default": 0.5753497594829802,
+      "Tuned": 0.5930305144493813,
+      "Absolute_gain": 0.01768075496640109,
+      "Relative_gain_pct": 3.073044643711912
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Warm",
+      "Metric": "MRR@20",
+      "Default": 0.1969381340533105,
+      "Tuned": 0.20452754928366923,
+      "Absolute_gain": 0.00758941523035872,
+      "Relative_gain_pct": 3.8537052596955603
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Warm",
+      "Metric": "NDCG@20",
+      "Default": 0.28048746613217795,
+      "Tuned": 0.2906574376089768,
+      "Absolute_gain": 0.010169971476798823,
+      "Relative_gain_pct": 3.6258202967280857
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Long-tail",
+      "Metric": "HR@10",
+      "Default": 0.23735112762902272,
+      "Tuned": 0.2617619731396233,
+      "Absolute_gain": 0.024410845510600576,
+      "Relative_gain_pct": 10.284697508896805
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Long-tail",
+      "Metric": "HR@20",
+      "Default": 0.35078976264887235,
+      "Tuned": 0.38170453585606895,
+      "Absolute_gain": 0.0309147732071966,
+      "Relative_gain_pct": 8.812906332771504
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Long-tail",
+      "Metric": "MRR@20",
+      "Default": 0.1253992390578893,
+      "Tuned": 0.1316450889859159,
+      "Absolute_gain": 0.006245849928026598,
+      "Relative_gain_pct": 4.980771793314682
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Long-tail",
+      "Metric": "NDCG@20",
+      "Default": 0.17394481373999154,
+      "Tuned": 0.18572274758384974,
+      "Absolute_gain": 0.011777933843858196,
+      "Relative_gain_pct": 6.771075026970085
+    }
+  ],
+  "curves": [
+    {
+      "Model": "GRU4Rec",
+      "K": 1,
+      "Best_valid_MRR@20": 0.12884450980744153,
+      "Cumulative_completed_worker_seconds": 296.95947959999995,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 2,
+      "Best_valid_MRR@20": 0.1678581208381056,
+      "Cumulative_completed_worker_seconds": 526.6669257199999,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 3,
+      "Best_valid_MRR@20": 0.1678581208381056,
+      "Cumulative_completed_worker_seconds": 697.1277945749998,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 4,
+      "Best_valid_MRR@20": 0.1678581208381056,
+      "Cumulative_completed_worker_seconds": 856.3953498159998,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 5,
+      "Best_valid_MRR@20": 0.1696043341555709,
+      "Cumulative_completed_worker_seconds": 985.8449173639998,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 6,
+      "Best_valid_MRR@20": 0.1696043341555709,
+      "Cumulative_completed_worker_seconds": 1505.6759730749998,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 7,
+      "Best_valid_MRR@20": 0.1696043341555709,
+      "Cumulative_completed_worker_seconds": 1793.3016313919998,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 8,
+      "Best_valid_MRR@20": 0.1696043341555709,
+      "Cumulative_completed_worker_seconds": 1950.2447301649997,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 9,
+      "Best_valid_MRR@20": 0.1696043341555709,
+      "Cumulative_completed_worker_seconds": 2122.976809254,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 10,
+      "Best_valid_MRR@20": 0.17111763122569978,
+      "Cumulative_completed_worker_seconds": 2234.930973728,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 11,
+      "Best_valid_MRR@20": 0.17111763122569978,
+      "Cumulative_completed_worker_seconds": 2449.440983976,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "GRU4Rec",
+      "K": 12,
+      "Best_valid_MRR@20": 0.1757441402804481,
+      "Cumulative_completed_worker_seconds": 2603.673973967,
+      "Default_valid_MRR@20": 0.16852817347380808
+    },
+    {
+      "Model": "NARM",
+      "K": 1,
+      "Best_valid_MRR@20": 0.1704617299348757,
+      "Cumulative_completed_worker_seconds": 228.05823636800005,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 2,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 353.89739613700004,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 3,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 765.7921144300001,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 4,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 1054.4572127840001,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 5,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 1187.1423947520002,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 6,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 1651.3055076540004,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 7,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 1942.9533625490003,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 8,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 2236.654200968,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 9,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 2552.2734535470004,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 10,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 2810.1398739740002,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 11,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 2952.8417495480003,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "NARM",
+      "K": 12,
+      "Best_valid_MRR@20": 0.1782794502833039,
+      "Cumulative_completed_worker_seconds": 3254.211319029,
+      "Default_valid_MRR@20": 0.1759902872486421
+    },
+    {
+      "Model": "SASRec",
+      "K": 1,
+      "Best_valid_MRR@20": 0.18795006183855179,
+      "Cumulative_completed_worker_seconds": 436.144174883,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 2,
+      "Best_valid_MRR@20": 0.1881337468763312,
+      "Cumulative_completed_worker_seconds": 950.131703139,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 3,
+      "Best_valid_MRR@20": 0.1881337468763312,
+      "Cumulative_completed_worker_seconds": 1354.771065458,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 4,
+      "Best_valid_MRR@20": 0.1881337468763312,
+      "Cumulative_completed_worker_seconds": 1775.0929599610001,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 5,
+      "Best_valid_MRR@20": 0.1881337468763312,
+      "Cumulative_completed_worker_seconds": 2307.50080469,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 6,
+      "Best_valid_MRR@20": 0.1881337468763312,
+      "Cumulative_completed_worker_seconds": 2581.504619954,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 7,
+      "Best_valid_MRR@20": 0.19387440431283023,
+      "Cumulative_completed_worker_seconds": 3049.0751456350004,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 8,
+      "Best_valid_MRR@20": 0.19387440431283023,
+      "Cumulative_completed_worker_seconds": 3642.861110267,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 9,
+      "Best_valid_MRR@20": 0.19387440431283023,
+      "Cumulative_completed_worker_seconds": 3876.3812111,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 10,
+      "Best_valid_MRR@20": 0.19387440431283023,
+      "Cumulative_completed_worker_seconds": 4206.877104432,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 11,
+      "Best_valid_MRR@20": 0.19387440431283023,
+      "Cumulative_completed_worker_seconds": 4438.027195587,
+      "Default_valid_MRR@20": 0.18771273434219443
+    },
+    {
+      "Model": "SASRec",
+      "K": 12,
+      "Best_valid_MRR@20": 0.19387440431283023,
+      "Cumulative_completed_worker_seconds": 4809.863971724,
+      "Default_valid_MRR@20": 0.18771273434219443
+    }
+  ],
+  "saturation": [
+    {
+      "Model": "GRU4Rec",
+      "Best_at_1": 0.12884450980744153,
+      "Best_at_3": 0.1678581208381056,
+      "Best_at_6": 0.1696043341555709,
+      "Best_at_12": 0.1757441402804481,
+      "Gain_1_to_3": 0.039013611030664086,
+      "Gain_3_to_6": 0.0017462133174653005,
+      "Gain_6_to_12": 0.00613980612487719,
+      "K_reaching_99pct_of_final_best_posthoc": 12
+    },
+    {
+      "Model": "NARM",
+      "Best_at_1": 0.1704617299348757,
+      "Best_at_3": 0.1782794502833039,
+      "Best_at_6": 0.1782794502833039,
+      "Best_at_12": 0.1782794502833039,
+      "Gain_1_to_3": 0.007817720348428175,
+      "Gain_3_to_6": 0.0,
+      "Gain_6_to_12": 0.0,
+      "K_reaching_99pct_of_final_best_posthoc": 2
+    },
+    {
+      "Model": "SASRec",
+      "Best_at_1": 0.18795006183855179,
+      "Best_at_3": 0.1881337468763312,
+      "Best_at_6": 0.1881337468763312,
+      "Best_at_12": 0.19387440431283023,
+      "Gain_1_to_3": 0.00018368503777940748,
+      "Gain_3_to_6": 0.0,
+      "Gain_6_to_12": 0.0057406574364990415,
+      "K_reaching_99pct_of_final_best_posthoc": 7
+    }
+  ],
+  "ranks": [
+    {
+      "Model": "GRU4Rec",
+      "Group": "All-seen",
+      "Default_rank_MRR20": 3,
+      "Tuned_rank_MRR20": 3,
+      "Rank_change": 0
+    },
+    {
+      "Model": "NARM",
+      "Group": "All-seen",
+      "Default_rank_MRR20": 2,
+      "Tuned_rank_MRR20": 2,
+      "Rank_change": 0
+    },
+    {
+      "Model": "SASRec",
+      "Group": "All-seen",
+      "Default_rank_MRR20": 1,
+      "Tuned_rank_MRR20": 1,
+      "Rank_change": 0
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Warm",
+      "Default_rank_MRR20": 3,
+      "Tuned_rank_MRR20": 3,
+      "Rank_change": 0
+    },
+    {
+      "Model": "NARM",
+      "Group": "Warm",
+      "Default_rank_MRR20": 2,
+      "Tuned_rank_MRR20": 2,
+      "Rank_change": 0
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Warm",
+      "Default_rank_MRR20": 1,
+      "Tuned_rank_MRR20": 1,
+      "Rank_change": 0
+    },
+    {
+      "Model": "GRU4Rec",
+      "Group": "Long-tail",
+      "Default_rank_MRR20": 3,
+      "Tuned_rank_MRR20": 3,
+      "Rank_change": 0
+    },
+    {
+      "Model": "NARM",
+      "Group": "Long-tail",
+      "Default_rank_MRR20": 2,
+      "Tuned_rank_MRR20": 2,
+      "Rank_change": 0
+    },
+    {
+      "Model": "SASRec",
+      "Group": "Long-tail",
+      "Default_rank_MRR20": 1,
+      "Tuned_rank_MRR20": 1,
+      "Rank_change": 0
+    }
+  ],
+  "references": [
+    {
+      "id": 1,
+      "authors": "M. Ferrari Dacrema, P. Cremonesi, D. Jannach",
+      "year": 2019,
+      "title": "Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches",
+      "venue": "RecSys",
+      "url": "https://arxiv.org/abs/1907.06902",
+      "relevance": "Động lực kiểm tra baseline và khả năng tái lập thay vì chỉ so sánh kiến trúc.",
+      "finding": "Khảo sát 18 thuật toán, tái lập được 7; 6 trong số đó thường thua các phương pháp đơn giản."
+    },
+    {
+      "id": 2,
+      "authors": "J. Bergstra, Y. Bengio",
+      "year": 2012,
+      "title": "Random Search for Hyper-Parameter Optimization",
+      "venue": "JMLR 13, pp. 281-305",
+      "url": "https://jmlr.org/papers/v13/bergstra12a.html",
+      "relevance": "Cơ sở dùng random search với số cấu hình cố định.",
+      "finding": "Random search là baseline tối ưu siêu tham số hiệu quả trong các thí nghiệm của tác giả; không bảo đảm 12 trial luôn đủ."
+    },
+    {
+      "id": 3,
+      "authors": "M. Ludewig, N. Mauro, S. Latifi, D. Jannach",
+      "year": 2021,
+      "title": "Empirical Analysis of Session-Based Recommendation Algorithms: A Comparison of Neural and Non-Neural Approaches",
+      "venue": "UMUAI 31, pp. 149-181",
+      "url": "https://doi.org/10.1007/s11257-020-09277-1",
+      "relevance": "Tham khảo benchmark SBR, validation và điều kiện so sánh thống nhất.",
+      "finding": "So sánh 12 thuật toán; phương pháp láng giềng đơn giản cạnh tranh tốt. Ngân sách tuning trong bài không bằng nhau tuyệt đối."
+    },
+    {
+      "id": 4,
+      "authors": "B. Hidasi, A. Karatzoglou, L. Baltrunas, D. Tikk",
+      "year": 2016,
+      "title": "Session-based Recommendations with Recurrent Neural Networks",
+      "venue": "ICLR",
+      "url": "https://arxiv.org/abs/1511.06939",
+      "relevance": "Cơ sở GRU4Rec; phân biệt cấu hình gốc với bản CE của RecBole.",
+      "finding": "RSC15, cấu hình TOP1 1.000 hidden: Recall@20 0,6206; MRR@20 0,2693. Khác dữ liệu/giao thức của BTL."
+    },
+    {
+      "id": 5,
+      "authors": "J. Li, P. Ren, Z. Chen, Z. Ren, T. Lian, J. Ma",
+      "year": 2017,
+      "title": "Neural Attentive Session-based Recommendation",
+      "venue": "CIKM",
+      "url": "https://arxiv.org/abs/1711.04725",
+      "relevance": "Cơ sở GRU kết hợp attention của NARM.",
+      "finding": "Diginetica, NARM công bố Recall@20 62,58% và MRR@20 27,35%; không dùng các số này thay kết quả của nhóm."
+    },
+    {
+      "id": 6,
+      "authors": "W.-C. Kang, J. McAuley",
+      "year": 2018,
+      "title": "Self-Attentive Sequential Recommendation",
+      "venue": "ICDM",
+      "url": "https://arxiv.org/abs/1808.09781",
+      "relevance": "Cơ sở self-attention của SASRec và lưu ý sampled ranking.",
+      "finding": "Bài gốc xếp hạng target với 100 item âm; không so trực tiếp điểm đó với full ranking 36.244 item của BTL."
+    },
+    {
+      "id": 7,
+      "authors": "W. X. Zhao et al.",
+      "year": 2021,
+      "title": "RecBole: Towards a Unified, Comprehensive and Efficient Framework for Recommendation Algorithms",
+      "venue": "CIKM",
+      "url": "https://arxiv.org/abs/2011.01731",
+      "relevance": "Cùng framework để giảm khác biệt triển khai và lưu cấu hình thống nhất.",
+      "finding": "Bài framework mô tả 73 mô hình và 28 bộ dữ liệu; đây không phải một bảng điểm duy nhất cho mọi model."
+    }
+  ],
+  "profile": {
+    "students": [
+      {
+        "name": "Nguyễn Tuấn Anh",
+        "student_id": ""
+      },
+      {
+        "name": "Mai Hoàng Anh",
+        "student_id": ""
+      }
+    ],
+    "class_name": "",
+    "lecturer": ""
+  }
+}

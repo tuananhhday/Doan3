@@ -1,0 +1,15 @@
+{
+  "notebook": "BTL_T10_Tuan1_DenTuan5_Full.ipynb",
+  "target_week": 5,
+  "target_trials_per_model": 6,
+  "total_target_trials": 18,
+  "local_cells_passed": true,
+  "cpu_trial_and_checkpoint_test_passed_models": [
+    "GRU4Rec",
+    "NARM",
+    "SASRec"
+  ],
+  "duplicate_launch_guard_passed": true,
+  "gpu_app_url": "https://modal.com/apps/tuananhnguyen28112005/main/ap-QxtvqzMMzrOcShvJg8thgJ",
+  "gpu_status": "running; see t10_tuning_v1-progress.json for current counts"
+}

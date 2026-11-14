@@ -1,0 +1,14 @@
+{
+  "amends": "protocol.json (khong sua file goc)",
+  "date": "2026-11-07",
+  "written_before": "Viet truoc khi train va cham test 3 lan chay cung tham so duoi day",
+  "reason": "Nhom can diem test cua 3 mo hinh tren cung mot bo tham so, ngoai diem valid da du kien",
+  "changes": [
+    "Chay truoc GRU4Rec-t06, NARM-t01, SASRec-t11 (lr 0.0003, hidden 128, 1 lop, dropout 0.1). Thu tu chay khong anh huong phan tich best-of-k, vi phan tich dung trial_index.",
+    "Cham test them cho 3 lan chay nay, luu rieng tai <ten>__shared_test.json."
+  ],
+  "unchanged": [
+    "Cau hinh thang van chon CHI bang valid MRR@20; stage_winners khong doc diem test cua cac lan chay nay.",
+    "Du lieu, 36 cau hinh, seed, so epoch va cach cham giu nguyen."
+  ]
+}

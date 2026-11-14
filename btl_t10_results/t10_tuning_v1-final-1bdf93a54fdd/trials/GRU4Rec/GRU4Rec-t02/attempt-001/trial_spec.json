@@ -1,0 +1,21 @@
+{
+  "trial": {
+    "trial_id": "GRU4Rec-t02",
+    "trial_index": 2,
+    "model": "GRU4Rec",
+    "search_seed": 2026,
+    "model_search_seed": 2026,
+    "train_seed": 42,
+    "status": "planned",
+    "overrides": {
+      "learning_rate": 0.001,
+      "hidden_size": 64,
+      "num_layers": 1,
+      "dropout_prob": 0.5
+    }
+  },
+  "fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+  "epochs": 30,
+  "smoke": false,
+  "max_train_seconds": 5400
+}

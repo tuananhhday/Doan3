@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3 mô hình trên Diginetica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<style>
+:root{color-scheme:light;--ink:#14213D;--soft:#36425A;--muted:#4A5568;--bg:#FAFAF7;--panel:#EEF1F7;--line:#DDE1E8;--accent:#3D4FB5;--warn-bg:#FFF4E5;--warn-line:#E8C48A;--night:#14213D;--night-soft:#C9D2E3}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0E1730;overflow:hidden;font-family:'Be Vietnam Pro',Arial,sans-serif;color:var(--ink)}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:center center}
+.slide{position:absolute;inset:0;width:1280px;height:720px;background:var(--bg);padding:44px 64px 74px;display:none;flex-direction:column;gap:18px;overflow:hidden}
+.slide.on{display:flex}
+.eyebrow{font-size:17px;font-weight:600;color:var(--accent)}
+h1{font-size:62px;line-height:1.12;font-weight:700}
+h2{font-size:38px;line-height:1.18;font-weight:700}
+h3{font-size:20px;font-weight:700;line-height:1.25}
+p{font-size:18px;line-height:1.42;color:var(--soft)}
+.head{display:flex;flex-direction:column;gap:6px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;display:flex;flex-direction:column;gap:4px}
+.card.fill{background:var(--panel);border-color:var(--panel)}
+.card.warn{background:var(--warn-bg);border-color:var(--warn-line)}
+.num{font-size:34px;font-weight:700;line-height:1.15;color:var(--ink)}
+.lbl{font-size:15.5px;color:var(--muted);line-height:1.32}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{text-align:left;font-weight:700;color:var(--ink);border-bottom:2px solid var(--ink);padding:7px 10px}
+td{padding:7px 10px;border-bottom:1px solid var(--line);color:var(--soft);line-height:1.32;vertical-align:top}
+.r{text-align:right;font-variant-numeric:tabular-nums}
+tr.top td{color:var(--ink);font-weight:600}
+tr.floor td{color:var(--muted);font-style:italic}
+tr.alert{background:var(--warn-bg)}
+tr.chg{background:var(--panel)}
+.key{background:var(--panel);border-radius:10px;padding:10px 18px;font-size:17.5px;line-height:1.4;color:var(--ink);margin-top:auto}
+.key b{font-weight:700}
+.src{position:absolute;left:64px;right:64px;bottom:20px;font-size:13px;line-height:1.3;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;display:flex;flex-direction:column;gap:4px}
+.step .n{font-size:15px;font-weight:700;color:var(--accent)}
+.step p{font-size:16.5px}
+.split{display:flex;gap:3px;height:62px;border-radius:10px;overflow:hidden}
+.split div{display:flex;align-items:center;padding:0 14px;font-size:16px;font-weight:600;white-space:nowrap}
+.s-tr{background:#2a78d6;color:#fff;flex:80.1}.s-va{background:#14213D;color:#fff;flex:9.9}.s-te{background:#DDE1E8;color:#14213D;flex:9.9}
+.dark{background:var(--night)!important}.dark h1,.dark h2{color:#F4F2EA}.dark p{color:var(--night-soft)}.dark .eyebrow{color:#A9C1F5}
+#nav{position:fixed;right:14px;bottom:10px;display:flex;align-items:center;gap:8px;color:#fff;font-size:14px;z-index:5}
+#nav button{background:#2A3A63;color:#fff;border:0;border-radius:6px;padding:7px 12px;font:inherit;cursor:pointer}
+#nav button:hover{background:#3D4FB5}
+@media print{html,body{overflow:visible;background:#fff;height:auto}#nav{display:none}#stage{position:static;transform:none!important;width:auto;height:auto}.slide{display:flex;position:relative;page-break-after:always}}
+@page{size:1280px 720px;margin:0}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<section class="slide dark" style="justify-content:space-between">
+  <p class="eyebrow">Bài tập lớn BTL-T10 · Gợi ý theo phiên</p>
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <h1>So sánh GRU4Rec, NARM và SASRec trên Diginetica</h1>
+    <p style="font-size:24px">Dữ liệu, tiền xử lý, chia tập, kết quả mặc định và sau tinh chỉnh</p>
+  </div>
+  <div>
+    <p style="font-weight:600;color:#F4F2EA">Nguyễn Tuấn Anh · Mai Hoàng Anh</p>
+    <p style="font-size:16px">Giảng viên: PGS.TS. Nguyễn Văn Hậu · Khoa CNTT, ĐH SPKT Hưng Yên · Tháng 11/2026</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">1. Giới thiệu bộ dữ liệu</p><h2>Diginetica: lượt xem sản phẩm trên sàn thương mại điện tử</h2></div>
+  <div class="grid g4">
+    <div class="card"><span class="num">1.235.380</span><span class="lbl">lượt xem sản phẩm</span></div>
+    <div class="card"><span class="num">310.324</span><span class="lbl">phiên truy cập</span></div>
+    <div class="card"><span class="num">122.993</span><span class="lbl">sản phẩm</span></div>
+    <div class="card"><span class="num">152 ngày</span><span class="lbl">từ 01/01 đến 01/06/2016</span></div>
+  </div>
+  <table>
+    <tr><th style="width:18%">Cột</th><th style="width:38%">Ý nghĩa</th><th>Có dùng không?</th></tr>
+    <tr><td>sessionId</td><td>Mã phiên truy cập</td><td>Dùng: gom lượt xem thành phiên</td></tr>
+    <tr><td>itemId</td><td>Mã sản phẩm được xem</td><td>Dùng: đầu vào và đáp án của mô hình</td></tr>
+    <tr><td>timeframe</td><td>Thời điểm xem trong phiên</td><td>Dùng: sắp đúng thứ tự xem</td></tr>
+    <tr><td>eventdate</td><td>Ngày xem</td><td>Dùng: chia tập theo thời gian</td></tr>
+    <tr><td>userId</td><td>Mã người dùng, chỉ khoảng 30% có</td><td>Bỏ: bài toán là khách ẩn danh</td></tr>
+    <tr><td>categoryId</td><td>Nhóm hàng của sản phẩm</td><td>Chỉ kiểm tra độ phủ, không đưa vào mô hình</td></tr>
+  </table>
+  <div class="key"><b>Ý chính:</b> mô hình nhìn vài sản phẩm khách vừa xem rồi xếp hạng toàn bộ sản phẩm để đoán món tiếp theo.</div>
+  <p class="src">Nguồn: CIKM Cup 2016, Track 2. Thống kê do nhóm tự đo trên file gốc đã kiểm tra SHA-256.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">2. Các vấn đề của dữ liệu</p><h2>Năm vấn đề chính và cách xử lý</h2></div>
+  <table>
+    <tr><th style="width:27%">Vấn đề</th><th style="width:33%">Số liệu</th><th>Cách xử lý</th></tr>
+    <tr class="alert"><td><b>Lượt xem bị xáo thứ tự</b></td><td>58,2% phiên không theo thời gian</td><td>Sắp lại theo thời điểm xem</td></tr>
+    <tr><td><b>Phiên chỉ có 1 sản phẩm</b></td><td>29,2% phiên</td><td>Bỏ, vì không có món tiếp theo để đoán</td></tr>
+    <tr><td><b>Sản phẩm hiếm khi được xem</b></td><td>63,8% sản phẩm dưới 5 lượt xem; 1% phổ biến nhất chiếm 21,6% lượt xem</td><td>Lọc dưới 5 lần, chỉ dựa trên train; báo cáo riêng nhóm ít gặp</td></tr>
+    <tr><td><b>Sản phẩm mới xuất hiện</b></td><td>Khoảng 24% vị trí của test có đáp án chưa có trong train</td><td>Bỏ các mẫu đó, vì đề T10 chỉ xét sản phẩm quen</td></tr>
+    <tr><td><b>Lượng truy cập không đều</b></td><td>Tháng 1 chỉ có 0,8% số phiên; 4 ngày sụt bất thường</td><td>Giữ nguyên, chia tập theo ngày và ghi rõ trong báo cáo</td></tr>
+  </table>
+  <div class="key"><b>Ý chính:</b> xáo thứ tự là lỗi lớn nhất, vì mô hình học từ thứ tự xem. Nếu không sửa, nó sẽ học sai "xem A rồi mới xem B".</div>
+  <p class="src">Nguồn: nhóm tự đo trong BTL_T10.ipynb, phần 2 và phần 6.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">3. Tiền xử lý</p><h2>Từ 310.324 phiên còn 219.370 phiên sạch</h2></div>
+  <div class="steps">
+    <div class="step"><span class="n">Bước 1</span><h3>Kiểm tra file</h3><p>Khớp SHA-256; không có dòng lỗi và không có dòng trùng.</p></div>
+    <div class="step"><span class="n">Bước 2</span><h3>Bỏ userId</h3><p>Đề cấm dùng thông tin định danh người dùng.</p></div>
+    <div class="step"><span class="n">Bước 3</span><h3>Sửa thứ tự</h3><p>Sắp lượt xem trong mỗi phiên theo thời gian.</p></div>
+    <div class="step"><span class="n">Bước 4</span><h3>Bỏ phiên lỗi</h3><p>Bỏ 260 phiên kéo dài nhiều ngày và 90.694 phiên quá ngắn.</p></div>
+    <div class="step"><span class="n">Bước 5</span><h3>Lọc sản phẩm</h3><p>Giữ sản phẩm có ít nhất 5 lần xem trong train: còn 36.244 sản phẩm.</p></div>
+    <div class="step"><span class="n">Bước 6</span><h3>Tạo mẫu</h3><p>Mỗi vị trí thành một mẫu: A B → C, prefix tối đa 50.</p></div>
+  </div>
+  <div class="card fill"><h3>Kiểm chứng dữ liệu</h3><p style="font-size:16.5px">Làm lại đúng cách của SR-GNN cho ra 982.961 lượt xem, 43.097 sản phẩm, 719.470 mẫu train và 60.858 mẫu test, khớp số công bố. Nhóm không dùng cách này vì nó lọc sản phẩm dựa cả trên tập test.</p></div>
+  <div class="key"><b>Ý chính:</b> dữ liệu sau xử lý còn 1.142.593 lượt xem. Mọi quyết định lọc sản phẩm chỉ dựa trên train, nên không nhìn trước tương lai.</div>
+  <p class="src">Nguồn: BTL_T10.ipynb, phần 3–6; btl_t10_results/data_report.json.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">4. Chia train / valid / test</p><h2>Chia theo thời gian: học từ quá khứ, chấm trên tương lai</h2></div>
+  <div class="split" role="img" aria-label="Train 80,1%, valid 9,9%, test 9,9% số phiên, theo thứ tự thời gian">
+    <div class="s-tr">Train 80,1% số phiên · 01/01 đến 12/05/2016</div><div class="s-va">Valid 9,9%</div><div class="s-te">Test 9,9%</div>
+  </div>
+  <table>
+    <tr><th style="width:11%">Tập</th><th style="width:21%">Thời gian</th><th class="r" style="width:12%">Số phiên</th><th class="r" style="width:12%">Số mẫu</th><th>Dùng để</th></tr>
+    <tr><td><b>Train</b></td><td>01/01 – 12/05/2016</td><td class="r">175.802</td><td class="r">613.300</td><td>Học tham số mô hình</td></tr>
+    <tr><td><b>Valid</b></td><td>13/05 – 23/05/2016</td><td class="r">21.766</td><td class="r">65.924</td><td>Chọn epoch và cấu hình tốt nhất</td></tr>
+    <tr><td><b>Test</b></td><td>24/05 – 01/06/2016</td><td class="r">21.802</td><td class="r">66.305</td><td>Chấm điểm cuối cùng, một lần</td></tr>
+  </table>
+  <div class="grid g2">
+    <div class="card fill"><h3>Chia theo ngày</h3><p style="font-size:16.5px">Mã phiên không tăng theo thời gian, nên nhóm chia theo nguyên ngày. Không phiên nào nằm ở 2 tập.</p></div>
+    <div class="card fill"><h3>Trong 66.305 mẫu test</h3><p style="font-size:16.5px">54.466 mẫu (82%) là sản phẩm quen và 11.839 mẫu (18%) là sản phẩm ít gặp.</p></div>
+  </div>
+  <div class="key"><b>Ý chính:</b> tập test nằm sau cùng về thời gian và chỉ dùng để chấm một lần, nên điểm test là điểm khách quan.</div>
+  <p class="src">Nguồn: btl_t10_results/data_report.json. Số phiên tính trước khi lọc sản phẩm trên train; số mẫu tính sau khi lọc.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">5. Kết quả trên tập test · Tham số mặc định của RecBole</p><h2>SASRec cao nhất cả 4 chỉ số, nhưng train lâu nhất</h2></div>
+  <table>
+    <tr><th style="width:25%">Mô hình</th><th class="r">HR@10</th><th class="r">HR@20</th><th class="r">MRR@20</th><th class="r">NDCG@20</th><th class="r">Epoch tốt nhất</th><th class="r">Thời gian train</th></tr>
+    <tr class="top"><td>SASRec</td><td class="r">0,3969</td><td class="r">0,5349</td><td class="r">0,1843</td><td class="r">0,2615</td><td class="r">28 / 30</td><td class="r">8,8 phút</td></tr>
+    <tr><td>NARM</td><td class="r">0,3897</td><td class="r">0,5271</td><td class="r">0,1762</td><td class="r">0,2536</td><td class="r">12 / 18</td><td class="r">2,2 phút</td></tr>
+    <tr><td>GRU4Rec</td><td class="r">0,3687</td><td class="r">0,5027</td><td class="r">0,1660</td><td class="r">0,2401</td><td class="r">27 / 30</td><td class="r">2,8 phút</td></tr>
+    <tr class="floor"><td>Pop (gợi ý hàng phổ biến)</td><td class="r">0,0066</td><td class="r">0,0099</td><td class="r">0,0022</td><td class="r">0,0038</td><td class="r">Không train</td><td class="r">Không train</td></tr>
+  </table>
+  <div class="grid g3">
+    <div class="card fill"><h3>Tham số mặc định</h3><p style="font-size:16.5px">lr 0,001 cho cả 3. GRU4Rec, NARM: hidden 128, 1 lớp. SASRec: hidden 64, 2 lớp.</p></div>
+    <div class="card fill"><h3>Cách train</h3><p style="font-size:16.5px">RecBole 1.2.1, tối đa 30 epoch, dừng sau 5 epoch không tăng, seed 42, GPU H100.</p></div>
+    <div class="card fill"><h3>Cách chấm</h3><p style="font-size:16.5px">Xếp hạng toàn bộ 36.244 sản phẩm trên 66.305 mẫu test, không lấy mẫu.</p></div>
+  </div>
+  <div class="key"><b>Ý chính:</b> với SASRec, khoảng 53% số lần sản phẩm đúng nằm trong 20 gợi ý đầu. Cả 3 mô hình đều vượt xa cách gợi ý hàng phổ biến.</div>
+  <p class="src">Nguồn: btl_t10_results/t10_v2/jobs/default-*.json. "Epoch tốt nhất" ghi epoch tốt nhất / số epoch đã chạy.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">6. Sau tinh chỉnh · Tập test · 12 cấu hình cho mỗi mô hình</p><h2>Cả 3 mô hình đều tăng MRR@20, thứ hạng không đổi</h2></div>
+  <table style="font-size:16px">
+    <tr><th style="width:15%">Mô hình</th><th style="width:15%">Phiên bản</th><th class="r">HR@10</th><th class="r">HR@20</th><th class="r">MRR@20</th><th class="r">NDCG@20</th><th class="r">Thời gian train</th></tr>
+    <tr class="top"><td>SASRec</td><td>Tinh chỉnh</td><td class="r">0,4158</td><td class="r">0,5540</td><td class="r">0,1916</td><td class="r">0,2717</td><td class="r">11,7 phút</td></tr>
+    <tr><td></td><td>Mặc định</td><td class="r">0,3969</td><td class="r">0,5349</td><td class="r">0,1843</td><td class="r">0,2615</td><td class="r">8,8 phút</td></tr>
+    <tr class="chg"><td></td><td>Thay đổi</td><td class="r">+4,8%</td><td class="r">+3,6%</td><td class="r">+4,0%</td><td class="r">+3,9%</td><td></td></tr>
+    <tr class="top"><td>NARM</td><td>Tinh chỉnh</td><td class="r">0,3886</td><td class="r">0,5232</td><td class="r">0,1799</td><td class="r">0,2556</td><td class="r">1,8 phút</td></tr>
+    <tr><td></td><td>Mặc định</td><td class="r">0,3897</td><td class="r">0,5271</td><td class="r">0,1762</td><td class="r">0,2536</td><td class="r">2,2 phút</td></tr>
+    <tr class="chg"><td></td><td>Thay đổi</td><td class="r">−0,3%</td><td class="r">−0,7%</td><td class="r">+2,1%</td><td class="r">+0,8%</td><td></td></tr>
+    <tr class="top"><td>GRU4Rec</td><td>Tinh chỉnh</td><td class="r">0,3837</td><td class="r">0,5170</td><td class="r">0,1753</td><td class="r">0,2507</td><td class="r">1,6 phút</td></tr>
+    <tr><td></td><td>Mặc định</td><td class="r">0,3687</td><td class="r">0,5027</td><td class="r">0,1660</td><td class="r">0,2401</td><td class="r">2,8 phút</td></tr>
+    <tr class="chg"><td></td><td>Thay đổi</td><td class="r">+4,1%</td><td class="r">+2,8%</td><td class="r">+5,6%</td><td class="r">+4,4%</td><td></td></tr>
+  </table>
+  <div class="key"><b>Ý chính:</b> mức tăng MRR@20 là thật: khoảng tin cậy 95% của cả 3 mô hình đều không chứa 0. NARM tăng MRR@20 nhưng giảm nhẹ HR, vì cấu hình được chọn theo MRR@20.</div>
+  <p class="src">Thời gian là của một lần train cấu hình đó. Khoảng tin cậy mức tăng: GRU4Rec 0,0077–0,0111; NARM 0,0022–0,0053; SASRec 0,0065–0,0082 (bootstrap ghép cặp 2.000 lần). Cả thí nghiệm mất khoảng 2,9 giờ GPU.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">7. Cùng một bộ tham số · lr 0,0003, hidden 128, 1 lớp, dropout 0,1 · Tập valid</p><h2>Cùng tham số, SASRec cách GRU4Rec tới 43%</h2></div>
+  <table>
+    <tr><th style="width:25%">Mô hình</th><th class="r">HR@10</th><th class="r">HR@20</th><th class="r">MRR@20</th><th class="r">NDCG@20</th><th class="r">Dừng ở epoch</th><th class="r">Thời gian train</th></tr>
+    <tr class="top"><td>SASRec</td><td class="r">0,4134</td><td class="r">0,5524</td><td class="r">0,1940</td><td class="r">0,2731</td><td class="r">17</td><td class="r">4,9 phút</td></tr>
+    <tr><td>NARM</td><td class="r">0,3736</td><td class="r">0,5051</td><td class="r">0,1728</td><td class="r">0,2460</td><td class="r">23</td><td class="r">2,9 phút</td></tr>
+    <tr class="alert"><td>GRU4Rec (chưa học xong)</td><td class="r">0,3206</td><td class="r">0,4556</td><td class="r">0,1355</td><td class="r">0,2055</td><td class="r">30</td><td class="r">2,9 phút</td></tr>
+  </table>
+  <div class="grid g2">
+    <div class="card warn"><h3>Vì sao chưa kết luận được?</h3><p style="font-size:17px">GRU4Rec chạm giới hạn 30 epoch khi điểm vẫn tăng: thêm 0,0079 trong 5 epoch cuối. Learning rate nhỏ hợp với SASRec nhưng làm GRU4Rec học chậm.</p></div>
+    <div class="card fill"><h3>So với cấu hình tốt nhất của mỗi mô hình</h3><p style="font-size:17px">Khi mỗi mô hình dùng cấu hình tốt nhất, valid MRR@20 là 0,1945, 0,1786 và 0,1751: khoảng cách SASRec và GRU4Rec chỉ còn 11%.</p></div>
+  </div>
+  <div class="key"><b>Ý chính:</b> cùng tham số chưa chắc đã công bằng. Để so sánh công bằng, mọi mô hình cần cùng ngân sách tinh chỉnh.</div>
+  <p class="src">Nguồn: GRU4Rec-t06, NARM-t01, SASRec-t11, là bộ duy nhất trùng cả 4 tham số trong 36 lần chạy; tham số kiến trúc khác giữ mặc định. Điểm valid, vì giao thức chỉ chấm test cho cấu hình thắng.</p>
+</section>
+
+<section class="slide dark">
+  <div class="head"><p class="eyebrow">Kết luận</p><h2>Công bằng cần cùng ngân sách tinh chỉnh, không chỉ cùng tham số</h2></div>
+  <div class="grid g3">
+    <div class="card" style="background:#1F2E52;border-color:#33456F"><h3 style="color:#F4F2EA">Tinh chỉnh có ích</h3><p style="font-size:17px">MRR@20 tăng từ 2,1% đến 5,6% với 12 cấu hình cho mỗi mô hình.</p></div>
+    <div class="card" style="background:#1F2E52;border-color:#33456F"><h3 style="color:#F4F2EA">Thứ hạng không đổi</h3><p style="font-size:17px">SASRec &gt; NARM &gt; GRU4Rec, trước và sau tinh chỉnh; bài CORE (SIGIR 2022) cũng có cùng thứ tự trên Diginetica.</p></div>
+    <div class="card" style="background:#1F2E52;border-color:#33456F"><h3 style="color:#F4F2EA">So sánh lệch gây sai</h3><p style="font-size:17px">Chỉ tinh chỉnh NARM rồi so với GRU4Rec mặc định làm khoảng cách lớn gấp 3 lần (0,0140 so với 0,0046).</p></div>
+  </div>
+  <div class="card" style="background:#1F2E52;border-color:#33456F">
+    <h3 style="color:#F4F2EA">Hạn chế</h3>
+    <p style="font-size:17px">Chỉ chạy seed 42. 12/36 cấu hình bị cắt ở epoch 30 khi còn tăng, chủ yếu với learning rate nhỏ. Cùng 12 lần thử, SASRec tốn gấp 3,6 lần thời gian GPU của GRU4Rec. Kết quả thuộc bản cài đặt RecBole 1.2.1.</p>
+  </div>
+  <p class="src" style="color:#C9D2E3">Tham khảo: Hidasi et al. 2016; Li et al. 2017; Kang &amp; McAuley 2018; Zhao et al. 2021; Bergstra &amp; Bengio 2012; Ferrari Dacrema et al. 2019; Hou et al. 2022.</p>
+</section>
+
+</div>
+<div id="nav"><button id="prev" aria-label="Slide trước">◀</button><span id="count"></span><button id="next" aria-label="Slide sau">▶</button><button id="full">Toàn màn hình</button></div>
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var stage=document.getElementById('stage'),count=document.getElementById('count'),i=0;
+  function read(){var n=parseInt(location.hash.slice(1),10);return n>=1&&n<=slides.length?n-1:0}
+  function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach(function(s,k){s.classList.toggle('on',k===i)});count.textContent=(i+1)+' / '+slides.length;try{history.replaceState(null,'','#'+(i+1))}catch(e){}}
+  function fit(){var s=Math.min(innerWidth/1280,innerHeight/720);stage.style.transform='translate(-50%,-50%) scale('+s+')'}
+  addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' '].indexOf(e.key)>=0){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp'].indexOf(e.key)>=0){e.preventDefault();show(i-1)}if(e.key==='Home')show(0);if(e.key==='End')show(slides.length-1)});
+  document.getElementById('next').onclick=function(){show(i+1)};
+  document.getElementById('prev').onclick=function(){show(i-1)};
+  document.getElementById('full').onclick=function(){if(document.fullscreenElement){document.exitFullscreen()}else if(document.documentElement.requestFullscreen){document.documentElement.requestFullscreen()}};
+  addEventListener('resize',fit);addEventListener('hashchange',function(){show(read())});
+  fit();show(read());
+})();
+</script>
+</body>
+</html>

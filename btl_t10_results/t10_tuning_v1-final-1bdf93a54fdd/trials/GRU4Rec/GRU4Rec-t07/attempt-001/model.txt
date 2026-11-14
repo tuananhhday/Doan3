@@ -1,0 +1,8 @@
+GRU4Rec(
+  (item_embedding): Embedding(36245, 64, padding_idx=0)
+  (emb_dropout): Dropout(p=0.5, inplace=False)
+  (gru_layers): GRU(64, 256, bias=False, batch_first=True)
+  (dense): Linear(in_features=256, out_features=64, bias=True)
+  (loss_fct): CrossEntropyLoss()
+)[1;34m
+Trainable parameters[0m: 2581888

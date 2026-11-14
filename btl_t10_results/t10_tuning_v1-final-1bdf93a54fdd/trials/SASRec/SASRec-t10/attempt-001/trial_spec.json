@@ -1,0 +1,22 @@
+{
+  "trial": {
+    "trial_id": "SASRec-t10",
+    "trial_index": 10,
+    "model": "SASRec",
+    "search_seed": 2026,
+    "model_search_seed": 2028,
+    "train_seed": 42,
+    "status": "planned",
+    "overrides": {
+      "learning_rate": 0.0003,
+      "hidden_size": 32,
+      "n_layers": 1,
+      "hidden_dropout_prob": 0.1,
+      "attn_dropout_prob": 0.1
+    }
+  },
+  "fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+  "epochs": 30,
+  "smoke": false,
+  "max_train_seconds": 5400
+}

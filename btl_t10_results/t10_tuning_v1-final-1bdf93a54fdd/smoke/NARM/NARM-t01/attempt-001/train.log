@@ -1,0 +1,7 @@
+2026-10-24 16:12:40,229 INFO [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[64][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'none', 'sample_num': 'none', 'alpha': 'none', 'dynamic': False, 'candidate_num': 0}][0m
+2026-10-24 16:12:40,229 INFO [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[128][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'TO', 'group_by': 'none', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+2026-10-24 16:12:40,477 INFO [1;32mepoch 0 training[0m [[1;34mtime[0m: 0.07s, [1;34mtrain loss[0m: 41.9921]
+2026-10-24 16:12:40,481 INFO [1;32mepoch 0 evaluating[0m [[1;34mtime[0m: 0.00s, [1;34mvalid_score[0m: 0.001116]
+2026-10-24 16:12:40,481 INFO [1;34mvalid result[0m: 
+hit@10 : 0.0078125    hit@20 : 0.0078125    mrr@20 : 0.0011160714285714285    ndcg@20 : 0.0026041666666666665
+2026-10-24 16:12:40,530 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/smoke/NARM/NARM-t01/attempt-001/NARM-Oct-24-2026_16-12-40.pth

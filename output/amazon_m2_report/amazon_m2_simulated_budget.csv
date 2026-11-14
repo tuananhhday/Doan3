@@ -1,0 +1,13 @@
+data_status,model,budget,best_validation_MRR@20
+simulated,GRU4Rec,1,0.1990
+simulated,GRU4Rec,3,0.2040
+simulated,GRU4Rec,6,0.2080
+simulated,GRU4Rec,12,0.2100
+simulated,NARM,1,0.2110
+simulated,NARM,3,0.2180
+simulated,NARM,6,0.2220
+simulated,NARM,12,0.2250
+simulated,SASRec,1,0.2080
+simulated,SASRec,3,0.2240
+simulated,SASRec,6,0.2330
+simulated,SASRec,12,0.2390

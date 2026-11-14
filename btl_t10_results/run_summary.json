@@ -1,0 +1,174 @@
+{
+  "results": [
+    {
+      "model": "GRU4Rec",
+      "smoke": false,
+      "seed": 42,
+      "max_epochs": 30,
+      "epochs_completed": 28,
+      "best_epoch": 22,
+      "best_valid_mrr20": 0.16852817347380808,
+      "stop_reason": "early_stopping",
+      "max_train_seconds": 5400,
+      "train_valid_seconds": 215.540210579,
+      "test_seconds": 0.9557749909999984,
+      "test": {
+        "All-seen": {
+          "n": 66305,
+          "hit@10": 0.3719327350878516,
+          "hit@20": 0.5074428776110399,
+          "mrr@20": 0.1685172698207727,
+          "ndcg@20": 0.24308530517132265
+        },
+        "Warm": {
+          "n": 54466,
+          "hit@10": 0.41097198252120587,
+          "hit@20": 0.5535012668453714,
+          "mrr@20": 0.18638993558995132,
+          "ndcg@20": 0.2673649941351262
+        },
+        "Long-tail": {
+          "n": 11839,
+          "hit@10": 0.19233043331362445,
+          "hit@20": 0.29554861052453757,
+          "mrr@20": 0.08629304363747282,
+          "ndcg@20": 0.131385200508553
+        }
+      },
+      "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+      "candidate_items": 36244,
+      "tie_policy": "score desc, internal item ID asc",
+      "run_dir": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/GRU4Rec",
+      "checkpoint": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/GRU4Rec/GRU4Rec-Oct-24-2026_06-17-47.pth",
+      "environment": {
+        "recbole": "1.2.1",
+        "torch": "2.5.1+cu124",
+        "numpy": "1.23.5",
+        "pandas": "1.5.3",
+        "scipy": "1.10.1",
+        "python": "3.10.17",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "cuda": "12.4",
+        "gpu_count": 1,
+        "protocol": "t10-train-core5-day-split-known-prefix-v1"
+      },
+      "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+      "peak_cuda_allocated_gib": 1.5642142295837402
+    },
+    {
+      "model": "NARM",
+      "smoke": false,
+      "seed": 42,
+      "max_epochs": 30,
+      "epochs_completed": 21,
+      "best_epoch": 15,
+      "best_valid_mrr20": 0.1759902872486421,
+      "stop_reason": "early_stopping",
+      "max_train_seconds": 5400,
+      "train_valid_seconds": 170.922360696,
+      "test_seconds": 1.1317556380000156,
+      "test": {
+        "All-seen": {
+          "n": 66305,
+          "hit@10": 0.38730110851368676,
+          "hit@20": 0.5242591056481412,
+          "mrr@20": 0.1748322477343754,
+          "ndcg@20": 0.25185801526226304
+        },
+        "Warm": {
+          "n": 54466,
+          "hit@10": 0.4275327727389564,
+          "hit@20": 0.5700804171409687,
+          "mrr@20": 0.19363895848207302,
+          "ndcg@20": 0.27686274050675597
+        },
+        "Long-tail": {
+          "n": 11839,
+          "hit@10": 0.2022130247487119,
+          "hit@20": 0.3134555283385421,
+          "mrr@20": 0.08831089393894494,
+          "ndcg@20": 0.1368223395154462
+        }
+      },
+      "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+      "candidate_items": 36244,
+      "tie_policy": "score desc, internal item ID asc",
+      "run_dir": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/NARM",
+      "checkpoint": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/NARM/NARM-Oct-24-2026_06-21-39.pth",
+      "environment": {
+        "recbole": "1.2.1",
+        "torch": "2.5.1+cu124",
+        "numpy": "1.23.5",
+        "pandas": "1.5.3",
+        "scipy": "1.10.1",
+        "python": "3.10.17",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "cuda": "12.4",
+        "gpu_count": 1,
+        "protocol": "t10-train-core5-day-split-known-prefix-v1"
+      },
+      "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+      "peak_cuda_allocated_gib": 1.5648245811462402
+    },
+    {
+      "model": "SASRec",
+      "smoke": false,
+      "seed": 42,
+      "max_epochs": 30,
+      "epochs_completed": 27,
+      "best_epoch": 21,
+      "best_valid_mrr20": 0.18771273434219443,
+      "stop_reason": "early_stopping",
+      "max_train_seconds": 5400,
+      "train_valid_seconds": 490.16472197,
+      "test_seconds": 1.413801125999953,
+      "test": {
+        "All-seen": {
+          "n": 66305,
+          "hit@10": 0.3945856270266194,
+          "hit@20": 0.5352537516024433,
+          "mrr@20": 0.1841646029794733,
+          "ndcg@20": 0.2614638862864484
+        },
+        "Warm": {
+          "n": 54466,
+          "hit@10": 0.4287628979546873,
+          "hit@20": 0.5753497594829802,
+          "mrr@20": 0.1969381340533105,
+          "ndcg@20": 0.28048746613217795
+        },
+        "Long-tail": {
+          "n": 11839,
+          "hit@10": 0.23735112762902272,
+          "hit@20": 0.35078976264887235,
+          "mrr@20": 0.1253992390578893,
+          "ndcg@20": 0.17394481373999154
+        }
+      },
+      "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+      "candidate_items": 36244,
+      "tie_policy": "score desc, internal item ID asc",
+      "run_dir": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/SASRec",
+      "checkpoint": "/work/results/week1_local/default/b93fbf33b89e-s42-e30/SASRec/SASRec-Oct-24-2026_06-24-46.pth",
+      "environment": {
+        "recbole": "1.2.1",
+        "torch": "2.5.1+cu124",
+        "numpy": "1.23.5",
+        "pandas": "1.5.3",
+        "scipy": "1.10.1",
+        "python": "3.10.17",
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "cuda": "12.4",
+        "gpu_count": 1,
+        "protocol": "t10-train-core5-day-split-known-prefix-v1"
+      },
+      "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+      "peak_cuda_allocated_gib": 2.3489418029785156
+    }
+  ],
+  "failures": {},
+  "archive": {
+    "volume": "btl-t10-week1",
+    "path": "exports/week1_local.zip"
+  }
+}

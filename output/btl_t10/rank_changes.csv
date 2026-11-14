@@ -1,0 +1,10 @@
+﻿Model,Group,Default_rank_MRR20,Tuned_rank_MRR20,Rank_change
+GRU4Rec,All-seen,3,3,0
+NARM,All-seen,2,2,0
+SASRec,All-seen,1,1,0
+GRU4Rec,Warm,3,3,0
+NARM,Warm,2,2,0
+SASRec,Warm,1,1,0
+GRU4Rec,Long-tail,3,3,0
+NARM,Long-tail,2,2,0
+SASRec,Long-tail,1,1,0

@@ -1,0 +1,13 @@
+﻿,Giá trị
+Trung vị / P90 độ dài phiên — thô,3 / 9
+Trung vị / P90 độ dài phiên — sau làm sạch,4 / 10
+Trung vị / P90 độ dài phiên — sau 5-core (dữ liệu cuối),4 / 9
+% phiên < 5 click — thô / sau làm sạch / sau 5-core,70.1% / 57.8% / 61.0%
+% item có category hợp lệ (từ điển),100.00%
+Gini số item theo category,0.69
+Gini độ phổ biến item (thô),0.73
+Số item trong từ điển (5-core trên train),"36,244"
+Ngày cắt train | valid,2016-05-12 | 2016-05-23
+Số mẫu train / valid / test,"613,300 / 65,924 / 66,305"
+% vị trí test bị bỏ vì item mới,24.1%
+% mẫu test Warm / Long-tail,82.1% / 17.9%

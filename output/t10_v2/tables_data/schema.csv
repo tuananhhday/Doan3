@@ -1,0 +1,8 @@
+﻿File,Cột,Rỗng/NA,% Rỗng/NA,Số giá trị khác nhau,Ví dụ,Ý nghĩa
+views,sessionId,0,0.0,310324,1,ID phiên (ẩn danh)
+views,userId,862389,69.81,87935,NA,ID người dùng đã đăng nhập (NA nếu không)
+views,itemId,0,0.0,122993,81766,ID sản phẩm được xem
+views,timeframe,0,0.0,644845,526309,ms tính từ lúc bắt đầu phiên (truy vấn đầu tiên)
+views,eventdate,0,0.0,152,2016-05-09,ngày của lượt xem (không có giờ)
+categories,itemId,0,0.0,184047,139578,ID sản phẩm được xem
+categories,categoryId,0,0.0,1217,1096,category của sản phẩm

@@ -1,0 +1,145 @@
+2026-10-24 17:22:07,753 INFO [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[2048][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'none', 'sample_num': 'none', 'alpha': 'none', 'dynamic': False, 'candidate_num': 0}][0m
+2026-10-24 17:22:07,753 INFO [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[128][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'TO', 'group_by': 'none', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+2026-10-24 17:22:19,527 INFO [1;32mepoch 0 training[0m [[1;34mtime[0m: 11.61s, [1;34mtrain loss[0m: 2973.2713]
+2026-10-24 17:22:20,270 INFO [1;32mepoch 0 evaluating[0m [[1;34mtime[0m: 0.74s, [1;34mvalid_score[0m: 0.016209]
+2026-10-24 17:22:20,270 INFO [1;34mvalid result[0m: 
+hit@10 : 0.03523754626539652    hit@20 : 0.04852557490443541    mrr@20 : 0.01620880834983309    ndcg@20 : 0.023305091427571433
+2026-10-24 17:22:20,310 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:22:36,370 INFO [1;32mepoch 1 training[0m [[1;34mtime[0m: 11.50s, [1;34mtrain loss[0m: 2671.0743]
+2026-10-24 17:22:37,095 INFO [1;32mepoch 1 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.065933]
+2026-10-24 17:22:37,095 INFO [1;34mvalid result[0m: 
+hit@10 : 0.15743886900066745    hit@20 : 0.23155451732297797    mrr@20 : 0.06593257842594553    ndcg@20 : 0.10197242273798164
+2026-10-24 17:22:37,137 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:22:54,475 INFO [1;32mepoch 2 training[0m [[1;34mtime[0m: 11.48s, [1;34mtrain loss[0m: 2255.4532]
+2026-10-24 17:22:55,191 INFO [1;32mepoch 2 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.093871]
+2026-10-24 17:22:55,192 INFO [1;34mvalid result[0m: 
+hit@10 : 0.22767125781202596    hit@20 : 0.33157878769492144    mrr@20 : 0.09387076599410522    ndcg@20 : 0.14563468366928606
+2026-10-24 17:22:55,232 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:23:11,878 INFO [1;32mepoch 3 training[0m [[1;34mtime[0m: 11.53s, [1;34mtrain loss[0m: 1990.4631]
+2026-10-24 17:23:12,622 INFO [1;32mepoch 3 evaluating[0m [[1;34mtime[0m: 0.74s, [1;34mvalid_score[0m: 0.110813]
+2026-10-24 17:23:12,622 INFO [1;34mvalid result[0m: 
+hit@10 : 0.2665796978338693    hit@20 : 0.3872641223226746    mrr@20 : 0.11081319842587276    ndcg@20 : 0.1710356511866152
+2026-10-24 17:23:12,663 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:23:29,197 INFO [1;32mepoch 4 training[0m [[1;34mtime[0m: 11.48s, [1;34mtrain loss[0m: 1841.4340]
+2026-10-24 17:23:29,909 INFO [1;32mepoch 4 evaluating[0m [[1;34mtime[0m: 0.71s, [1;34mvalid_score[0m: 0.123515]
+2026-10-24 17:23:29,909 INFO [1;34mvalid result[0m: 
+hit@10 : 0.2948091742005946    hit@20 : 0.42720405315211457    mrr@20 : 0.12351513584442195    ndcg@20 : 0.18975307873903668
+2026-10-24 17:23:29,948 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:23:45,647 INFO [1;32mepoch 5 training[0m [[1;34mtime[0m: 11.60s, [1;34mtrain loss[0m: 1753.2568]
+2026-10-24 17:23:46,362 INFO [1;32mepoch 5 evaluating[0m [[1;34mtime[0m: 0.71s, [1;34mvalid_score[0m: 0.133408]
+2026-10-24 17:23:46,362 INFO [1;34mvalid result[0m: 
+hit@10 : 0.31454402038711243    hit@20 : 0.4495783022874826    mrr@20 : 0.1334081110368839    ndcg@20 : 0.2024998687739407
+2026-10-24 17:23:46,407 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:24:03,581 INFO [1;32mepoch 6 training[0m [[1;34mtime[0m: 11.56s, [1;34mtrain loss[0m: 1697.1731]
+2026-10-24 17:24:04,302 INFO [1;32mepoch 6 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.141324]
+2026-10-24 17:24:04,302 INFO [1;34mvalid result[0m: 
+hit@10 : 0.33053212790486014    hit@20 : 0.4662186760512105    mrr@20 : 0.14132414294550766    ndcg@20 : 0.21244553151457585
+2026-10-24 17:24:04,342 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:24:20,054 INFO [1;32mepoch 7 training[0m [[1;34mtime[0m: 11.61s, [1;34mtrain loss[0m: 1660.5455]
+2026-10-24 17:24:20,813 INFO [1;32mepoch 7 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.147330]
+2026-10-24 17:24:20,813 INFO [1;34mvalid result[0m: 
+hit@10 : 0.34142345731448337    hit@20 : 0.4800831260239063    mrr@20 : 0.14733040853635926    ndcg@20 : 0.22022145938369242
+2026-10-24 17:24:20,878 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:24:36,808 INFO [1;32mepoch 8 training[0m [[1;34mtime[0m: 11.81s, [1;34mtrain loss[0m: 1635.1580]
+2026-10-24 17:24:37,531 INFO [1;32mepoch 8 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.152746]
+2026-10-24 17:24:37,531 INFO [1;34mvalid result[0m: 
+hit@10 : 0.35275468721558156    hit@20 : 0.49232449487288393    mrr@20 : 0.1527460309417998    ndcg@20 : 0.227287602059731
+2026-10-24 17:24:37,576 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:24:54,428 INFO [1;32mepoch 9 training[0m [[1;34mtime[0m: 11.89s, [1;34mtrain loss[0m: 1615.8355]
+2026-10-24 17:24:55,176 INFO [1;32mepoch 9 evaluating[0m [[1;34mtime[0m: 0.75s, [1;34mvalid_score[0m: 0.157706]
+2026-10-24 17:24:55,176 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3604756992900916    hit@20 : 0.4999696620350707    mrr@20 : 0.157705869350276    ndcg@20 : 0.2328383122509105
+2026-10-24 17:24:55,219 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:25:12,795 INFO [1;32mepoch 10 training[0m [[1;34mtime[0m: 13.01s, [1;34mtrain loss[0m: 1602.4056]
+2026-10-24 17:25:13,516 INFO [1;32mepoch 10 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.160371]
+2026-10-24 17:25:13,517 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3656634912930041    hit@20 : 0.5067198592318427    mrr@20 : 0.16037084350045472    ndcg@20 : 0.2364466619284214
+2026-10-24 17:25:13,556 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:25:29,370 INFO [1;32mepoch 11 training[0m [[1;34mtime[0m: 11.97s, [1;34mtrain loss[0m: 1591.3507]
+2026-10-24 17:25:30,088 INFO [1;32mepoch 11 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.165393]
+2026-10-24 17:25:30,089 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3718979430859778    hit@20 : 0.5103452460408956    mrr@20 : 0.16539323595065722    ndcg@20 : 0.24125203323485586
+2026-10-24 17:25:30,130 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:25:47,005 INFO [1;32mepoch 12 training[0m [[1;34mtime[0m: 12.03s, [1;34mtrain loss[0m: 1582.8366]
+2026-10-24 17:25:47,723 INFO [1;32mepoch 12 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.165922]
+2026-10-24 17:25:47,723 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3736727140343426    hit@20 : 0.5134852254110794    mrr@20 : 0.16592212975703916    ndcg@20 : 0.24233603853088295
+2026-10-24 17:25:47,761 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:26:05,201 INFO [1;32mepoch 13 training[0m [[1;34mtime[0m: 11.92s, [1;34mtrain loss[0m: 1576.2288]
+2026-10-24 17:26:05,919 INFO [1;32mepoch 13 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.167803]
+2026-10-24 17:26:05,919 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3756446817547479    hit@20 : 0.5153661792366968    mrr@20 : 0.1678025964171701    ndcg@20 : 0.24427025327955448
+2026-10-24 17:26:05,960 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:26:24,062 INFO [1;32mepoch 14 training[0m [[1;34mtime[0m: 12.11s, [1;34mtrain loss[0m: 1571.0300]
+2026-10-24 17:26:24,778 INFO [1;32mepoch 14 evaluating[0m [[1;34mtime[0m: 0.71s, [1;34mvalid_score[0m: 0.170015]
+2026-10-24 17:26:24,778 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3767671864571325    hit@20 : 0.5177628784661125    mrr@20 : 0.17001547882998908    ndcg@20 : 0.24647444535441174
+2026-10-24 17:26:24,819 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:26:41,604 INFO [1;32mepoch 15 training[0m [[1;34mtime[0m: 11.63s, [1;34mtrain loss[0m: 1565.5549]
+2026-10-24 17:26:42,325 INFO [1;32mepoch 15 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.171264]
+2026-10-24 17:26:42,326 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3782082397912748    hit@20 : 0.518490989624416    mrr@20 : 0.1712641365825628    ndcg@20 : 0.24763140683618284
+2026-10-24 17:26:42,367 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:26:59,475 INFO [1;32mepoch 16 training[0m [[1;34mtime[0m: 11.51s, [1;34mtrain loss[0m: 1560.8819]
+2026-10-24 17:27:00,193 INFO [1;32mepoch 16 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.170806]
+2026-10-24 17:27:00,193 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38113585340695344    hit@20 : 0.518490989624416    mrr@20 : 0.17080639535479403    ndcg@20 : 0.24738955392797174
+2026-10-24 17:27:24,899 INFO [1;32mepoch 17 training[0m [[1;34mtime[0m: 12.32s, [1;34mtrain loss[0m: 1557.4381]
+2026-10-24 17:27:25,646 INFO [1;32mepoch 17 evaluating[0m [[1;34mtime[0m: 0.75s, [1;34mvalid_score[0m: 0.171779]
+2026-10-24 17:27:25,646 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38218251319701474    hit@20 : 0.5204629573448213    mrr@20 : 0.17177858377533806    ndcg@20 : 0.24854628450324637
+2026-10-24 17:27:25,691 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:27:44,218 INFO [1;32mepoch 18 training[0m [[1;34mtime[0m: 11.82s, [1;34mtrain loss[0m: 1553.3283]
+2026-10-24 17:27:44,930 INFO [1;32mepoch 18 evaluating[0m [[1;34mtime[0m: 0.71s, [1;34mvalid_score[0m: 0.171654]
+2026-10-24 17:27:44,930 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38107517747709485    hit@20 : 0.5227686426794491    mrr@20 : 0.17165364059148827    ndcg@20 : 0.24888661843249224
+2026-10-24 17:27:59,683 INFO [1;32mepoch 19 training[0m [[1;34mtime[0m: 12.60s, [1;34mtrain loss[0m: 1550.1842]
+2026-10-24 17:28:00,403 INFO [1;32mepoch 19 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.173893]
+2026-10-24 17:28:00,403 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38231903403919665    hit@20 : 0.523345064013106    mrr@20 : 0.17389313352396188    ndcg@20 : 0.25078268856541647
+2026-10-24 17:28:00,446 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:28:16,950 INFO [1;32mepoch 20 training[0m [[1;34mtime[0m: 12.30s, [1;34mtrain loss[0m: 1547.1282]
+2026-10-24 17:28:17,669 INFO [1;32mepoch 20 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.173767]
+2026-10-24 17:28:17,669 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3825162308112372    hit@20 : 0.5230568533462775    mrr@20 : 0.173767244519397    ndcg@20 : 0.250634515533797
+2026-10-24 17:28:31,143 INFO [1;32mepoch 21 training[0m [[1;34mtime[0m: 11.67s, [1;34mtrain loss[0m: 1545.1183]
+2026-10-24 17:28:31,858 INFO [1;32mepoch 21 evaluating[0m [[1;34mtime[0m: 0.71s, [1;34mvalid_score[0m: 0.174114]
+2026-10-24 17:28:31,858 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38509495783022873    hit@20 : 0.5241641890661974    mrr@20 : 0.1741137781815808    ndcg@20 : 0.2511666115972623
+2026-10-24 17:28:31,897 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:28:48,563 INFO [1;32mepoch 22 training[0m [[1;34mtime[0m: 11.80s, [1;34mtrain loss[0m: 1541.8527]
+2026-10-24 17:28:49,281 INFO [1;32mepoch 22 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.173383]
+2026-10-24 17:28:49,282 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3844881985316425    hit@20 : 0.5240276682240156    mrr@20 : 0.1733827088366744    ndcg@20 : 0.25058751375856597
+2026-10-24 17:29:04,607 INFO [1;32mepoch 23 training[0m [[1;34mtime[0m: 11.74s, [1;34mtrain loss[0m: 1540.1073]
+2026-10-24 17:29:05,377 INFO [1;32mepoch 23 evaluating[0m [[1;34mtime[0m: 0.77s, [1;34mvalid_score[0m: 0.174173]
+2026-10-24 17:29:05,377 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38606577270796677    hit@20 : 0.5245130756628845    mrr@20 : 0.17417269524083717    ndcg@20 : 0.25132951186646685
+2026-10-24 17:29:05,421 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:29:23,180 INFO [1;32mepoch 24 training[0m [[1;34mtime[0m: 11.90s, [1;34mtrain loss[0m: 1538.0076]
+2026-10-24 17:29:23,906 INFO [1;32mepoch 24 evaluating[0m [[1;34mtime[0m: 0.73s, [1;34mvalid_score[0m: 0.175887]
+2026-10-24 17:29:23,907 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38550452035677446    hit@20 : 0.5248164553121777    mrr@20 : 0.175887256866227    ndcg@20 : 0.2526582504147216
+2026-10-24 17:29:23,948 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:29:41,164 INFO [1;32mepoch 25 training[0m [[1;34mtime[0m: 11.86s, [1;34mtrain loss[0m: 1536.1412]
+2026-10-24 17:29:41,881 INFO [1;32mepoch 25 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.174954]
+2026-10-24 17:29:41,881 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38690006674352284    hit@20 : 0.5268946059098356    mrr@20 : 0.17495418755282824    ndcg@20 : 0.2524337551339603
+2026-10-24 17:29:55,286 INFO [1;32mepoch 26 training[0m [[1;34mtime[0m: 11.79s, [1;34mtrain loss[0m: 1534.3465]
+2026-10-24 17:29:56,043 INFO [1;32mepoch 26 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.175094]
+2026-10-24 17:29:56,043 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3866573630240883    hit@20 : 0.524361385838238    mrr@20 : 0.17509368289159258    ndcg@20 : 0.2520375120787618
+2026-10-24 17:30:09,613 INFO [1;32mepoch 27 training[0m [[1;34mtime[0m: 11.82s, [1;34mtrain loss[0m: 1532.4535]
+2026-10-24 17:30:10,329 INFO [1;32mepoch 27 evaluating[0m [[1;34mtime[0m: 0.71s, [1;34mvalid_score[0m: 0.176182]
+2026-10-24 17:30:10,329 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3881590922880893    hit@20 : 0.5267580850676536    mrr@20 : 0.1761816164929006    ndcg@20 : 0.25339392049141013
+2026-10-24 17:30:10,371 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth
+2026-10-24 17:30:27,124 INFO [1;32mepoch 28 training[0m [[1;34mtime[0m: 11.76s, [1;34mtrain loss[0m: 1530.2032]
+2026-10-24 17:30:27,846 INFO [1;32mepoch 28 evaluating[0m [[1;34mtime[0m: 0.72s, [1;34mvalid_score[0m: 0.176129]
+2026-10-24 17:30:27,846 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3871276014804927    hit@20 : 0.5252715247861174    mrr@20 : 0.17612867329450455    ndcg@20 : 0.2530291781132221
+2026-10-24 17:30:42,859 INFO [1;32mepoch 29 training[0m [[1;34mtime[0m: 13.15s, [1;34mtrain loss[0m: 1529.3974]
+2026-10-24 17:30:43,616 INFO [1;32mepoch 29 evaluating[0m [[1;34mtime[0m: 0.76s, [1;34mvalid_score[0m: 0.176197]
+2026-10-24 17:30:43,617 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3872337843577453    hit@20 : 0.528199138401796    mrr@20 : 0.17619746764552574    ndcg@20 : 0.2536717966150401
+2026-10-24 17:30:43,659 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/SASRec/SASRec-t05/attempt-001/SASRec-Oct-24-2026_17-22-07.pth

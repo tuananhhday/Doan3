@@ -1,0 +1,7 @@
+data_status,model,configuration,HR@10,MRR@10,HR@20,MRR@20
+simulated,GRU4Rec,base,0.3512,0.1776,0.4238,0.1827
+simulated,GRU4Rec,tuned,0.3786,0.1954,0.4521,0.2006
+simulated,NARM,base,0.3729,0.1908,0.4487,0.1960
+simulated,NARM,tuned,0.4013,0.2116,0.4764,0.2167
+simulated,SASRec,base,0.3895,0.2023,0.4628,0.2073
+simulated,SASRec,tuned,0.4237,0.2268,0.4956,0.2319

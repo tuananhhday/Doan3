@@ -1,0 +1,23 @@
+[
+  {
+    "model": "GRU4Rec",
+    "trial_id": "GRU4Rec-t12",
+    "path": "results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t12/attempt-001/GRU4Rec-Oct-25-2026_02-15-05.pth",
+    "sha256": "44d3937606b3f490b0b7387909331bd58a61921d9c11103ec26cbaf626950b63",
+    "bytes": 28194816
+  },
+  {
+    "model": "NARM",
+    "trial_id": "NARM-t02",
+    "path": "results/t10_tuning_v1/trials/NARM/NARM-t02/attempt-001/NARM-Oct-24-2026_16-33-58.pth",
+    "sha256": "08b5de5993d0a3fbb82c9b0bc82cc9f3c94e4c76fab715213b77451f83b97bd1",
+    "bytes": 32775091
+  },
+  {
+    "model": "SASRec",
+    "trial_id": "SASRec-t07",
+    "path": "results/t10_tuning_v1/trials/SASRec/SASRec-t07/attempt-001/SASRec-Oct-24-2026_18-04-19.pth",
+    "sha256": "47c2c6e2893c82d8b28b1b955cebe0b88b5f7f3e731a370537bce9629260c6a4",
+    "bytes": 58981858
+  }
+]

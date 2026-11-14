@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "authors": "M. Ferrari Dacrema, P. Cremonesi, D. Jannach",
+    "year": 2019,
+    "title": "Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches",
+    "venue": "RecSys",
+    "url": "https://arxiv.org/abs/1907.06902",
+    "relevance": "Động lực kiểm tra baseline và khả năng tái lập thay vì chỉ so sánh kiến trúc.",
+    "finding": "Khảo sát 18 thuật toán, tái lập được 7; 6 trong số đó thường thua các phương pháp đơn giản."
+  },
+  {
+    "id": 2,
+    "authors": "J. Bergstra, Y. Bengio",
+    "year": 2012,
+    "title": "Random Search for Hyper-Parameter Optimization",
+    "venue": "JMLR 13, pp. 281-305",
+    "url": "https://jmlr.org/papers/v13/bergstra12a.html",
+    "relevance": "Cơ sở dùng random search với số cấu hình cố định.",
+    "finding": "Random search là baseline tối ưu siêu tham số hiệu quả trong các thí nghiệm của tác giả; không bảo đảm 12 trial luôn đủ."
+  },
+  {
+    "id": 3,
+    "authors": "M. Ludewig, N. Mauro, S. Latifi, D. Jannach",
+    "year": 2021,
+    "title": "Empirical Analysis of Session-Based Recommendation Algorithms: A Comparison of Neural and Non-Neural Approaches",
+    "venue": "UMUAI 31, pp. 149-181",
+    "url": "https://doi.org/10.1007/s11257-020-09277-1",
+    "relevance": "Tham khảo benchmark SBR, validation và điều kiện so sánh thống nhất.",
+    "finding": "So sánh 12 thuật toán; phương pháp láng giềng đơn giản cạnh tranh tốt. Ngân sách tuning trong bài không bằng nhau tuyệt đối."
+  },
+  {
+    "id": 4,
+    "authors": "B. Hidasi, A. Karatzoglou, L. Baltrunas, D. Tikk",
+    "year": 2016,
+    "title": "Session-based Recommendations with Recurrent Neural Networks",
+    "venue": "ICLR",
+    "url": "https://arxiv.org/abs/1511.06939",
+    "relevance": "Cơ sở GRU4Rec; phân biệt cấu hình gốc với bản CE của RecBole.",
+    "finding": "RSC15, cấu hình TOP1 1.000 hidden: Recall@20 0,6206; MRR@20 0,2693. Khác dữ liệu/giao thức của BTL."
+  },
+  {
+    "id": 5,
+    "authors": "J. Li, P. Ren, Z. Chen, Z. Ren, T. Lian, J. Ma",
+    "year": 2017,
+    "title": "Neural Attentive Session-based Recommendation",
+    "venue": "CIKM",
+    "url": "https://arxiv.org/abs/1711.04725",
+    "relevance": "Cơ sở GRU kết hợp attention của NARM.",
+    "finding": "Diginetica, NARM công bố Recall@20 62,58% và MRR@20 27,35%; không dùng các số này thay kết quả của nhóm."
+  },
+  {
+    "id": 6,
+    "authors": "W.-C. Kang, J. McAuley",
+    "year": 2018,
+    "title": "Self-Attentive Sequential Recommendation",
+    "venue": "ICDM",
+    "url": "https://arxiv.org/abs/1808.09781",
+    "relevance": "Cơ sở self-attention của SASRec và lưu ý sampled ranking.",
+    "finding": "Bài gốc xếp hạng target với 100 item âm; không so trực tiếp điểm đó với full ranking 36.244 item của BTL."
+  },
+  {
+    "id": 7,
+    "authors": "W. X. Zhao et al.",
+    "year": 2021,
+    "title": "RecBole: Towards a Unified, Comprehensive and Efficient Framework for Recommendation Algorithms",
+    "venue": "CIKM",
+    "url": "https://arxiv.org/abs/2011.01731",
+    "relevance": "Cùng framework để giảm khác biệt triển khai và lưu cấu hình thống nhất.",
+    "finding": "Bài framework mô tả 73 mô hình và 28 bộ dữ liệu; đây không phải một bảng điểm duy nhất cho mọi model."
+  }
+]

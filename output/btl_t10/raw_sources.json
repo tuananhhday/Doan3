@@ -1,0 +1,12 @@
+{
+  "train-item-views.csv": {
+    "url": "https://raw.githubusercontent.com/RecoHut-Datasets/diginetica/2672053d53bf74e6e8eec77e684e4e7b6bc5da8c/train-item-views.csv",
+    "sha256": "0b9edf1b7960bb855a2248972f8ed593f18721f321b976b2077c9f782fb43e38",
+    "bytes": 42664076
+  },
+  "product-categories.csv": {
+    "url": "https://raw.githubusercontent.com/RecoHut-Datasets/diginetica/2672053d53bf74e6e8eec77e684e4e7b6bc5da8c/product-categories.csv",
+    "sha256": "9e9566e34548e5d1b8d05ed6dd0222fbb8a7b7b2a8a18cdf28c1a4eba8f9e42c",
+    "bytes": 1979575
+  }
+}

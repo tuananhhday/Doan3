@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "sha256": {
+    "GRU4Rec.hyper": "3c1c8e8e7dac6045f3b24d7468d683bd051f02cfbe37ce146b6053d318b51463",
+    "NARM.hyper": "c698021d8cc38ab022149bc1e14eb6c080eac97e31b0f5cb5f1ff8cfb4e712c3",
+    "SASRec.hyper": "8863aa15fa58d9ef5cbf574a5cba3f6600f09061f522eaa1399ed3017a0450bf",
+    "baseline_defaults.json": "d629a733577a5ef81352b1feeb8fcbb47ab2136ec17520903816bc7f8017e14f",
+    "search_protocol.json": "887aa2a6616c0ed8ae957546304b10214a955f047c9d3914b7ec7f7d6c9af180",
+    "trial_manifest.csv": "758938dd6d19c04860e0a34be47569b992f0f9962262359da210aa80670752ff",
+    "trial_manifest.json": "3311d132ada525bce7585238bc3e7dbbf93fbe0375d0320b4ce8b491e9a2a896"
+  }
+}

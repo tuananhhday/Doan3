@@ -1,0 +1,14 @@
+[
+  {
+    "event": "recovered_stale_controller",
+    "recorded_at": "2026-10-25T09:01:09.094222+07:00",
+    "active_trial": "NARM-t09",
+    "old_app": "ap-OUMNanW7ArF54JM426yBxC",
+    "resume_app": "ap-XOqxe9rR4TrkOuKjWwDRwM",
+    "observed_stale_seconds": 25709,
+    "checkpoint_and_result_reused": true,
+    "completed_trial_retrained": false,
+    "search_manifest_changed": false,
+    "reason": "A full controller was waiting on its own stale running state; only the waiting CPU controller was replaced."
+  }
+]

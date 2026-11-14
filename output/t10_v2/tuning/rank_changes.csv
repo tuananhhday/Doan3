@@ -1,0 +1,13 @@
+﻿Group,Metric,Default,Tuned,Đổi hạng?
+All-seen,HR@10,SASRec > NARM > GRU4Rec,SASRec > NARM > GRU4Rec,False
+All-seen,HR@20,SASRec > NARM > GRU4Rec,SASRec > NARM > GRU4Rec,False
+All-seen,MRR@20,SASRec > NARM > GRU4Rec,SASRec > NARM > GRU4Rec,False
+All-seen,NDCG@20,SASRec > NARM > GRU4Rec,SASRec > NARM > GRU4Rec,False
+Warm,HR@10,NARM > SASRec > GRU4Rec,SASRec > NARM > GRU4Rec,True
+Warm,HR@20,SASRec > NARM > GRU4Rec,SASRec > NARM > GRU4Rec,False
+Warm,MRR@20,SASRec > NARM > GRU4Rec,SASRec > NARM > GRU4Rec,False
+Warm,NDCG@20,SASRec > NARM > GRU4Rec,SASRec > NARM > GRU4Rec,False
+Long-tail,HR@10,SASRec > NARM > GRU4Rec,SASRec > NARM > GRU4Rec,False
+Long-tail,HR@20,SASRec > NARM > GRU4Rec,SASRec > GRU4Rec > NARM,True
+Long-tail,MRR@20,SASRec > NARM > GRU4Rec,SASRec > GRU4Rec > NARM,True
+Long-tail,NDCG@20,SASRec > NARM > GRU4Rec,SASRec > GRU4Rec > NARM,True

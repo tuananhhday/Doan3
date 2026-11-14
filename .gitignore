@@ -1,0 +1,15 @@
+# Vượt giới hạn 100MB của GitHub
+btl_t10_results/week1_local-verified.zip
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+node_modules/
+.env

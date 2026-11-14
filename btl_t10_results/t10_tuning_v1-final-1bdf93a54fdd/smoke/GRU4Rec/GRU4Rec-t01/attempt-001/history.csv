@@ -1,0 +1,2 @@
+epoch,loss_sum,train_seconds,valid_seconds,valid_mrr20
+1,41.98853397369385,0.46695046900000037,0.04580604600000271,0.0

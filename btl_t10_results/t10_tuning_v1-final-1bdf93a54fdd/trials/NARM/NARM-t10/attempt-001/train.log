@@ -1,0 +1,134 @@
+2026-10-25 01:54:57,998 INFO [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[2048][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'none', 'sample_num': 'none', 'alpha': 'none', 'dynamic': False, 'candidate_num': 0}][0m
+2026-10-25 01:54:58,004 INFO [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[128][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'TO', 'group_by': 'none', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+2026-10-25 01:55:04,473 INFO [1;32mepoch 0 training[0m [[1;34mtime[0m: 6.31s, [1;34mtrain loss[0m: 2448.7038]
+2026-10-25 01:55:05,033 INFO [1;32mepoch 0 evaluating[0m [[1;34mtime[0m: 0.56s, [1;34mvalid_score[0m: 0.089669]
+2026-10-25 01:55:05,033 INFO [1;34mvalid result[0m: 
+hit@10 : 0.2174928705782416    hit@20 : 0.32391845155027    mrr@20 : 0.08966865047882698    ndcg@20 : 0.14056846492774436
+2026-10-25 01:55:05,084 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:55:14,449 INFO [1;32mepoch 1 training[0m [[1;34mtime[0m: 6.18s, [1;34mtrain loss[0m: 1907.8617]
+2026-10-25 01:55:14,950 INFO [1;32mepoch 1 evaluating[0m [[1;34mtime[0m: 0.50s, [1;34mvalid_score[0m: 0.116414]
+2026-10-25 01:55:14,950 INFO [1;34mvalid result[0m: 
+hit@10 : 0.2780322795946848    hit@20 : 0.4070444754565864    mrr@20 : 0.11641389966418011    ndcg@20 : 0.1796593830952368
+2026-10-25 01:55:15,003 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:55:23,825 INFO [1;32mepoch 2 training[0m [[1;34mtime[0m: 6.14s, [1;34mtrain loss[0m: 1774.8766]
+2026-10-25 01:55:24,320 INFO [1;32mepoch 2 evaluating[0m [[1;34mtime[0m: 0.49s, [1;34mvalid_score[0m: 0.129446]
+2026-10-25 01:55:24,320 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3088404829804017    hit@20 : 0.4446635519689339    mrr@20 : 0.12944578743573495    ndcg@20 : 0.1982141825841645
+2026-10-25 01:55:24,375 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:55:34,280 INFO [1;32mepoch 3 training[0m [[1;34mtime[0m: 6.13s, [1;34mtrain loss[0m: 1707.3567]
+2026-10-25 01:55:34,803 INFO [1;32mepoch 3 evaluating[0m [[1;34mtime[0m: 0.52s, [1;34mvalid_score[0m: 0.141044]
+2026-10-25 01:55:34,803 INFO [1;34mvalid result[0m: 
+hit@10 : 0.32916691948304105    hit@20 : 0.46750803956070625    mrr@20 : 0.14104430177355204    ndcg@20 : 0.21244169311433195
+2026-10-25 01:55:34,858 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:55:43,488 INFO [1;32mepoch 4 training[0m [[1;34mtime[0m: 6.18s, [1;34mtrain loss[0m: 1663.4090]
+2026-10-25 01:55:44,009 INFO [1;32mepoch 4 evaluating[0m [[1;34mtime[0m: 0.52s, [1;34mvalid_score[0m: 0.146287]
+2026-10-25 01:55:44,009 INFO [1;34mvalid result[0m: 
+hit@10 : 0.33845033675141073    hit@20 : 0.47889994539166314    mrr@20 : 0.14628746472937246    ndcg@20 : 0.2190263962870961
+2026-10-25 01:55:44,061 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:55:52,673 INFO [1;32mepoch 5 training[0m [[1;34mtime[0m: 6.15s, [1;34mtrain loss[0m: 1631.0557]
+2026-10-25 01:55:53,208 INFO [1;32mepoch 5 evaluating[0m [[1;34mtime[0m: 0.53s, [1;34mvalid_score[0m: 0.151204]
+2026-10-25 01:55:53,209 INFO [1;34mvalid result[0m: 
+hit@10 : 0.34727868454584065    hit@20 : 0.48898731873065954    mrr@20 : 0.15120415162961395    ndcg@20 : 0.22512684495793317
+2026-10-25 01:55:53,263 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:56:01,966 INFO [1;32mepoch 6 training[0m [[1;34mtime[0m: 6.09s, [1;34mtrain loss[0m: 1607.0117]
+2026-10-25 01:56:02,520 INFO [1;32mepoch 6 evaluating[0m [[1;34mtime[0m: 0.55s, [1;34mvalid_score[0m: 0.155031]
+2026-10-25 01:56:02,520 INFO [1;34mvalid result[0m: 
+hit@10 : 0.35489351374309813    hit@20 : 0.4959043747345428    mrr@20 : 0.155031440775347    ndcg@20 : 0.2297436979015496
+2026-10-25 01:56:02,573 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:56:10,556 INFO [1;32mepoch 7 training[0m [[1;34mtime[0m: 6.16s, [1;34mtrain loss[0m: 1585.7101]
+2026-10-25 01:56:11,056 INFO [1;32mepoch 7 evaluating[0m [[1;34mtime[0m: 0.50s, [1;34mvalid_score[0m: 0.156991]
+2026-10-25 01:56:11,056 INFO [1;34mvalid result[0m: 
+hit@10 : 0.35961106728960623    hit@20 : 0.5011983496147079    mrr@20 : 0.15699103379510013    ndcg@20 : 0.23244497254456226
+2026-10-25 01:56:11,109 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:56:19,207 INFO [1;32mepoch 8 training[0m [[1;34mtime[0m: 6.14s, [1;34mtrain loss[0m: 1569.3405]
+2026-10-25 01:56:19,757 INFO [1;32mepoch 8 evaluating[0m [[1;34mtime[0m: 0.55s, [1;34mvalid_score[0m: 0.161269]
+2026-10-25 01:56:19,758 INFO [1;34mvalid result[0m: 
+hit@10 : 0.36549663248589287    hit@20 : 0.506704690249378    mrr@20 : 0.16126877741576234    ndcg@20 : 0.23707489340344215
+2026-10-25 01:56:19,808 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:56:29,522 INFO [1;32mepoch 9 training[0m [[1;34mtime[0m: 6.08s, [1;34mtrain loss[0m: 1553.4970]
+2026-10-25 01:56:30,029 INFO [1;32mepoch 9 evaluating[0m [[1;34mtime[0m: 0.51s, [1;34mvalid_score[0m: 0.161723]
+2026-10-25 01:56:30,029 INFO [1;34mvalid result[0m: 
+hit@10 : 0.36904617438262244    hit@20 : 0.5119531581821491    mrr@20 : 0.16172287824271842    ndcg@20 : 0.2385516244136116
+2026-10-25 01:56:30,083 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:56:39,560 INFO [1;32mepoch 10 training[0m [[1;34mtime[0m: 6.19s, [1;34mtrain loss[0m: 1541.3601]
+2026-10-25 01:56:40,067 INFO [1;32mepoch 10 evaluating[0m [[1;34mtime[0m: 0.51s, [1;34mvalid_score[0m: 0.164587]
+2026-10-25 01:56:40,067 INFO [1;34mvalid result[0m: 
+hit@10 : 0.374051938595959    hit@20 : 0.5148656028153632    mrr@20 : 0.16458682385909296    ndcg@20 : 0.24152864328809456
+2026-10-25 01:56:40,119 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:56:49,285 INFO [1;32mepoch 11 training[0m [[1;34mtime[0m: 6.18s, [1;34mtrain loss[0m: 1528.6919]
+2026-10-25 01:56:49,831 INFO [1;32mepoch 11 evaluating[0m [[1;34mtime[0m: 0.54s, [1;34mvalid_score[0m: 0.166310]
+2026-10-25 01:56:49,831 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3759783993689703    hit@20 : 0.5162763181845762    mrr@20 : 0.16631036773304322    ndcg@20 : 0.24319568136918004
+2026-10-25 01:56:49,883 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:56:58,136 INFO [1;32mepoch 12 training[0m [[1;34mtime[0m: 6.15s, [1;34mtrain loss[0m: 1518.6855]
+2026-10-25 01:56:58,648 INFO [1;32mepoch 12 evaluating[0m [[1;34mtime[0m: 0.51s, [1;34mvalid_score[0m: 0.167511]
+2026-10-25 01:56:58,648 INFO [1;34mvalid result[0m: 
+hit@10 : 0.37682786238699106    hit@20 : 0.5163369941144348    mrr@20 : 0.16751148391192353    ndcg@20 : 0.24418618344719084
+2026-10-25 01:56:58,705 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:57:08,387 INFO [1;32mepoch 13 training[0m [[1;34mtime[0m: 6.28s, [1;34mtrain loss[0m: 1508.8876]
+2026-10-25 01:57:08,929 INFO [1;32mepoch 13 evaluating[0m [[1;34mtime[0m: 0.54s, [1;34mvalid_score[0m: 0.169377]
+2026-10-25 01:57:08,929 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3756901887021419    hit@20 : 0.5183848067471634    mrr@20 : 0.16937744922573295    ndcg@20 : 0.24605435812921508
+2026-10-25 01:57:08,980 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:57:17,622 INFO [1;32mepoch 14 training[0m [[1;34mtime[0m: 6.23s, [1;34mtrain loss[0m: 1500.1303]
+2026-10-25 01:57:18,148 INFO [1;32mepoch 14 evaluating[0m [[1;34mtime[0m: 0.53s, [1;34mvalid_score[0m: 0.168170]
+2026-10-25 01:57:18,149 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3784509435107093    hit@20 : 0.5182179479400522    mrr@20 : 0.16817032877003738    ndcg@20 : 0.2451223373795704
+2026-10-25 01:57:25,206 INFO [1;32mepoch 15 training[0m [[1;34mtime[0m: 6.19s, [1;34mtrain loss[0m: 1492.5618]
+2026-10-25 01:57:25,720 INFO [1;32mepoch 15 evaluating[0m [[1;34mtime[0m: 0.51s, [1;34mvalid_score[0m: 0.168576]
+2026-10-25 01:57:25,720 INFO [1;34mvalid result[0m: 
+hit@10 : 0.37849645045810326    hit@20 : 0.5219798555912869    mrr@20 : 0.1685761803495373    ndcg@20 : 0.2461302044186103
+2026-10-25 01:57:32,831 INFO [1;32mepoch 16 training[0m [[1;34mtime[0m: 6.18s, [1;34mtrain loss[0m: 1484.2027]
+2026-10-25 01:57:33,406 INFO [1;32mepoch 16 evaluating[0m [[1;34mtime[0m: 0.57s, [1;34mvalid_score[0m: 0.170396]
+2026-10-25 01:57:33,406 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38166676779321645    hit@20 : 0.5222073903282568    mrr@20 : 0.17039558697032786    ndcg@20 : 0.24775143999177046
+2026-10-25 01:57:33,463 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:57:41,710 INFO [1;32mepoch 17 training[0m [[1;34mtime[0m: 6.09s, [1;34mtrain loss[0m: 1477.3523]
+2026-10-25 01:57:42,270 INFO [1;32mepoch 17 evaluating[0m [[1;34mtime[0m: 0.56s, [1;34mvalid_score[0m: 0.170556]
+2026-10-25 01:57:42,270 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3808779807050543    hit@20 : 0.5252108488562587    mrr@20 : 0.170555614462246    ndcg@20 : 0.24840207361881103
+2026-10-25 01:57:42,326 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:57:50,745 INFO [1;32mepoch 18 training[0m [[1;34mtime[0m: 6.19s, [1;34mtrain loss[0m: 1470.5391]
+2026-10-25 01:57:51,269 INFO [1;32mepoch 18 evaluating[0m [[1;34mtime[0m: 0.52s, [1;34mvalid_score[0m: 0.169869]
+2026-10-25 01:57:51,270 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38040774224865    hit@20 : 0.5230416843638128    mrr@20 : 0.1698689107763758    ndcg@20 : 0.24746481588680808
+2026-10-25 01:57:58,551 INFO [1;32mepoch 19 training[0m [[1;34mtime[0m: 6.38s, [1;34mtrain loss[0m: 1464.2369]
+2026-10-25 01:57:59,086 INFO [1;32mepoch 19 evaluating[0m [[1;34mtime[0m: 0.53s, [1;34mvalid_score[0m: 0.170966]
+2026-10-25 01:57:59,087 INFO [1;34mvalid result[0m: 
+hit@10 : 0.37978581396759903    hit@20 : 0.5220708694860748    mrr@20 : 0.17096554304093858    ndcg@20 : 0.24815476950577292
+2026-10-25 01:57:59,138 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:58:07,405 INFO [1;32mepoch 20 training[0m [[1;34mtime[0m: 6.21s, [1;34mtrain loss[0m: 1458.4064]
+2026-10-25 01:58:07,927 INFO [1;32mepoch 20 evaluating[0m [[1;34mtime[0m: 0.52s, [1;34mvalid_score[0m: 0.171123]
+2026-10-25 01:58:07,927 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38385110126812694    hit@20 : 0.527228323524058    mrr@20 : 0.1711226160285635    ndcg@20 : 0.24940724288878824
+2026-10-25 01:58:07,977 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:58:16,446 INFO [1;32mepoch 21 training[0m [[1;34mtime[0m: 6.36s, [1;34mtrain loss[0m: 1452.3685]
+2026-10-25 01:58:16,952 INFO [1;32mepoch 21 evaluating[0m [[1;34mtime[0m: 0.51s, [1;34mvalid_score[0m: 0.172611]
+2026-10-25 01:58:16,952 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38627813846247194    hit@20 : 0.5263788605060372    mrr@20 : 0.1726105493730608    ndcg@20 : 0.2504614257654026
+2026-10-25 01:58:17,002 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/trials/NARM/NARM-t10/attempt-001/NARM-Oct-25-2026_01-54-58.pth
+2026-10-25 01:58:24,857 INFO [1;32mepoch 22 training[0m [[1;34mtime[0m: 6.16s, [1;34mtrain loss[0m: 1447.1084]
+2026-10-25 01:58:25,384 INFO [1;32mepoch 22 evaluating[0m [[1;34mtime[0m: 0.53s, [1;34mvalid_score[0m: 0.171920]
+2026-10-25 01:58:25,385 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3831533280747527    hit@20 : 0.524892300224501    mrr@20 : 0.1719204824936654    ndcg@20 : 0.2495194521045538
+2026-10-25 01:58:32,645 INFO [1;32mepoch 23 training[0m [[1;34mtime[0m: 6.31s, [1;34mtrain loss[0m: 1442.2219]
+2026-10-25 01:58:33,142 INFO [1;32mepoch 23 evaluating[0m [[1;34mtime[0m: 0.50s, [1;34mvalid_score[0m: 0.169604]
+2026-10-25 01:58:33,143 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38062010800315516    hit@20 : 0.5232995570657121    mrr@20 : 0.16960401407668405    ndcg@20 : 0.24736517223263454
+2026-10-25 01:58:40,316 INFO [1;32mepoch 24 training[0m [[1;34mtime[0m: 6.19s, [1;34mtrain loss[0m: 1437.6320]
+2026-10-25 01:58:40,864 INFO [1;32mepoch 24 evaluating[0m [[1;34mtime[0m: 0.55s, [1;34mvalid_score[0m: 0.171765]
+2026-10-25 01:58:40,864 INFO [1;34mvalid result[0m: 
+hit@10 : 0.3834567077240459    hit@20 : 0.5260906498392088    mrr@20 : 0.17176496620204879    ndcg@20 : 0.24967240258797152
+2026-10-25 01:58:47,979 INFO [1;32mepoch 25 training[0m [[1;34mtime[0m: 6.17s, [1;34mtrain loss[0m: 1433.9408]
+2026-10-25 01:58:48,503 INFO [1;32mepoch 25 evaluating[0m [[1;34mtime[0m: 0.52s, [1;34mvalid_score[0m: 0.171531]
+2026-10-25 01:58:48,503 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38612644863782536    hit@20 : 0.5261361567866027    mrr@20 : 0.17153118322126634    ndcg@20 : 0.24958097923753034
+2026-10-25 01:58:55,564 INFO [1;32mepoch 26 training[0m [[1;34mtime[0m: 6.26s, [1;34mtrain loss[0m: 1428.7034]
+2026-10-25 01:58:56,065 INFO [1;32mepoch 26 evaluating[0m [[1;34mtime[0m: 0.50s, [1;34mvalid_score[0m: 0.170734]
+2026-10-25 01:58:56,065 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38216734421455006    hit@20 : 0.5259389600145622    mrr@20 : 0.1707344123638351    ndcg@20 : 0.24879509438594424
+2026-10-25 01:59:03,150 INFO [1;32mepoch 27 training[0m [[1;34mtime[0m: 6.17s, [1;34mtrain loss[0m: 1425.2671]
+2026-10-25 01:59:03,664 INFO [1;32mepoch 27 evaluating[0m [[1;34mtime[0m: 0.51s, [1;34mvalid_score[0m: 0.172370]
+2026-10-25 01:59:03,664 INFO [1;34mvalid result[0m: 
+hit@10 : 0.38547418239184517    hit@20 : 0.5250743280140768    mrr@20 : 0.17236992961281888    ndcg@20 : 0.24998733652215552
+2026-10-25 01:59:04,542 INFO Finished training, best eval result in epoch 21

@@ -1,0 +1,48 @@
+{
+  "trial_id": "NARM-t11",
+  "trial_index": 11,
+  "overrides": {
+    "learning_rate": 0.003,
+    "hidden_size": 128,
+    "n_layers": 2,
+    "dropout_probs": [
+      0.1,
+      0.1
+    ]
+  },
+  "trial_spec_sha256": "c51f8e1f75309ab4eb73e5e19d46ed51ef105a0b525b01873846a4bb15062112",
+  "test_evaluated": false,
+  "model": "NARM",
+  "smoke": false,
+  "seed": 42,
+  "max_epochs": 30,
+  "epochs_completed": 13,
+  "best_epoch": 7,
+  "best_valid_mrr20": 0.17170857617345286,
+  "stop_reason": "early_stopping",
+  "max_train_seconds": 5400,
+  "train_valid_seconds": 129.08539598700003,
+  "test_seconds": 2.5399998548891745e-07,
+  "test": null,
+  "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+  "candidate_items": 36244,
+  "tie_policy": "score desc, internal item ID asc",
+  "run_dir": "/work/results/t10_tuning_v1/trials/NARM/NARM-t11/attempt-001",
+  "checkpoint": "/work/results/t10_tuning_v1/trials/NARM/NARM-t11/attempt-001/NARM-Oct-25-2026_02-08-40.pth",
+  "environment": {
+    "recbole": "1.2.1",
+    "torch": "2.5.1+cu124",
+    "numpy": "1.23.5",
+    "pandas": "1.5.3",
+    "scipy": "1.10.1",
+    "python": "3.10.17",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "cuda": "12.4",
+    "gpu_count": 1,
+    "protocol": "t10-train-core5-day-split-known-prefix-v1"
+  },
+  "budget_warning": "Wall time is checked after each full epoch, not a hard spending cap.",
+  "peak_cuda_allocated_gib": 1.9728875160217285,
+  "search_identity": "6a8f9863eef8a0c9635c340e9da17a5f1e69dbb869195542a239182c618ba03d",
+  "worker_seconds": 142.701875574
+}

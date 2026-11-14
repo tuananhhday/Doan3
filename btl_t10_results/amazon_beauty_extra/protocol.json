@@ -1,0 +1,481 @@
+{
+  "name": "t10-amazon-beauty-extra-v1",
+  "status": "Thi nghiem BO SUNG. De T10 (Muc 1.5) khong cho dung Amazon thay Diginetica.",
+  "dataset": {
+    "name": "Amazon Beauty 5-core (2014)",
+    "sha256": "e5925ec99023f1dc9c7d3dff7ef34cfeacd40d1b981b5525e1e4ba9c8abc18fe",
+    "fingerprint": "fb5fc03781b069b33aa9f86c746827e26a3164f899a9bf6e8376d157ff89d2bc",
+    "raw": {
+      "users": 22363,
+      "items": 12101,
+      "interactions": 198502
+    },
+    "samples": {
+      "train": 131413,
+      "valid": 22337,
+      "test": 22313
+    },
+    "vocabulary_items": 12088
+  },
+  "split": "leave-one-out",
+  "same_day_ties": {
+    "policy": "random",
+    "seed": 42,
+    "pairs": 77402,
+    "reason": "File goc sap theo ma san pham; giu nguyen se tao meo 'ma tang dan'"
+  },
+  "sensitivity_check": "Sau khi xong, train lai 3 ban mac dinh voi thu tu file goc de do tac dong; khong dung de chon cau hinh",
+  "same_as_diginetica": [
+    "3 mo hinh",
+    "tham so mac dinh",
+    "36 cau hinh",
+    "chi so",
+    "full ranking",
+    "cach pha hoa",
+    "seed 42",
+    "patience 5",
+    "batch 2048",
+    "chon theo valid MRR@20",
+    "Warm/Long-tail nguong 10",
+    "RecBole 1.2.1",
+    "torch 2.5.1"
+  ],
+  "different_from_diginetica": {
+    "split": "leave-one-out theo chuoi, thay vi theo ngay: Amazon chi co thoi gian theo ngay, va day la chuan cua cac bai bao tren Amazon",
+    "unit": "chuoi cua nguoi dung da an danh, thay vi phien an danh",
+    "max_epochs": "100 thay vi 30: Beauty co khoang 65 buoc moi epoch, Diginetica khoang 300",
+    "hardware": "RTX 3050 Laptop thay vi H100; thoi gian hai bo khong so truc tiep duoc"
+  },
+  "max_epochs": 100,
+  "stopping_step": 5,
+  "seed": 42,
+  "budget": "12 cau hinh moi mo hinh",
+  "fallback": "Neu thieu thoi gian: lay 8 cau hinh dau cua moi mo hinh, ghi ro ly do",
+  "selection": "valid MRR@20 cao nhat; hoa thi lay trial_index nho hon",
+  "test_policy": "Chi default va cau hinh thang duoc cham test, moi cai 1 lan",
+  "same_parameter_comparison": {
+    "config": "lr 0.0003, hidden 128, 1 lop, dropout 0.1",
+    "trials": {
+      "GRU4Rec": "GRU4Rec-t06",
+      "NARM": "NARM-t01",
+      "SASRec": "SASRec-t11"
+    },
+    "metric": "valid MRR@20 (giong bang Diginetica)"
+  },
+  "manifest": {
+    "GRU4Rec": [
+      {
+        "trial_id": "GRU4Rec-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t02",
+        "trial_index": 2,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.5
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t03",
+        "trial_index": 3,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 256,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t04",
+        "trial_index": 4,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 256,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t05",
+        "trial_index": 5,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t06",
+        "trial_index": 6,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t07",
+        "trial_index": 7,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 256,
+          "num_layers": 1,
+          "dropout_prob": 0.5
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t08",
+        "trial_index": 8,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t09",
+        "trial_index": 9,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 2,
+          "dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t10",
+        "trial_index": 10,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t11",
+        "trial_index": 11,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 128,
+          "num_layers": 2,
+          "dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "GRU4Rec-t12",
+        "trial_index": 12,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "num_layers": 1,
+          "dropout_prob": 0.3
+        }
+      }
+    ],
+    "NARM": [
+      {
+        "trial_id": "NARM-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t02",
+        "trial_index": 2,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 256,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t03",
+        "trial_index": 3,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t04",
+        "trial_index": 4,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t05",
+        "trial_index": 5,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t06",
+        "trial_index": 6,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t07",
+        "trial_index": 7,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t08",
+        "trial_index": 8,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t09",
+        "trial_index": 9,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t10",
+        "trial_index": 10,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t11",
+        "trial_index": 11,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.1,
+            0.1
+          ]
+        }
+      },
+      {
+        "trial_id": "NARM-t12",
+        "trial_index": 12,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "dropout_probs": [
+            0.25,
+            0.5
+          ]
+        }
+      }
+    ],
+    "SASRec": [
+      {
+        "trial_id": "SASRec-t01",
+        "trial_index": 1,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t02",
+        "trial_index": 2,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.5,
+          "attn_dropout_prob": 0.5
+        }
+      },
+      {
+        "trial_id": "SASRec-t03",
+        "trial_index": 3,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t04",
+        "trial_index": 4,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t05",
+        "trial_index": 5,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.5,
+          "attn_dropout_prob": 0.5
+        }
+      },
+      {
+        "trial_id": "SASRec-t06",
+        "trial_index": 6,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t07",
+        "trial_index": 7,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t08",
+        "trial_index": 8,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 64,
+          "n_layers": 2,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t09",
+        "trial_index": 9,
+        "overrides": {
+          "learning_rate": 0.003,
+          "hidden_size": 64,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      },
+      {
+        "trial_id": "SASRec-t10",
+        "trial_index": 10,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.1,
+          "attn_dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "SASRec-t11",
+        "trial_index": 11,
+        "overrides": {
+          "learning_rate": 0.0003,
+          "hidden_size": 128,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.1,
+          "attn_dropout_prob": 0.1
+        }
+      },
+      {
+        "trial_id": "SASRec-t12",
+        "trial_index": 12,
+        "overrides": {
+          "learning_rate": 0.001,
+          "hidden_size": 32,
+          "n_layers": 1,
+          "hidden_dropout_prob": 0.3,
+          "attn_dropout_prob": 0.3
+        }
+      }
+    ]
+  }
+}

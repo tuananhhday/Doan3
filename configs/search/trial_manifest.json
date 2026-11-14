@@ -1,0 +1,647 @@
+{
+  "schema_version": 1,
+  "search_version": "t10-search-v1",
+  "search_seed": 2026,
+  "train_seed": 42,
+  "trials_per_model": 12,
+  "data_fingerprint": "b93fbf33b89e2bc78ee63d87ba2554ec0b9c4ee4c95da579b709a6bbad43f0ad",
+  "candidate_count_excluding_default": {
+    "GRU4Rec": 53,
+    "NARM": 53,
+    "SASRec": 53
+  },
+  "trials": [
+    {
+      "trial_id": "GRU4Rec-t01",
+      "trial_index": 1,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 128,
+        "num_layers": 1,
+        "dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t02",
+      "trial_index": 2,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 64,
+        "num_layers": 1,
+        "dropout_prob": 0.5
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t03",
+      "trial_index": 3,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 256,
+        "num_layers": 2,
+        "dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t04",
+      "trial_index": 4,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 256,
+        "num_layers": 2,
+        "dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t05",
+      "trial_index": 5,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 128,
+        "num_layers": 1,
+        "dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t06",
+      "trial_index": 6,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 128,
+        "num_layers": 1,
+        "dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t07",
+      "trial_index": 7,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 256,
+        "num_layers": 1,
+        "dropout_prob": 0.5
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t08",
+      "trial_index": 8,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 64,
+        "num_layers": 2,
+        "dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t09",
+      "trial_index": 9,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 64,
+        "num_layers": 2,
+        "dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t10",
+      "trial_index": 10,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 64,
+        "num_layers": 1,
+        "dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t11",
+      "trial_index": 11,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 128,
+        "num_layers": 2,
+        "dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "GRU4Rec-t12",
+      "trial_index": 12,
+      "model": "GRU4Rec",
+      "search_seed": 2026,
+      "model_search_seed": 2026,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 64,
+        "num_layers": 1,
+        "dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "NARM-t01",
+      "trial_index": 1,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 128,
+        "n_layers": 1,
+        "dropout_probs": [
+          0.1,
+          0.1
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t02",
+      "trial_index": 2,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 256,
+        "n_layers": 1,
+        "dropout_probs": [
+          0.1,
+          0.1
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t03",
+      "trial_index": 3,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 64,
+        "n_layers": 2,
+        "dropout_probs": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t04",
+      "trial_index": 4,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 64,
+        "n_layers": 1,
+        "dropout_probs": [
+          0.1,
+          0.1
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t05",
+      "trial_index": 5,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 128,
+        "n_layers": 1,
+        "dropout_probs": [
+          0.1,
+          0.1
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t06",
+      "trial_index": 6,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 64,
+        "n_layers": 1,
+        "dropout_probs": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t07",
+      "trial_index": 7,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 128,
+        "n_layers": 1,
+        "dropout_probs": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t08",
+      "trial_index": 8,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 64,
+        "n_layers": 2,
+        "dropout_probs": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t09",
+      "trial_index": 9,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 128,
+        "n_layers": 2,
+        "dropout_probs": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t10",
+      "trial_index": 10,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 128,
+        "n_layers": 2,
+        "dropout_probs": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t11",
+      "trial_index": 11,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 128,
+        "n_layers": 2,
+        "dropout_probs": [
+          0.1,
+          0.1
+        ]
+      }
+    },
+    {
+      "trial_id": "NARM-t12",
+      "trial_index": 12,
+      "model": "NARM",
+      "search_seed": 2026,
+      "model_search_seed": 2027,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 64,
+        "n_layers": 2,
+        "dropout_probs": [
+          0.25,
+          0.5
+        ]
+      }
+    },
+    {
+      "trial_id": "SASRec-t01",
+      "trial_index": 1,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 32,
+        "n_layers": 2,
+        "hidden_dropout_prob": 0.3,
+        "attn_dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "SASRec-t02",
+      "trial_index": 2,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 64,
+        "n_layers": 2,
+        "hidden_dropout_prob": 0.5,
+        "attn_dropout_prob": 0.5
+      }
+    },
+    {
+      "trial_id": "SASRec-t03",
+      "trial_index": 3,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 64,
+        "n_layers": 2,
+        "hidden_dropout_prob": 0.3,
+        "attn_dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "SASRec-t04",
+      "trial_index": 4,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 32,
+        "n_layers": 1,
+        "hidden_dropout_prob": 0.3,
+        "attn_dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "SASRec-t05",
+      "trial_index": 5,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 32,
+        "n_layers": 2,
+        "hidden_dropout_prob": 0.5,
+        "attn_dropout_prob": 0.5
+      }
+    },
+    {
+      "trial_id": "SASRec-t06",
+      "trial_index": 6,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 128,
+        "n_layers": 1,
+        "hidden_dropout_prob": 0.3,
+        "attn_dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "SASRec-t07",
+      "trial_index": 7,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 128,
+        "n_layers": 2,
+        "hidden_dropout_prob": 0.3,
+        "attn_dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "SASRec-t08",
+      "trial_index": 8,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 64,
+        "n_layers": 2,
+        "hidden_dropout_prob": 0.3,
+        "attn_dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "SASRec-t09",
+      "trial_index": 9,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.003,
+        "hidden_size": 64,
+        "n_layers": 1,
+        "hidden_dropout_prob": 0.3,
+        "attn_dropout_prob": 0.3
+      }
+    },
+    {
+      "trial_id": "SASRec-t10",
+      "trial_index": 10,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 32,
+        "n_layers": 1,
+        "hidden_dropout_prob": 0.1,
+        "attn_dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "SASRec-t11",
+      "trial_index": 11,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.0003,
+        "hidden_size": 128,
+        "n_layers": 1,
+        "hidden_dropout_prob": 0.1,
+        "attn_dropout_prob": 0.1
+      }
+    },
+    {
+      "trial_id": "SASRec-t12",
+      "trial_index": 12,
+      "model": "SASRec",
+      "search_seed": 2026,
+      "model_search_seed": 2028,
+      "train_seed": 42,
+      "status": "planned",
+      "overrides": {
+        "learning_rate": 0.001,
+        "hidden_size": 32,
+        "n_layers": 1,
+        "hidden_dropout_prob": 0.3,
+        "attn_dropout_prob": 0.3
+      }
+    }
+  ],
+  "execution_order": [
+    "GRU4Rec-t01",
+    "NARM-t01",
+    "SASRec-t01",
+    "GRU4Rec-t02",
+    "NARM-t02",
+    "SASRec-t02",
+    "GRU4Rec-t03",
+    "NARM-t03",
+    "SASRec-t03",
+    "GRU4Rec-t04",
+    "NARM-t04",
+    "SASRec-t04",
+    "GRU4Rec-t05",
+    "NARM-t05",
+    "SASRec-t05",
+    "GRU4Rec-t06",
+    "NARM-t06",
+    "SASRec-t06",
+    "GRU4Rec-t07",
+    "NARM-t07",
+    "SASRec-t07",
+    "GRU4Rec-t08",
+    "NARM-t08",
+    "SASRec-t08",
+    "GRU4Rec-t09",
+    "NARM-t09",
+    "SASRec-t09",
+    "GRU4Rec-t10",
+    "NARM-t10",
+    "SASRec-t10",
+    "GRU4Rec-t11",
+    "NARM-t11",
+    "SASRec-t11",
+    "GRU4Rec-t12",
+    "NARM-t12",
+    "SASRec-t12"
+  ],
+  "batch_prefixes": {
+    "week4": 3,
+    "week5_and_6": 6,
+    "week7": 12,
+    "fallback": 8
+  }
+}

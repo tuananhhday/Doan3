@@ -1,0 +1,39 @@
+{
+ "python": "3.11.12",
+ "torch": "2.5.1+cu124",
+ "cuda": "12.4",
+ "recbole": "1.2.1",
+ "numpy": "1.23.5",
+ "pandas": "1.5.3",
+ "cuda_available": true,
+ "gpu": "NVIDIA H100 80GB HBM3",
+ "gpu_memory_gib": 79.2,
+ "nvidia_smi": "NVIDIA H100 80GB HBM3, 81559 MiB, 610.57.04",
+ "matmul_tflops_fp32": 52.1,
+ "data_on_volume": true,
+ "fingerprint_ok": true,
+ "recbole_load_seconds": 11.3,
+ "samples_recbole": {
+  "train": 613300,
+  "valid": 65924,
+  "test": 66305
+ },
+ "samples_match_report": true,
+ "n_items": 36244,
+ "train_step_seconds": 0.449,
+ "train_step_loss": 10.4506,
+ "full_sort_shape": [
+  128,
+  36245
+ ],
+ "peak_gpu_memory_gib": 2.56,
+ "checks": {
+  "Máy chủ là H100": true,
+  "CUDA dùng được": true,
+  "Python máy chủ trùng laptop": true,
+  "RecBole 1.2.1": true,
+  "Dữ liệu có trên Volume, đúng fingerprint": true,
+  "RecBole đọc đủ số mẫu train/valid/test": true,
+  "Train 1 bước + chấm toàn bộ item chạy được": true
+ }
+}

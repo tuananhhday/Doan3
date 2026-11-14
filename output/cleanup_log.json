@@ -1,0 +1,192 @@
+{
+  "completed_at": "2026-10-25T10:24:07",
+  "workspace": "F:\\Đồ Án 3",
+  "removed_paths": [
+    {
+      "path": ".pdf-tools",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": ".pip-cache",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": ".uv-cache",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "tmp",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "log_tensorboard",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "BTL_T10_Tuan1_DenTuan5_Full.ipynb",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "BTL_T10_Tuan1_Local_H100.ipynb",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "BTL_T10_Tuan1_Modal_H100.ipynb",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "BTL_T10_Tuan2_SearchSpace.ipynb",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_local_code",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_week1_code",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "week1_h100",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "week2_search",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "PHUONG_AN_CAC_TUAN_TIEP_THEO_BTL_T10.md",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "PHUONG_AN_TUAN_1_BTL_T10.md",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": ".btl_t10_runtime/__pycache__",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/week1_local-20261024-220300",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/week1_local-20261024-220711-790215",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/week1_local-20261024-220731-349063",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/week1_local-20261024-220852",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/week1_local-20261024-223038-709422",
+      "status": "removed",
+      "error": null,
+      "retry": "Completed outside sandbox without changing directory permissions"
+    },
+    {
+      "path": "btl_t10_results/week1_local-extracted",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/week1_local-20261024-220300.zip",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/week1_local-20261024-220852.zip",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/t10_tuning_v1-reports-ae48e69e9b0e",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/t10_tuning_v1-0b0d8cf182aa.zip",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/week2",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/full_collector.json",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/full_resume_launcher.json",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/tuning_collector.json",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/tuning_launch.log",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/tuning_collection.log",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/full_collection.log",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/recovered_pipeline_summary.json",
+      "status": "removed",
+      "error": null
+    },
+    {
+      "path": "btl_t10_results/upload_check.json",
+      "status": "removed",
+      "error": null
+    }
+  ],
+  "remaining_paths": [],
+  "code_backup": "output\\luu_tru\\ma_cu_truoc_don.zip",
+  "protected_files_verified_unchanged": 95,
+  "verification": [
+    "Python package imports",
+    "Notebook schema and code syntax",
+    "Prepared dataset fingerprint and checksums",
+    "Frozen search configuration and baseline archive"
+  ],
+  "approximate_disk_space_recovered_bytes": 1409552384
+}

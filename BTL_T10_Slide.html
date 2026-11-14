@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>So sánh 3 mô hình</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<style>
+:root{color-scheme:light;--ink:#14213D;--soft:#36425A;--muted:#4A5568;--bg:#FAFAF7;--panel:#EEF1F7;--line:#DDE1E8;--accent:#3D4FB5;--warn-bg:#FFF4E5;--warn-line:#E8C48A;--night:#14213D;--night-soft:#C9D2E3}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0E1730;overflow:hidden;font-family:'Be Vietnam Pro',Arial,sans-serif;color:var(--ink)}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:center center}
+.slide{position:absolute;inset:0;width:1280px;height:720px;background:var(--bg);padding:44px 64px 74px;display:none;flex-direction:column;gap:18px;overflow:hidden}
+.slide.on{display:flex}
+.eyebrow{font-size:17px;font-weight:600;color:var(--accent)}
+h1{font-size:62px;line-height:1.12;font-weight:700}
+h2{font-size:38px;line-height:1.18;font-weight:700}
+h3{font-size:20px;font-weight:700;line-height:1.25}
+p{font-size:18px;line-height:1.42;color:var(--soft)}
+.head{display:flex;flex-direction:column;gap:6px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;display:flex;flex-direction:column;gap:4px}
+.card.fill{background:var(--panel);border-color:var(--panel)}
+.card.warn{background:var(--warn-bg);border-color:var(--warn-line)}
+.num{font-size:34px;font-weight:700;line-height:1.15;color:var(--ink)}
+.lbl{font-size:15.5px;color:var(--muted);line-height:1.32}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{text-align:left;font-weight:700;color:var(--ink);border-bottom:2px solid var(--ink);padding:7px 10px}
+td{padding:7px 10px;border-bottom:1px solid var(--line);color:var(--soft);line-height:1.32;vertical-align:top}
+.r{text-align:right;font-variant-numeric:tabular-nums}
+tr.top td{color:var(--ink);font-weight:600}
+tr.floor td{color:var(--muted);font-style:italic}
+tr.alert{background:var(--warn-bg)}
+.key{background:var(--panel);border-radius:10px;padding:10px 18px;font-size:17.5px;line-height:1.4;color:var(--ink);margin-top:auto}
+.key b{font-weight:700}
+.src{position:absolute;left:64px;right:64px;bottom:20px;font-size:13px;line-height:1.3;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;display:flex;flex-direction:column;gap:4px}
+.step .n{font-size:15px;font-weight:700;color:var(--accent)}
+.step p{font-size:16.5px}
+.split{display:flex;gap:3px;height:58px;border-radius:10px;overflow:hidden}
+.split div{display:flex;align-items:center;padding:0 14px;font-size:16px;font-weight:600;white-space:nowrap}
+.s-tr{background:#2a78d6;color:#fff;flex:74.6}.s-va{background:#14213D;color:#fff;flex:12.7}.s-te{background:#DDE1E8;color:#14213D;flex:12.7}
+.seq{display:flex;align-items:center;gap:8px;font-size:17px;color:var(--soft)}
+.seq b{display:inline-block;min-width:84px;color:var(--ink)}
+.chip{display:inline-flex;align-items:center;justify-content:center;width:36px;height:34px;border-radius:7px;background:var(--panel);font-weight:600;color:var(--ink)}
+.chip.t{background:#2a78d6;color:#fff}.chip.v{background:#14213D;color:#fff}.chip.e{background:#DDE1E8;border:2px solid #14213D}
+.dark{background:var(--night)!important}.dark h1{color:#F4F2EA}.dark p{color:var(--night-soft)}.dark .eyebrow{color:#A9C1F5}
+#nav{position:fixed;right:14px;bottom:10px;display:flex;align-items:center;gap:8px;color:#fff;font-size:14px;z-index:5}
+#nav button{background:#2A3A63;color:#fff;border:0;border-radius:6px;padding:7px 12px;font:inherit;cursor:pointer}
+#nav button:hover{background:#3D4FB5}
+@media print{html,body{overflow:visible;background:#fff;height:auto}#nav{display:none}#stage{position:static;transform:none!important;width:auto;height:auto}.slide{display:flex;position:relative;page-break-after:always}}
+@page{size:1280px 720px;margin:0}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<section class="slide dark" style="justify-content:space-between">
+  <p class="eyebrow">BTL-T10 · Thí nghiệm bổ sung trên dữ liệu Amazon</p>
+  <div style="display:flex;flex-direction:column;gap:18px">
+    <h1>So sánh GRU4Rec, NARM và SASRec trên Amazon Beauty</h1>
+    <p style="font-size:24px">Dữ liệu, tiền xử lý, chia tập và kết quả với tham số mặc định</p>
+  </div>
+  <div>
+    <p style="font-weight:600;color:#F4F2EA">Nguyễn Tuấn Anh · Mai Hoàng Anh</p>
+    <p style="font-size:16px">Giảng viên: PGS.TS. Nguyễn Văn Hậu · Khoa CNTT, ĐH SPKT Hưng Yên · Tháng 11/2026</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">1. Giới thiệu bộ dữ liệu</p><h2>Amazon Beauty: lịch sử đánh giá sản phẩm làm đẹp</h2></div>
+  <div class="grid g4">
+    <div class="card"><span class="num">22.363</span><span class="lbl">người dùng</span></div>
+    <div class="card"><span class="num">12.101</span><span class="lbl">sản phẩm</span></div>
+    <div class="card"><span class="num">198.502</span><span class="lbl">lượt đánh giá</span></div>
+    <div class="card"><span class="num">06/2002–07/2014</span><span class="lbl">khoảng thời gian</span></div>
+  </div>
+  <p>Đây là bản <b>5-core</b>: mỗi người dùng và mỗi sản phẩm có ít nhất 5 đánh giá. Mỗi lượt đánh giá được coi là một lần tương tác.</p>
+  <table>
+    <tr><th style="width:26%">Cột trong file</th><th style="width:34%">Ý nghĩa</th><th>Có dùng không?</th></tr>
+    <tr><td>reviewerID</td><td>Mã người dùng</td><td>Chỉ để gom chuỗi, sau đó đổi thành số</td></tr>
+    <tr><td>asin</td><td>Mã sản phẩm</td><td>Dùng: đầu vào và đáp án của mô hình</td></tr>
+    <tr><td>unixReviewTime</td><td>Ngày đánh giá</td><td>Dùng: sắp chuỗi theo thời gian</td></tr>
+    <tr><td>reviewText, overall, summary...</td><td>Nội dung và điểm đánh giá</td><td>Bỏ: chỉ dùng mã sản phẩm</td></tr>
+  </table>
+  <div class="key"><b>Ý chính:</b> mô hình chỉ nhìn chuỗi sản phẩm đã đánh giá để đoán sản phẩm tiếp theo.</div>
+  <p class="src">Nguồn: Amazon product data (McAuley et al., SIGIR 2015; He &amp; McAuley, WWW 2016), bản reviews_Beauty_5. Mục 1.5 của đề T10 không dùng Amazon: đây là thí nghiệm bổ sung, không thay Diginetica.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">2. Các vấn đề của dữ liệu</p><h2>Dữ liệu thưa, chuỗi ngắn và có một lỗi thứ tự</h2></div>
+  <div class="grid g4">
+    <div class="card"><span class="num">0,07%</span><h3>Rất thưa</h3><span class="lbl">Mật độ tương tác giữa người dùng và sản phẩm.</span></div>
+    <div class="card"><span class="num">62,9%</span><h3>Chuỗi ngắn</h3><span class="lbl">Chuỗi có tối đa 7 sản phẩm; trung vị là 6.</span></div>
+    <div class="card"><span class="num">59,6%</span><h3>Sản phẩm ít gặp</h3><span class="lbl">Sản phẩm có tối đa 10 đánh giá; 1% phổ biến nhất chiếm 10,5% lượt.</span></div>
+    <div class="card"><span class="num">72,3%</span><h3>Lệch thời gian</h3><span class="lbl">Tương tác nằm trong 2013–2014; trước 2010 chỉ có 3,1%.</span></div>
+  </div>
+  <div class="card warn" style="flex-direction:row;gap:26px;align-items:center;padding:18px 24px">
+    <span class="num" style="white-space:nowrap">43,9%</span>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <h3>Lỗi nguy hiểm nhất: thứ tự giả trong cùng ngày</h3>
+      <p style="font-size:17px">43,9% cặp sản phẩm liền nhau có cùng ngày đánh giá, vì Amazon chỉ ghi thời gian theo ngày. File gốc lại sắp theo mã sản phẩm, nên <b>100% các cặp này có mã tăng dần</b>. Nếu giữ nguyên, mô hình có thể học mẹo "mã sau lớn hơn" thay vì hành vi thật.</p>
+    </div>
+  </div>
+  <p>Khác với dữ liệu phiên: không có người dùng nào đánh giá lặp lại cùng một sản phẩm, nên mô hình không thể đoán bằng cách gợi ý lại món vừa xem.</p>
+  <div class="key"><b>Ý chính:</b> dữ liệu thưa và chuỗi ngắn làm bài toán khó hơn; riêng thứ tự giả phải được xử lý trước khi train.</div>
+  <p class="src">Nguồn: nhóm tự đo trên toàn bộ 198.502 dòng của file gốc.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">3. Tiền xử lý</p><h2>Sáu bước trước khi đưa dữ liệu vào mô hình</h2></div>
+  <div class="steps">
+    <div class="step"><span class="n">Bước 1</span><h3>Kiểm tra file</h3><p>Khớp SHA-256 và đủ 22.363 người dùng, 12.101 sản phẩm, 198.502 dòng.</p></div>
+    <div class="step"><span class="n">Bước 2</span><h3>Giữ 3 cột</h3><p>Bỏ văn bản và điểm đánh giá. Đổi mã người dùng thành số thứ tự.</p></div>
+    <div class="step"><span class="n">Bước 3</span><h3>Sửa thứ tự</h3><p>Sắp theo ngày, xáo trong cùng ngày (seed 42). Cặp có mã tăng dần giảm từ 77.402 còn 38.605.</p></div>
+    <div class="step"><span class="n">Bước 4</span><h3>Chia tập</h3><p>Tách mỗi chuỗi thành train, valid, test theo cách leave-one-out.</p></div>
+    <div class="step"><span class="n">Bước 5</span><h3>Chốt từ điển</h3><p>Chỉ lấy sản phẩm có trong train: còn 12.088 sản phẩm để xếp hạng.</p></div>
+    <div class="step"><span class="n">Bước 6</span><h3>Tạo mẫu</h3><p>Mỗi vị trí thành một mẫu: A B → C, prefix tối đa 50. Bỏ 26 mẫu valid và 50 mẫu test có đáp án lạ.</p></div>
+  </div>
+  <div class="key"><b>Ý chính:</b> từ điển chỉ lấy từ train, nên tập test không ảnh hưởng đến việc chọn sản phẩm. Sau khi xáo, tỉ lệ mã tăng dần còn khoảng 50%, đúng như thứ tự ngẫu nhiên.</div>
+  <p class="src">Nguồn: amazon_beauty_extra/prepare_beauty.py và data_report.json. Giao thức được chốt vào protocol.json trước khi train.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">4. Chia train / valid / test</p><h2>Mỗi chuỗi: món cuối để test, món kế cuối để valid</h2></div>
+  <div class="grid g2" style="align-items:center">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="seq"><b>Chuỗi gốc</b><span class="chip">A</span><span class="chip">B</span><span class="chip">C</span><span class="chip">D</span><span class="chip">E</span></div>
+      <div class="seq"><b>Train</b><span class="chip t">A</span>→<span class="chip t">B</span>&nbsp; và &nbsp;<span class="chip t">A</span><span class="chip t">B</span>→<span class="chip t">C</span></div>
+      <div class="seq"><b>Valid</b><span class="chip">A</span><span class="chip">B</span><span class="chip">C</span>→<span class="chip v">D</span></div>
+      <div class="seq"><b>Test</b><span class="chip">A</span><span class="chip">B</span><span class="chip">C</span><span class="chip">D</span>→<span class="chip e">E</span></div>
+    </div>
+    <div class="card fill"><h3>Vì sao chia như vậy?</h3><p style="font-size:16.5px">Đây là cách phổ biến trên Amazon Beauty trong các bài báo về gợi ý chuỗi. Điểm yếu: mỗi người dùng cắt ở một thời điểm riêng, nên không phải chia theo một mốc thời gian chung như Diginetica.</p></div>
+  </div>
+  <div class="split" role="img" aria-label="Train 131.413 mẫu, valid 22.337 mẫu, test 22.313 mẫu">
+    <div class="s-tr">Train 131.413 mẫu (74,6%)</div><div class="s-va">Valid 22.337</div><div class="s-te">Test 22.313</div>
+  </div>
+  <table>
+    <tr><th style="width:12%">Tập</th><th class="r" style="width:12%">Số mẫu</th><th class="r" style="width:17%">Sản phẩm quen</th><th class="r" style="width:17%">Sản phẩm ít gặp</th><th>Dùng để</th></tr>
+    <tr><td><b>Train</b></td><td class="r">131.413</td><td class="r">91.800</td><td class="r">39.613</td><td>Học tham số mô hình</td></tr>
+    <tr><td><b>Valid</b></td><td class="r">22.337</td><td class="r">13.646</td><td class="r">8.691</td><td>Chọn epoch tốt nhất</td></tr>
+    <tr><td><b>Test</b></td><td class="r">22.313</td><td class="r">12.929</td><td class="r">9.384</td><td>Chấm điểm cuối cùng</td></tr>
+  </table>
+  <p class="src">Sản phẩm quen: có hơn 10 tương tác trong train; sản phẩm ít gặp: từ 10 trở xuống, cùng ngưỡng với thí nghiệm Diginetica. Nguồn: data_report.json.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">5. Kết quả trên tập test · Tham số mặc định của RecBole</p><h2>SASRec cao nhất cả 4 chỉ số, nhưng tốn thời gian nhất</h2></div>
+  <table>
+    <tr><th style="width:24%">Mô hình</th><th class="r">HR@10</th><th class="r">HR@20</th><th class="r">MRR@20</th><th class="r">NDCG@20</th><th class="r">Dừng ở epoch</th><th class="r">Thời gian train</th></tr>
+    <tr class="top"><td>SASRec</td><td class="r">0,0692</td><td class="r">0,1042</td><td class="r">0,0250</td><td class="r">0,0423</td><td class="r">19</td><td class="r">8,1 phút</td></tr>
+    <tr><td>NARM</td><td class="r">0,0589</td><td class="r">0,0905</td><td class="r">0,0231</td><td class="r">0,0377</td><td class="r">36</td><td class="r">4,0 phút</td></tr>
+    <tr><td>GRU4Rec</td><td class="r">0,0597</td><td class="r">0,0916</td><td class="r">0,0228</td><td class="r">0,0377</td><td class="r">36</td><td class="r">2,8 phút</td></tr>
+    <tr class="floor"><td>Pop (gợi ý hàng phổ biến)</td><td class="r">0,0164</td><td class="r">0,0264</td><td class="r">0,0060</td><td class="r">0,0104</td><td class="r">Không train</td><td class="r">Không train</td></tr>
+  </table>
+  <div class="grid g3">
+    <div class="card fill"><h3>SASRec hơn NARM</h3><p style="font-size:16.5px">MRR@20 hơn 0,0018; khoảng tin cậy 95% từ 0,0003 đến 0,0033, không chứa 0.</p></div>
+    <div class="card fill"><h3>NARM và GRU4Rec ngang nhau</h3><p style="font-size:16.5px">Chênh MRR@20 từ −0,0009 đến 0,0016: chưa phân biệt được.</p></div>
+    <div class="card fill"><h3>Đổi ở sản phẩm ít gặp</h3><p style="font-size:16.5px">MRR@20: NARM 0,0052, GRU4Rec 0,0050, SASRec 0,0042 (chưa kiểm định). Sản phẩm quen: SASRec 0,0400.</p></div>
+  </div>
+  <div class="key"><b>Ý chính:</b> cả 3 mô hình đều vượt xa Pop. SASRec cao nhất trên toàn tập test và ở nhóm sản phẩm quen, nhưng không cao nhất ở nhóm ít gặp.</div>
+  <p class="src">22.313 mẫu test, xếp hạng trên toàn bộ 12.088 sản phẩm. RecBole 1.2.1, loss CE, lr 0,001, batch 2048, tối đa 100 epoch, dừng sau 5 epoch không tăng, seed 42, RTX 3050. Bootstrap ghép cặp 2.000 lần. Chưa đo dao động theo seed.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">6. Cùng một bộ tham số · lr 0,0003, hidden 128, 1 lớp, dropout 0,1</p><h2>Cùng tham số, SASRec vẫn cao nhất, nhưng GRU4Rec chưa kịp học</h2></div>
+  <table>
+    <tr><th style="width:24%">Mô hình</th><th class="r">HR@10</th><th class="r">HR@20</th><th class="r">MRR@20</th><th class="r">NDCG@20</th><th class="r">Dừng ở epoch</th><th class="r">MRR@20 mặc định</th></tr>
+    <tr class="top"><td>SASRec</td><td class="r">0,0722</td><td class="r">0,1079</td><td class="r">0,0242</td><td class="r">0,0426</td><td class="r">23</td><td class="r">0,0250</td></tr>
+    <tr><td>NARM</td><td class="r">0,0528</td><td class="r">0,0804</td><td class="r">0,0195</td><td class="r">0,0327</td><td class="r">36</td><td class="r">0,0231</td></tr>
+    <tr class="alert"><td>GRU4Rec (bị dừng sớm)</td><td class="r">0,0065</td><td class="r">0,0130</td><td class="r">0,0018</td><td class="r">0,0042</td><td class="r">7</td><td class="r">0,0228</td></tr>
+  </table>
+  <div class="grid g2">
+    <div class="card warn"><h3>Không kết luận GRU4Rec kém</h3><p style="font-size:17px">Điểm cao nhất của nó ở ngay epoch 1 (valid 0,0020). Các epoch sau thấp hơn rồi nhích dần, nên luật "5 epoch không tăng" dừng nó ở epoch 7, khi gần như chưa học được.</p></div>
+    <div class="card fill"><h3>Cùng tham số chưa chắc đã công bằng</h3><p style="font-size:17px">Learning rate nhỏ hợp với SASRec nhưng làm GRU4Rec học chậm. Bản mặc định của GRU4Rec đạt 0,0228, cao hơn nhiều so với 0,0018.</p></div>
+  </div>
+  <div class="key"><b>Ý chính:</b> dùng chung một bộ tham số có thể làm một mô hình trông kém hơn hẳn năng lực thật. Muốn công bằng, cần cùng ngân sách tinh chỉnh.</div>
+  <p class="src">Nguồn: GRU4Rec-t06, NARM-t01, SASRec-t11. Tham số kiến trúc khác giữ mặc định. SASRec hơn NARM về MRR@20: 0,0048, khoảng tin cậy 95% từ 0,0034 đến 0,0062.</p>
+</section>
+
+<section class="slide">
+  <div class="head"><p class="eyebrow">7. Đối chiếu bài báo và kết luận · HR@10 trên Amazon Beauty</p><h2>Điểm thấp là bình thường khi chấm trên toàn bộ sản phẩm</h2></div>
+  <table>
+    <tr><th style="width:27%">Nguồn</th><th style="width:15%">Quy mô</th><th>Cách chấm</th><th class="r" style="width:11%">GRU4Rec</th><th class="r" style="width:11%">NARM</th><th class="r" style="width:11%">SASRec</th></tr>
+    <tr class="top"><td>Nhóm (mặc định)</td><td>22.363 người dùng</td><td>Toàn bộ sản phẩm</td><td class="r">0,0597</td><td class="r">0,0589</td><td class="r">0,0692</td></tr>
+    <tr><td>Klenitskiy &amp; Vasilev 2023</td><td>40.226 người dùng</td><td>Toàn bộ sản phẩm</td><td class="r">0,0291</td><td class="r">Không có</td><td class="r">0,0246</td></tr>
+    <tr><td>Wu et al. 2023</td><td>20.830 phiên</td><td>Chưa xác định được</td><td class="r">0,1098</td><td class="r">0,1188</td><td class="r">Không có</td></tr>
+    <tr><td>Kang &amp; McAuley 2018</td><td>52.024 người dùng</td><td>100 sản phẩm âm lấy mẫu</td><td class="r">0,2125</td><td class="r">Không có</td><td class="r">0,4854</td></tr>
+  </table>
+  <p style="font-size:16px">Các dòng khác nhau về cách lọc dữ liệu, loss và cách chấm, nên chỉ để so độ lớn, không ghép thành bảng xếp hạng. Số của tác giả, không phải của nhóm.</p>
+  <div class="grid g3">
+    <div class="card fill"><h3>Kết luận 1</h3><p style="font-size:16.5px">Với tham số mặc định, SASRec tốt nhất; NARM và GRU4Rec chưa phân biệt được.</p></div>
+    <div class="card fill"><h3>Kết luận 2</h3><p style="font-size:16.5px">Dùng chung tham số có thể làm sai lệch so sánh, như trường hợp GRU4Rec.</p></div>
+    <div class="card fill"><h3>Hạn chế</h3><p style="font-size:16.5px">Chỉ một seed; chưa có kết quả sau tinh chỉnh trên dữ liệu này; dữ liệu nằm ngoài phạm vi đề.</p></div>
+  </div>
+  <p class="src">Nguồn: Klenitskiy &amp; Vasilev, RecSys 2023, Bảng 2 (SASRec dùng loss CE đạt 0,0533). Wu et al., ICDE 2023, Bảng VIII. Kang &amp; McAuley, ICDM 2018, Bảng III. Dữ liệu chính của đề T10 vẫn là Diginetica.</p>
+</section>
+
+</div>
+<div id="nav"><button id="prev" aria-label="Slide trước">◀</button><span id="count"></span><button id="next" aria-label="Slide sau">▶</button><button id="full">Toàn màn hình</button></div>
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var stage=document.getElementById('stage'),count=document.getElementById('count'),i=0;
+  function read(){var n=parseInt(location.hash.slice(1),10);return n>=1&&n<=slides.length?n-1:0}
+  function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach(function(s,k){s.classList.toggle('on',k===i)});count.textContent=(i+1)+' / '+slides.length;try{history.replaceState(null,'','#'+(i+1))}catch(e){}}
+  function fit(){var s=Math.min(innerWidth/1280,innerHeight/720);stage.style.transform='translate(-50%,-50%) scale('+s+')'}
+  addEventListener('keydown',function(e){if(['ArrowRight','PageDown',' '].indexOf(e.key)>=0){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp'].indexOf(e.key)>=0){e.preventDefault();show(i-1)}if(e.key==='Home')show(0);if(e.key==='End')show(slides.length-1)});
+  document.getElementById('next').onclick=function(){show(i+1)};
+  document.getElementById('prev').onclick=function(){show(i-1)};
+  document.getElementById('full').onclick=function(){if(document.fullscreenElement){document.exitFullscreen()}else if(document.documentElement.requestFullscreen){document.documentElement.requestFullscreen()}};
+  addEventListener('resize',fit);addEventListener('hashchange',function(){show(read())});
+  fit();show(read());
+})();
+</script>
+</body>
+</html>

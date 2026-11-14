@@ -1,0 +1,140 @@
+{
+  "gpu_id": "0",
+  "worker": 0,
+  "use_gpu": true,
+  "seed": 42,
+  "state": "INFO",
+  "reproducibility": true,
+  "data_path": "/__modal/volumes/vo-C9d0PYHKKwIpWV6e3N4MK8/prepared/local-b93fbf33b89e2bc7/diginetica_w1",
+  "checkpoint_dir": "/work/results/t10_tuning_v1/trials/GRU4Rec/GRU4Rec-t08/attempt-001",
+  "show_progress": false,
+  "save_dataset": false,
+  "dataset_save_path": null,
+  "save_dataloaders": false,
+  "dataloaders_save_path": null,
+  "log_wandb": false,
+  "wandb_project": "recbole",
+  "shuffle": true,
+  "epochs": 30,
+  "train_batch_size": 2048,
+  "learner": "adam",
+  "learning_rate": 0.003,
+  "train_neg_sample_args": {
+    "distribution": "none",
+    "sample_num": "none",
+    "alpha": "none",
+    "dynamic": false,
+    "candidate_num": 0
+  },
+  "eval_step": 1,
+  "stopping_step": 5,
+  "clip_grad_norm": null,
+  "weight_decay": 0.0,
+  "loss_decimal_place": 4,
+  "require_pow": false,
+  "enable_amp": false,
+  "enable_scaler": false,
+  "transform": null,
+  "eval_args": {
+    "split": {
+      "RS": [
+        0.8,
+        0.1,
+        0.1
+      ]
+    },
+    "order": "TO",
+    "group_by": "none",
+    "mode": {
+      "valid": "full",
+      "test": "full"
+    }
+  },
+  "repeatable": true,
+  "metrics": [
+    "Hit",
+    "MRR",
+    "NDCG"
+  ],
+  "topk": [
+    10,
+    20
+  ],
+  "valid_metric": "MRR@20",
+  "valid_metric_bigger": true,
+  "eval_batch_size": 128,
+  "metric_decimal_place": 8,
+  "embedding_size": 64,
+  "hidden_size": 64,
+  "num_layers": 2,
+  "dropout_prob": 0.1,
+  "loss_type": "CE",
+  "field_separator": "\t",
+  "seq_separator": " ",
+  "USER_ID_FIELD": "session_id",
+  "ITEM_ID_FIELD": "item_id",
+  "RATING_FIELD": "rating",
+  "TIME_FIELD": null,
+  "seq_len": null,
+  "LABEL_FIELD": "label",
+  "threshold": null,
+  "NEG_PREFIX": "neg_",
+  "numerical_features": [],
+  "load_col": {
+    "inter": [
+      "session_id",
+      "item_id_list",
+      "item_id"
+    ]
+  },
+  "unload_col": null,
+  "unused_col": null,
+  "additional_feat_suffix": null,
+  "rm_dup_inter": null,
+  "val_interval": null,
+  "filter_inter_by_user_or_item": true,
+  "user_inter_num_interval": "[0,inf)",
+  "item_inter_num_interval": "[0,inf)",
+  "alias_of_user_id": null,
+  "alias_of_item_id": [
+    "item_id_list"
+  ],
+  "alias_of_entity_id": null,
+  "alias_of_relation_id": null,
+  "preload_weight": null,
+  "normalize_field": null,
+  "normalize_all": null,
+  "discretization": null,
+  "ITEM_LIST_LENGTH_FIELD": "item_length",
+  "LIST_SUFFIX": "_list",
+  "MAX_ITEM_LIST_LENGTH": 50,
+  "POSITION_FIELD": "position_id",
+  "HEAD_ENTITY_ID_FIELD": "head_id",
+  "TAIL_ENTITY_ID_FIELD": "tail_id",
+  "RELATION_ID_FIELD": "relation_id",
+  "ENTITY_ID_FIELD": "entity_id",
+  "kg_reverse_r": false,
+  "entity_kg_num_interval": "[0,inf)",
+  "relation_kg_num_interval": "[0,inf)",
+  "benchmark_filename": [
+    "train",
+    "valid",
+    "test"
+  ],
+  "MODEL_TYPE": "ModelType.SEQUENTIAL",
+  "dataset": "diginetica_w1",
+  "model": "GRU4Rec",
+  "MODEL_INPUT_TYPE": "InputType.POINTWISE",
+  "eval_type": "EvaluatorType.RANKING",
+  "single_spec": true,
+  "local_rank": 0,
+  "device": "cuda",
+  "valid_neg_sample_args": {
+    "distribution": "uniform",
+    "sample_num": "none"
+  },
+  "test_neg_sample_args": {
+    "distribution": "uniform",
+    "sample_num": "none"
+  }
+}

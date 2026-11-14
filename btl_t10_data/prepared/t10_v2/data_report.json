@@ -1,0 +1,153 @@
+{
+ "protocol": {
+  "split_order": "temporal (by whole day)",
+  "split_ratio": [
+   0.8,
+   0.1,
+   0.1
+  ],
+  "min_session_len": 2,
+  "item_core": "5-core on TRAIN only",
+  "max_prefix_len": 50,
+  "oov_policy": "drop unseen targets; remove unseen items from prefix; drop empty prefix",
+  "repeats": "kept",
+  "user_id": "dropped",
+  "groups": {
+   "near_cold": 2,
+   "warm": 10
+  },
+  "len_buckets": [
+   "2–3",
+   "4–5",
+   "6–10",
+   ">10"
+  ]
+ },
+ "sources": {
+  "train-item-views.csv": {
+   "url": "https://raw.githubusercontent.com/RecoHut-Datasets/diginetica/2672053d53bf74e6e8eec77e684e4e7b6bc5da8c/train-item-views.csv",
+   "sha256": "0b9edf1b7960bb855a2248972f8ed593f18721f321b976b2077c9f782fb43e38",
+   "bytes": 42664076
+  },
+  "product-categories.csv": {
+   "url": "https://raw.githubusercontent.com/RecoHut-Datasets/diginetica/2672053d53bf74e6e8eec77e684e4e7b6bc5da8c/product-categories.csv",
+   "sha256": "9e9566e34548e5d1b8d05ed6dd0222fbb8a7b7b2a8a18cdf28c1a4eba8f9e42c",
+   "bytes": 1979575
+  }
+ },
+ "cleaning_funnel": [
+  {
+   "Bước": "0. Dữ liệu gốc",
+   "Dòng": 1235380,
+   "Phiên": 310324,
+   "Item": 122993
+  },
+  {
+   "Bước": "1. Loại dòng lỗi, bỏ userId",
+   "Dòng": 1235380,
+   "Phiên": 310324,
+   "Item": 122993
+  },
+  {
+   "Bước": "2. Loại dòng trùng",
+   "Dòng": 1235380,
+   "Phiên": 310324,
+   "Item": 122993
+  },
+  {
+   "Bước": "3. Sắp theo timeframe",
+   "Dòng": 1235380,
+   "Phiên": 310324,
+   "Item": 122993
+  },
+  {
+   "Bước": "4. Loại phiên nhiều ngày",
+   "Dòng": 1233287,
+   "Phiên": 310064,
+   "Item": 122911
+  },
+  {
+   "Bước": "5. Loại phiên < 2 click",
+   "Dòng": 1142593,
+   "Phiên": 219370,
+   "Item": 121386
+  }
+ ],
+ "train_core": [
+  {
+   "Vòng": 0,
+   "Dòng": 920067,
+   "Phiên": 175802,
+   "Item": 111173
+  },
+  {
+   "Vòng": 1,
+   "Dòng": 778636,
+   "Phiên": 161869,
+   "Item": 37187
+  },
+  {
+   "Vòng": 2,
+   "Dòng": 774825,
+   "Phiên": 161213,
+   "Item": 36325
+  },
+  {
+   "Vòng": 3,
+   "Dòng": 774487,
+   "Phiên": 161151,
+   "Item": 36253
+  },
+  {
+   "Vòng": 4,
+   "Dòng": 774446,
+   "Phiên": 161142,
+   "Item": 36245
+  },
+  {
+   "Vòng": 5,
+   "Dòng": 774441,
+   "Phiên": 161141,
+   "Item": 36244
+  },
+  {
+   "Vòng": 6,
+   "Dòng": 774441,
+   "Phiên": 161141,
+   "Item": 36244
+  }
+ ],
+ "boundaries": [
+  "2016-05-12",
+  "2016-05-23"
+ ],
+ "vocabulary_items": 36244,
+ "category_coverage": 1.0,
+ "splits": {
+  "train": {
+   "sessions": 175802,
+   "samples": 613300,
+   "sha256": "57e0b26e9b43b0e935f1f5f3cc77dd0f8c44689b19dfbaed27197e6597f071df"
+  },
+  "valid": {
+   "sessions": 21766,
+   "samples": 65924,
+   "sha256": "c4a93e5a696736f9bc0b6683dcec98dd4f04718371e033fbfb5b28900bfa712e"
+  },
+  "test": {
+   "sessions": 21802,
+   "samples": 66305,
+   "sha256": "fefc5f96a7592b83b44238a7805cc9fc53e30ea78a527df9611643d00e7e0011"
+  }
+ },
+ "srgnn_check": {
+  "Click": 982961,
+  "Item": 43097,
+  "Phiên train": 186670,
+  "Phiên test": 15963,
+  "Mẫu train (prefix)": 719470,
+  "Mẫu test (prefix)": 60858,
+  "Độ dài TB": 4.85
+ },
+ "fingerprint": "1ffb16f5692b5857bffbc982391447d3ac8f32c22a5024b4e705304aede4aad4"
+}

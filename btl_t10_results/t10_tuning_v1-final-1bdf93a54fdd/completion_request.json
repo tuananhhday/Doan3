@@ -1,0 +1,5 @@
+{
+  "target_trials_per_model": 12,
+  "gpu_budget_hours": 5.0,
+  "status": "continuing_to_full_search"
+}

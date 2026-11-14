@@ -1,0 +1,10 @@
+{
+  "raw_rows": 1235380,
+  "raw_sessions": 310324,
+  "invalid_rows_removed": 0,
+  "exact_duplicate_rows_removed": 0,
+  "multi_day_sessions_removed": 260,
+  "short_sessions_removed": 90694,
+  "clean_rows": 1142593,
+  "clean_sessions": 219370
+}

@@ -1,0 +1,7 @@
+2026-10-24 16:13:04,340 INFO [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[64][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'none', 'sample_num': 'none', 'alpha': 'none', 'dynamic': False, 'candidate_num': 0}][0m
+2026-10-24 16:13:04,346 INFO [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[128][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'TO', 'group_by': 'none', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+2026-10-24 16:13:04,753 INFO [1;32mepoch 0 training[0m [[1;34mtime[0m: 0.24s, [1;34mtrain loss[0m: 41.9081]
+2026-10-24 16:13:04,758 INFO [1;32mepoch 0 evaluating[0m [[1;34mtime[0m: 0.00s, [1;34mvalid_score[0m: 0.010417]
+2026-10-24 16:13:04,758 INFO [1;34mvalid result[0m: 
+hit@10 : 0.015625    hit@20 : 0.015625    mrr@20 : 0.010416666666666666    ndcg@20 : 0.01171875
+2026-10-24 16:13:04,793 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/smoke/SASRec/SASRec-t01/attempt-001/SASRec-Oct-24-2026_16-13-04.pth

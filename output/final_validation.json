@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "notebook_cells": 62,
+  "saved_outputs": 8,
+  "tuning_trials": 36,
+  "tested_winners": 3,
+  "report_pages": 12,
+  "slide_pages": 15,
+  "zip_files": 85,
+  "zip_bytes": 234821973,
+  "all_zip_checksums_match": true,
+  "zip_crc_ok": true,
+  "winner_mapping_audits": 3,
+  "training_default": false
+}

@@ -1,0 +1,7 @@
+2026-10-24 16:12:12,908 INFO [1;35m[Training]: [0m[1;36mtrain_batch_size[0m = [1;33m[64][0m[1;36m train_neg_sample_args[0m: [1;33m[{'distribution': 'none', 'sample_num': 'none', 'alpha': 'none', 'dynamic': False, 'candidate_num': 0}][0m
+2026-10-24 16:12:12,908 INFO [1;35m[Evaluation]: [0m[1;36meval_batch_size[0m = [1;33m[128][0m[1;36m eval_args[0m: [1;33m[{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'TO', 'group_by': 'none', 'mode': {'valid': 'full', 'test': 'full'}}][0m
+2026-10-24 16:12:15,449 INFO [1;32mepoch 0 training[0m [[1;34mtime[0m: 0.47s, [1;34mtrain loss[0m: 41.9885]
+2026-10-24 16:12:15,498 INFO [1;32mepoch 0 evaluating[0m [[1;34mtime[0m: 0.05s, [1;34mvalid_score[0m: 0.000000]
+2026-10-24 16:12:15,498 INFO [1;34mvalid result[0m: 
+hit@10 : 0.0    hit@20 : 0.0    mrr@20 : 0.0    ndcg@20 : 0.0
+2026-10-24 16:12:15,552 INFO [1;34mSaving current[0m: /work/results/t10_tuning_v1/smoke/GRU4Rec/GRU4Rec-t01/attempt-001/GRU4Rec-Oct-24-2026_16-12-13.pth

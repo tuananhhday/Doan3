@@ -1,0 +1,16 @@
+{
+  "name": "t10-yoochoose164-extra-v1",
+  "date": "2026-11-07",
+  "written_before": "Chot truoc khi train",
+  "status": "Thi nghiem bo sung. De T10 Muc 1.5 cho phep Yoochoose, nhung phan chinh cua de T10 van la Diginetica.",
+  "dataset": "Yoochoose 1/64, ban xu ly san tu github.com/RecoHut-Datasets/yoochoose",
+  "runs": ["3 ban mac dinh", "3 ban cung tham so: GRU4Rec-t06, NARM-t01, SASRec-t11"],
+  "same_as_diginetica": ["3 mo hinh", "tham so mac dinh", "chi so", "full ranking", "cach pha hoa", "seed 42", "dung som sau 5 epoch", "batch 2048", "chon epoch theo valid MRR@20", "RecBole 1.2.1", "torch 2.5.1"],
+  "different_from_diginetica": {
+    "preprocessing": "Dung ban xu ly san, khong xu ly lai tu du lieu tho; bo loc san pham co the da dung ca du lieu test",
+    "valid": "10% mau cuoi cua train theo thu tu file, cat dung ranh gioi phien",
+    "max_epochs": "50 thay vi 30: Yoochoose co it buoc moi epoch hon",
+    "hardware": "RTX 3050 Laptop thay vi H100"
+  },
+  "test_policy": "Cham test cho 3 ban mac dinh va 3 ban cung tham so; khong chon cau hinh nao bang test"
+}
